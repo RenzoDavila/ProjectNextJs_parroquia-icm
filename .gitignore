@@ -30,8 +30,13 @@ yarn-debug.log*
 yarn-error.log*
 .pnpm-debug.log*
 
-# env files (can opt-in for committing if needed)
+# env files (can opt-in for commiting if needed)
 .env*
+
+# uploads - ignore uploaded images but keep folder structure
+public/uploads/**/*
+!public/uploads/**/.gitignore
+!public/uploads/README.md
 
 # vercel
 .vercel
