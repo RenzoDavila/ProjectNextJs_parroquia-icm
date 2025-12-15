@@ -384,8 +384,8 @@ export default function ReservarPage() {
             .filter((slot: AvailableTime) => slot.isAvailable)
             .map((slot: AvailableTime) => slot.time);
           
-          // Eliminar duplicados usando Set
-          const uniqueTimes = Array.from(new Set(times));
+          // Eliminar duplicados usando Set (asegurar tipo string[] para TypeScript)
+          const uniqueTimes = Array.from(new Set(times)) as string[];
           setAvailableTimes(uniqueTimes);
         }
       } catch (error) {
