@@ -1,0 +1,1105 @@
+[00:00:00.986] Server  LOG      ✓ Ready in 735ms
+[00:00:03.411] Browser INFO    %cDownload the React DevTools for a better development experience: https://react.dev/link/react-devtools font-weight:bold
+[00:00:03.543] Browser INFO    %cDownload the React DevTools for a better development experience: https://react.dev/link/react-devtools font-weight:bold
+[00:00:03.718] Server  LOG     Ejecutada query {}
+[00:00:03.806] Server  LOG     Consulta ejecutada: {}
+[00:00:03.899] Server  LOG     Consulta ejecutada: {}
+[00:00:04.041] Server  LOG     Consulta ejecutada: {}
+[00:00:04.506] Browser WARN    Image with src "/images/logos/logo-parroquia.png" has "fill" but is missing "sizes" prop. Please add it to improve page performance. Read more: https://nextjs.org/docs/api-reference/next/image#sizes
+[00:00:04.511] Server  LOG     Ejecutada query {}
+[00:00:04.513] Server  LOG     Ejecutada query {}
+[00:00:04.514] Server  LOG     Ejecutada query {}
+[00:00:05.435] Server  LOG     Ejecutada query {}
+[00:00:06.305] Server  ERROR    ⨯ "The requested resource isn't a valid image for" "/images/about/donaciones.jpg" "received" null
+[00:00:10.001] Browser INFO    %cDownload the React DevTools for a better development experience: https://react.dev/link/react-devtools font-weight:bold
+[00:00:10.039] Server  LOG     Consulta ejecutada: {}
+[00:00:10.051] Server  LOG     Consulta ejecutada: {}
+[00:00:10.083] Server  LOG     Consulta ejecutada: {}
+[00:00:10.104] Server  LOG     Ejecutada query {}
+[00:00:10.105] Server  LOG     Ejecutada query {}
+[00:00:10.106] Server  LOG     Ejecutada query {}
+[00:00:10.116] Server  LOG     Ejecutada query {}
+[00:00:10.183] Browser WARN    Image with src "/images/logos/logo-parroquia.png" has "fill" but is missing "sizes" prop. Please add it to improve page performance. Read more: https://nextjs.org/docs/api-reference/next/image#sizes
+[00:00:10.187] Server  ERROR    ⨯ "The requested resource isn't a valid image for" "/images/about/donaciones.jpg" "received" null
+[00:00:29.827] Server  WARN    Error: Route "/api/admin/donation-info/[id]" used `params.id`. `params` is a Promise and must be unwrapped with `await` or `React.use()` before accessing its properties. Learn more: https://nextjs.org/docs/messages/sync-dynamic-apis
+[00:00:29.926] Server  ERROR   Error en query de base de datos: error: column "bank_logo_url" of relation "donation_info" does not exist
+[00:00:29.981] Server  ERROR   Error: error: column "bank_logo_url" of relation "donation_info" does not exist
+[00:01:57.693] Server  LOG      ✓ Compiled in 105ms
+[00:03:31.228] Browser INFO    %cDownload the React DevTools for a better development experience: https://react.dev/link/react-devtools font-weight:bold
+[00:03:31.370] Server  LOG     Ejecutada query {}
+[00:03:37.268] Server  LOG     Ejecutada query {}
+[00:03:40.475] Server  LOG     Ejecutada query {}
+[00:03:42.464] Browser INFO    %cDownload the React DevTools for a better development experience: https://react.dev/link/react-devtools font-weight:bold
+[00:03:42.522] Server  LOG     Ejecutada query {}
+[00:03:45.349] Browser INFO    %cDownload the React DevTools for a better development experience: https://react.dev/link/react-devtools font-weight:bold
+[00:03:45.398] Server  LOG     Consulta ejecutada: {}
+[00:03:45.412] Server  LOG     Consulta ejecutada: {}
+[00:03:45.436] Server  LOG     Consulta ejecutada: {}
+[00:03:45.455] Server  LOG     Ejecutada query {}
+[00:03:45.456] Server  LOG     Ejecutada query {}
+[00:03:45.457] Server  LOG     Ejecutada query {}
+[00:03:45.468] Server  LOG     Ejecutada query {}
+[00:03:45.497] Browser WARN    Image with src "/images/logos/logo-parroquia.png" has "fill" but is missing "sizes" prop. Please add it to improve page performance. Read more: https://nextjs.org/docs/api-reference/next/image#sizes
+[00:03:46.155] Browser WARN    Image with src "/uploads/donations/1765767518868-og7gct.jpg" has "fill" but is missing "sizes" prop. Please add it to improve page performance. Read more: https://nextjs.org/docs/api-reference/next/image#sizes
+[00:04:38.889] Browser WARN    Detected `scroll-behavior: smooth` on the `<html>` element. To disable smooth scrolling during route transitions, add `data-scroll-behavior="smooth"` to your <html> element. Learn more: https://nextjs.org/docs/messages/missing-data-scroll-behavior
+[00:04:38.893] Server  LOG     Consulta ejecutada: {}
+[00:04:38.913] Server  LOG     Consulta ejecutada: {}
+[00:05:09.090] Browser WARN    Detected `scroll-behavior: smooth` on the `<html>` element. To disable smooth scrolling during route transitions, add `data-scroll-behavior="smooth"` to your <html> element. Learn more: https://nextjs.org/docs/messages/missing-data-scroll-behavior
+[00:07:16.330] Server  LOG     Consulta ejecutada: {}
+[00:07:16.351] Server  LOG     Consulta ejecutada: {}
+[00:07:18.840] Browser INFO    %cDownload the React DevTools for a better development experience: https://react.dev/link/react-devtools font-weight:bold
+[00:07:18.903] Server  LOG     Consulta ejecutada: {}
+[00:07:22.074] Browser INFO    %cDownload the React DevTools for a better development experience: https://react.dev/link/react-devtools font-weight:bold
+[00:07:22.217] Browser WARN    Image with src "/images/logos/logo-parroquia.png" has "fill" but is missing "sizes" prop. Please add it to improve page performance. Read more: https://nextjs.org/docs/api-reference/next/image#sizes
+[00:07:24.637] Browser INFO    %cDownload the React DevTools for a better development experience: https://react.dev/link/react-devtools font-weight:bold
+[00:07:24.775] Browser WARN    Image with src "/images/logos/logo-parroquia.png" has "fill" but is missing "sizes" prop. Please add it to improve page performance. Read more: https://nextjs.org/docs/api-reference/next/image#sizes
+[00:07:27.043] Browser INFO    %cDownload the React DevTools for a better development experience: https://react.dev/link/react-devtools font-weight:bold
+[00:07:27.194] Browser WARN    Image with src "/images/logos/logo-parroquia.png" has "fill" but is missing "sizes" prop. Please add it to improve page performance. Read more: https://nextjs.org/docs/api-reference/next/image#sizes
+[00:07:29.246] Browser INFO    %cDownload the React DevTools for a better development experience: https://react.dev/link/react-devtools font-weight:bold
+[00:07:29.254] Server  LOG     Consulta ejecutada: {}
+[00:09:11.609] Server  LOG      ✓ Compiled in 169ms
+[00:09:11.713] Browser ERROR   ./src/app/nosotros/page.tsx:123:1
+Parsing ecmascript source code failed
+  121 |     category: "parroquiales",
+  122 |   },
+> 123 | };
+      | ^
+  124 |
+  125 | export default function NosotrosPage() {
+  126 |   const [teamMembers, setTeamMembers] = useState<TeamMember[]>([]);
+
+Expression expected
+
+Import traces:
+  Client Component Browser:
+    ./src/app/nosotros/page.tsx [Client Component Browser]
+    ./src/app/nosotros/page.tsx [Server Component]
+
+  Client Component SSR:
+    ./src/app/nosotros/page.tsx [Client Component SSR]
+    ./src/app/nosotros/page.tsx [Server Component]
+[00:09:12.429] Browser ERROR   ./src/app/nosotros/page.tsx:123:1
+Parsing ecmascript source code failed
+  121 |     category: "parroquiales",
+  122 |   },
+> 123 | };
+      | ^
+  124 |
+  125 | export default function NosotrosPage() {
+  126 |   const [teamMembers, setTeamMembers] = useState<TeamMember[]>([]);
+
+Expression expected
+
+Import traces:
+  Client Component Browser:
+    ./src/app/nosotros/page.tsx [Client Component Browser]
+    ./src/app/nosotros/page.tsx [Server Component]
+
+  Client Component SSR:
+    ./src/app/nosotros/page.tsx [Client Component SSR]
+    ./src/app/nosotros/page.tsx [Server Component]
+[00:10:02.957] Server  LOG      ✓ Compiled in 224ms
+[00:10:03.063] Browser ERROR   ./src/app/nosotros/page.tsx:123:1
+Parsing ecmascript source code failed
+  121 |     category: "parroquiales",
+  122 |   },
+> 123 | };
+      | ^
+  124 |
+  125 | export default function NosotrosPage() {
+  126 |   const [teamMembers, setTeamMembers] = useState<TeamMember[]>([]);
+
+Expression expected
+
+Import traces:
+  Client Component Browser:
+    ./src/app/nosotros/page.tsx [Client Component Browser]
+    ./src/app/nosotros/page.tsx [Server Component]
+
+  Client Component SSR:
+    ./src/app/nosotros/page.tsx [Client Component SSR]
+    ./src/app/nosotros/page.tsx [Server Component]
+[00:10:03.713] Browser ERROR   ./src/app/nosotros/page.tsx:123:1
+Parsing ecmascript source code failed
+  121 |     category: "parroquiales",
+  122 |   },
+> 123 | };
+      | ^
+  124 |
+  125 | export default function NosotrosPage() {
+  126 |   const [teamMembers, setTeamMembers] = useState<TeamMember[]>([]);
+
+Expression expected
+
+Import traces:
+  Client Component Browser:
+    ./src/app/nosotros/page.tsx [Client Component Browser]
+    ./src/app/nosotros/page.tsx [Server Component]
+
+  Client Component SSR:
+    ./src/app/nosotros/page.tsx [Client Component SSR]
+    ./src/app/nosotros/page.tsx [Server Component]
+[00:10:14.492] Browser ERROR   ./src/app/nosotros/page.tsx:123:1
+Parsing ecmascript source code failed
+  121 |     category: "parroquiales",
+  122 |   },
+> 123 | };
+      | ^
+  124 |
+  125 | export default function NosotrosPage() {
+  126 |   const [teamMembers, setTeamMembers] = useState<TeamMember[]>([]);
+
+Expression expected
+
+Import traces:
+  Client Component Browser:
+    ./src/app/nosotros/page.tsx [Client Component Browser]
+    ./src/app/nosotros/page.tsx [Server Component]
+
+  Client Component SSR:
+    ./src/app/nosotros/page.tsx [Client Component SSR]
+    ./src/app/nosotros/page.tsx [Server Component]
+[00:10:15.275] Browser ERROR   ./src/app/nosotros/page.tsx:123:1
+Parsing ecmascript source code failed
+  121 |     category: "parroquiales",
+  122 |   },
+> 123 | };
+      | ^
+  124 |
+  125 | export default function NosotrosPage() {
+  126 |   const [teamMembers, setTeamMembers] = useState<TeamMember[]>([]);
+
+Expression expected
+
+Import traces:
+  Client Component Browser:
+    ./src/app/nosotros/page.tsx [Client Component Browser]
+    ./src/app/nosotros/page.tsx [Server Component]
+
+  Client Component SSR:
+    ./src/app/nosotros/page.tsx [Client Component SSR]
+    ./src/app/nosotros/page.tsx [Server Component]
+[00:11:33.319] Server  LOG     Consulta ejecutada: {}
+[00:11:33.489] Server  LOG     Consulta ejecutada: {}
+[00:14:16.648] Server  LOG     Consulta ejecutada: {}
+[00:14:16.673] Server  LOG     Consulta ejecutada: {}
+[00:14:20.406] Browser INFO    %cDownload the React DevTools for a better development experience: https://react.dev/link/react-devtools font-weight:bold
+[00:14:20.483] Server  LOG     Consulta ejecutada: {}
+[00:14:20.499] Server  LOG     Consulta ejecutada: {}
+[00:14:20.552] Browser WARN    Image with src "/images/logos/logo-parroquia.png" has "fill" but is missing "sizes" prop. Please add it to improve page performance. Read more: https://nextjs.org/docs/api-reference/next/image#sizes
+[00:20:23.776] Server  LOG      ✓ Compiled in 186ms
+[00:20:23.904] Server  LOG     Consulta ejecutada: {}
+[00:20:23.955] Server  LOG     Consulta ejecutada: {}
+[00:20:48.525] Server  LOG      ✓ Compiled in 264ms
+[00:21:03.095] Server  LOG      ✓ Compiled in 127ms
+[00:31:55.216] Server  LOG     Consulta ejecutada: {}
+[00:31:55.228] Server  LOG     Consulta ejecutada: {}
+[00:32:29.577] Server  LOG     Consulta ejecutada: {}
+[00:32:29.594] Server  LOG     Consulta ejecutada: {}
+[00:32:56.244] Server  LOG     Consulta ejecutada: {}
+[00:32:56.257] Server  LOG     Consulta ejecutada: {}
+[00:35:13.580] Server  LOG     Consulta ejecutada: {}
+[00:35:13.592] Server  LOG     Consulta ejecutada: {}
+[00:35:24.588] Server  LOG     Consulta ejecutada: {}
+[00:35:24.601] Server  LOG     Consulta ejecutada: {}
+[00:35:27.710] Browser INFO    %cDownload the React DevTools for a better development experience: https://react.dev/link/react-devtools font-weight:bold
+[00:35:27.767] Server  LOG     Consulta ejecutada: {}
+[00:35:27.779] Server  LOG     Consulta ejecutada: {}
+[00:35:27.844] Browser WARN    Image with src "/images/logos/logo-parroquia.png" has "fill" but is missing "sizes" prop. Please add it to improve page performance. Read more: https://nextjs.org/docs/api-reference/next/image#sizes
+[00:36:54.187] Server  LOG     Consulta ejecutada: {}
+[00:36:54.202] Server  LOG     Consulta ejecutada: {}
+[00:37:38.336] Server  LOG     Consulta ejecutada: {}
+[00:37:38.349] Server  LOG     Consulta ejecutada: {}
+[00:37:41.862] Browser INFO    %cDownload the React DevTools for a better development experience: https://react.dev/link/react-devtools font-weight:bold
+[00:37:41.924] Server  LOG     Consulta ejecutada: {}
+[00:37:41.937] Server  LOG     Consulta ejecutada: {}
+[00:37:41.997] Browser WARN    Image with src "/images/logos/logo-parroquia.png" has "fill" but is missing "sizes" prop. Please add it to improve page performance. Read more: https://nextjs.org/docs/api-reference/next/image#sizes
+[00:40:20.406] Server  LOG     Consulta ejecutada: {}
+[00:40:20.430] Server  LOG     Consulta ejecutada: {}
+[00:42:44.626] Server  LOG     Consulta ejecutada: {}
+[00:42:44.639] Server  LOG     Consulta ejecutada: {}
+[00:42:58.571] Server  LOG     Consulta ejecutada: {}
+[00:42:58.587] Server  LOG     Consulta ejecutada: {}
+[00:43:32.194] Server  LOG     Consulta ejecutada: {}
+[00:43:32.206] Server  LOG     Consulta ejecutada: {}
+[00:44:58.018] Server  LOG      ✓ Compiled in 118ms
+[00:54:31.929] Browser INFO    %cDownload the React DevTools for a better development experience: https://react.dev/link/react-devtools font-weight:bold
+[00:54:31.991] Server  LOG     Consulta ejecutada: {}
+[00:54:32.004] Server  LOG     Consulta ejecutada: {}
+[00:54:32.073] Browser WARN    Image with src "/images/logos/logo-parroquia.png" has "fill" but is missing "sizes" prop. Please add it to improve page performance. Read more: https://nextjs.org/docs/api-reference/next/image#sizes
+[00:55:07.576] Browser WARN    Detected `scroll-behavior: smooth` on the `<html>` element. To disable smooth scrolling during route transitions, add `data-scroll-behavior="smooth"` to your <html> element. Learn more: https://nextjs.org/docs/messages/missing-data-scroll-behavior
+[00:55:07.587] Server  LOG     Consulta ejecutada: {}
+[00:55:07.604] Server  LOG     Consulta ejecutada: {}
+[00:55:10.302] Server  LOG     Consulta ejecutada: {}
+[00:55:10.314] Server  LOG     Consulta ejecutada: {}
+[00:55:10.324] Server  LOG     Consulta ejecutada: {}
+[00:55:10.345] Server  LOG     Consulta ejecutada: {}
+[00:55:10.370] Server  LOG     Consulta ejecutada: {}
+[00:55:10.379] Server  LOG     Consulta ejecutada: {}
+[00:55:10.399] Server  LOG     Ejecutada query {}
+[00:55:10.400] Server  LOG     Ejecutada query {}
+[00:55:10.401] Server  LOG     Ejecutada query {}
+[00:55:10.413] Server  LOG     Ejecutada query {}
+[00:55:10.415] Server  LOG     Ejecutada query {}
+[00:55:10.422] Server  LOG     Ejecutada query {}
+[00:55:10.431] Server  LOG     Ejecutada query {}
+[00:55:10.438] Server  LOG     Ejecutada query {}
+[00:55:11.860] Server  LOG     Consulta ejecutada: {}
+[00:55:11.925] Server  LOG     Consulta ejecutada: {}
+[00:55:11.933] Server  LOG     Consulta ejecutada: {}
+[00:55:11.942] Server  LOG     Consulta ejecutada: {}
+[00:55:13.893] Server  LOG     Consulta ejecutada: {}
+[00:55:13.903] Server  LOG     Consulta ejecutada: {}
+[00:55:13.923] Server  LOG     Consulta ejecutada: {}
+[00:55:13.946] Server  LOG     Consulta ejecutada: {}
+[00:55:13.959] Server  LOG     Consulta ejecutada: {}
+[00:55:13.981] Server  LOG     Consulta ejecutada: {}
+[00:55:13.998] Server  LOG     Ejecutada query {}
+[00:55:14.020] Server  LOG     Ejecutada query {}
+[00:55:14.021] Server  LOG     Ejecutada query {}
+[00:55:14.029] Server  LOG     Ejecutada query {}
+[00:55:14.030] Server  LOG     Ejecutada query {}
+[00:55:14.031] Server  LOG     Ejecutada query {}
+[00:55:14.037] Server  LOG     Ejecutada query {}
+[00:55:14.096] Server  LOG     Ejecutada query {}
+[00:55:15.123] Server  LOG     Consulta ejecutada: {}
+[00:55:15.156] Server  LOG     Consulta ejecutada: {}
+[00:55:15.162] Server  LOG     Consulta ejecutada: {}
+[00:55:15.172] Server  LOG     Consulta ejecutada: {}
+[00:55:15.476] Server  LOG     Consulta ejecutada: {}
+[00:55:15.486] Server  LOG     Consulta ejecutada: {}
+[00:55:17.684] Server  LOG     Consulta ejecutada: {}
+[00:55:17.693] Server  LOG     Consulta ejecutada: {}
+[00:55:19.279] Server  LOG     Consulta ejecutada: {}
+[00:55:19.288] Server  LOG     Consulta ejecutada: {}
+[00:55:19.295] Server  LOG     Consulta ejecutada: {}
+[00:55:19.319] Server  LOG     Consulta ejecutada: {}
+[00:56:20.699] Server  LOG     Consulta ejecutada: {}
+[00:56:20.706] Server  LOG     Consulta ejecutada: {}
+[00:57:25.925] Server  LOG      ✓ Compiled in 52ms
+[00:57:44.697] Server  LOG     Consulta ejecutada: {}
+[00:57:44.724] Server  LOG     Consulta ejecutada: {}
+[00:57:44.740] Server  LOG     Consulta ejecutada: {}
+[00:57:44.781] Server  LOG     Consulta ejecutada: {}
+[00:57:44.800] Server  LOG     Consulta ejecutada: {}
+[00:57:44.809] Server  LOG     Consulta ejecutada: {}
+[00:57:44.834] Server  LOG     Ejecutada query {}
+[00:57:44.835] Server  LOG     Ejecutada query {}
+[00:57:44.836] Server  LOG     Ejecutada query {}
+[00:57:44.851] Server  LOG     Ejecutada query {}
+[00:57:44.853] Server  LOG     Ejecutada query {}
+[00:57:44.857] Server  LOG     Ejecutada query {}
+[00:57:44.866] Server  LOG     Ejecutada query {}
+[00:57:44.889] Server  LOG     Ejecutada query {}
+[00:57:45.730] Browser WARN    Image with src "/uploads/donations/1765767518868-og7gct.jpg" has "fill" but is missing "sizes" prop. Please add it to improve page performance. Read more: https://nextjs.org/docs/api-reference/next/image#sizes
+[00:58:12.235] Server  LOG      ✓ Compiled in 115ms
+[00:58:35.070] Server  LOG      ✓ Compiled in 73ms
+[00:58:39.518] Server  LOG      ✓ Compiled in 41ms
+[00:58:46.227] Browser WARN    Image with src "https://images.unsplash.com/photo-1529156069898-49953e39b3ac?w=600" has "fill" but is missing "sizes" prop. Please add it to improve page performance. Read more: https://nextjs.org/docs/api-reference/next/image#sizes
+[00:58:48.871] Browser WARN    Image with src "https://images.unsplash.com/photo-1544620347-c4fd4a3d5957?w=600" has "fill" but is missing "sizes" prop. Please add it to improve page performance. Read more: https://nextjs.org/docs/api-reference/next/image#sizes
+[00:58:51.209] Browser WARN    Image with src "https://images.unsplash.com/photo-1529156069898-49953e39b3ac?w=400" has "fill" but is missing "sizes" prop. Please add it to improve page performance. Read more: https://nextjs.org/docs/api-reference/next/image#sizes
+[00:58:51.209] Browser WARN    Image with src "https://images.unsplash.com/photo-1532629345422-7515f3d16bb6?w=400" has "fill" but is missing "sizes" prop. Please add it to improve page performance. Read more: https://nextjs.org/docs/api-reference/next/image#sizes
+[00:58:51.209] Browser WARN    Image with src "https://images.unsplash.com/photo-1511895426328-dc8714191300?w=400" has "fill" but is missing "sizes" prop. Please add it to improve page performance. Read more: https://nextjs.org/docs/api-reference/next/image#sizes
+[00:58:51.677] Server  ERROR    ⨯ "upstream image response failed for" "https://images.unsplash.com/photo-1544776193-52f10d0f912c?w=400" 404
+[01:00:35.820] Server  ERROR    ⨯ "upstream image response failed for" "https://images.unsplash.com/photo-1544776193-52f10d0f912c?w=400" 404
+[01:01:29.000] Server  ERROR    ⨯ "upstream image response failed for" "https://images.unsplash.com/photo-1544776193-52f10d0f912c?w=400" 404
+[01:01:29.006] Browser INFO    %cDownload the React DevTools for a better development experience: https://react.dev/link/react-devtools font-weight:bold
+[01:01:29.231] Browser WARN    Image with src "/images/logos/logo-parroquia.png" has "fill" but is missing "sizes" prop. Please add it to improve page performance. Read more: https://nextjs.org/docs/api-reference/next/image#sizes
+[01:01:29.231] Browser WARN    Image with src "https://images.unsplash.com/photo-1544776193-52f10d0f912c?w=400" has "fill" but is missing "sizes" prop. Please add it to improve page performance. Read more: https://nextjs.org/docs/api-reference/next/image#sizes
+[01:01:29.231] Browser WARN    Image with src "https://images.unsplash.com/photo-1532629345422-7515f3d16bb6?w=400" has "fill" but is missing "sizes" prop. Please add it to improve page performance. Read more: https://nextjs.org/docs/api-reference/next/image#sizes
+[01:01:29.231] Browser WARN    Image with src "https://images.unsplash.com/photo-1529156069898-49953e39b3ac?w=400" has "fill" but is missing "sizes" prop. Please add it to improve page performance. Read more: https://nextjs.org/docs/api-reference/next/image#sizes
+[01:01:29.231] Browser WARN    Image with src "https://images.unsplash.com/photo-1511895426328-dc8714191300?w=400" has "fill" but is missing "sizes" prop. Please add it to improve page performance. Read more: https://nextjs.org/docs/api-reference/next/image#sizes
+[01:01:29.258] Server  LOG     Consulta ejecutada: {}
+[01:01:29.283] Server  LOG     Consulta ejecutada: {}
+[01:01:29.317] Server  LOG     Consulta ejecutada: {}
+[01:01:29.352] Server  LOG     Ejecutada query {}
+[01:01:29.353] Server  LOG     Ejecutada query {}
+[01:01:29.354] Server  LOG     Ejecutada query {}
+[01:01:29.371] Server  LOG     Ejecutada query {}
+[01:01:43.485] Server  ERROR    ⨯ "upstream image response failed for" "https://images.unsplash.com/photo-1544776193-52f10d0f912c?w=400" 404
+[01:01:47.415] Server  ERROR    ⨯ "upstream image response failed for" "https://images.unsplash.com/photo-1544776193-52f10d0f912c?w=400" 404
+[01:02:59.657] Server  LOG      ✓ Compiled in 74ms
+[01:03:03.931] Server  ERROR    ⨯ "upstream image response failed for" "https://images.unsplash.com/photo-1544776193-52f10d0f912c?w=400" 404
+[01:03:03.983] Browser INFO    %cDownload the React DevTools for a better development experience: https://react.dev/link/react-devtools font-weight:bold
+[01:03:04.220] Browser WARN    Image with src "/images/logos/logo-parroquia.png" has "fill" but is missing "sizes" prop. Please add it to improve page performance. Read more: https://nextjs.org/docs/api-reference/next/image#sizes
+[01:03:04.220] Browser WARN    Image with src "https://images.unsplash.com/photo-1544620347-c4fd4a3d5957?w=600" has "fill" but is missing "sizes" prop. Please add it to improve page performance. Read more: https://nextjs.org/docs/api-reference/next/image#sizes
+[01:03:04.220] Browser WARN    Image with src "https://images.unsplash.com/photo-1544776193-52f10d0f912c?w=400" has "fill" but is missing "sizes" prop. Please add it to improve page performance. Read more: https://nextjs.org/docs/api-reference/next/image#sizes
+[01:03:04.220] Browser WARN    Image with src "https://images.unsplash.com/photo-1532629345422-7515f3d16bb6?w=400" has "fill" but is missing "sizes" prop. Please add it to improve page performance. Read more: https://nextjs.org/docs/api-reference/next/image#sizes
+[01:03:04.221] Browser WARN    Image with src "https://images.unsplash.com/photo-1529156069898-49953e39b3ac?w=400" has "fill" but is missing "sizes" prop. Please add it to improve page performance. Read more: https://nextjs.org/docs/api-reference/next/image#sizes
+[01:03:04.221] Browser WARN    Image with src "https://images.unsplash.com/photo-1511895426328-dc8714191300?w=400" has "fill" but is missing "sizes" prop. Please add it to improve page performance. Read more: https://nextjs.org/docs/api-reference/next/image#sizes
+[01:03:04.253] Server  LOG     Consulta ejecutada: {}
+[01:03:04.727] Server  LOG     Consulta ejecutada: {}
+[01:03:05.177] Server  LOG     Consulta ejecutada: {}
+[01:03:05.246] Server  LOG     Ejecutada query {}
+[01:03:05.248] Server  LOG     Ejecutada query {}
+[01:03:05.249] Server  LOG     Ejecutada query {}
+[01:03:05.273] Server  LOG     Ejecutada query {}
+[01:03:05.350] Browser WARN    Image with src "https://images.unsplash.com/photo-1529156069898-49953e39b3ac?w=600" has "fill" but is missing "sizes" prop. Please add it to improve page performance. Read more: https://nextjs.org/docs/api-reference/next/image#sizes
+[01:03:08.146] Server  ERROR    ⨯ "upstream image response failed for" "https://images.unsplash.com/photo-1544776193-52f10d0f912c?w=400" 404
+[01:03:08.221] Browser INFO    %cDownload the React DevTools for a better development experience: https://react.dev/link/react-devtools font-weight:bold
+[01:03:08.460] Browser WARN    Image with src "/images/logos/logo-parroquia.png" has "fill" but is missing "sizes" prop. Please add it to improve page performance. Read more: https://nextjs.org/docs/api-reference/next/image#sizes
+[01:03:08.460] Browser WARN    Image with src "https://images.unsplash.com/photo-1529156069898-49953e39b3ac?w=600" has "fill" but is missing "sizes" prop. Please add it to improve page performance. Read more: https://nextjs.org/docs/api-reference/next/image#sizes
+[01:03:08.460] Browser WARN    Image with src "https://images.unsplash.com/photo-1544620347-c4fd4a3d5957?w=600" has "fill" but is missing "sizes" prop. Please add it to improve page performance. Read more: https://nextjs.org/docs/api-reference/next/image#sizes
+[01:03:08.460] Browser WARN    Image with src "https://images.unsplash.com/photo-1544776193-52f10d0f912c?w=400" has "fill" but is missing "sizes" prop. Please add it to improve page performance. Read more: https://nextjs.org/docs/api-reference/next/image#sizes
+[01:03:08.460] Browser WARN    Image with src "https://images.unsplash.com/photo-1532629345422-7515f3d16bb6?w=400" has "fill" but is missing "sizes" prop. Please add it to improve page performance. Read more: https://nextjs.org/docs/api-reference/next/image#sizes
+[01:03:08.460] Browser WARN    Image with src "https://images.unsplash.com/photo-1529156069898-49953e39b3ac?w=400" has "fill" but is missing "sizes" prop. Please add it to improve page performance. Read more: https://nextjs.org/docs/api-reference/next/image#sizes
+[01:03:08.460] Browser WARN    Image with src "https://images.unsplash.com/photo-1511895426328-dc8714191300?w=400" has "fill" but is missing "sizes" prop. Please add it to improve page performance. Read more: https://nextjs.org/docs/api-reference/next/image#sizes
+[01:03:08.475] Server  LOG     Consulta ejecutada: {}
+[01:03:08.492] Server  LOG     Consulta ejecutada: {}
+[01:03:08.529] Server  LOG     Consulta ejecutada: {}
+[01:03:08.595] Server  LOG     Ejecutada query {}
+[01:03:08.597] Server  LOG     Ejecutada query {}
+[01:03:08.598] Server  LOG     Ejecutada query {}
+[01:03:09.051] Server  LOG     Ejecutada query {}
+[01:03:10.970] Server  LOG      ✓ Compiled in 189ms
+[01:03:13.035] Server  ERROR    ⨯ "upstream image response failed for" "https://images.unsplash.com/photo-1544776193-52f10d0f912c?w=400" 404
+[01:03:13.178] Browser INFO    %cDownload the React DevTools for a better development experience: https://react.dev/link/react-devtools font-weight:bold
+[01:03:13.427] Browser WARN    Image with src "/images/logos/logo-parroquia.png" has "fill" but is missing "sizes" prop. Please add it to improve page performance. Read more: https://nextjs.org/docs/api-reference/next/image#sizes
+[01:03:13.427] Browser WARN    Image with src "https://images.unsplash.com/photo-1529156069898-49953e39b3ac?w=600" has "fill" but is missing "sizes" prop. Please add it to improve page performance. Read more: https://nextjs.org/docs/api-reference/next/image#sizes
+[01:03:13.427] Browser WARN    Image with src "https://images.unsplash.com/photo-1544620347-c4fd4a3d5957?w=600" has "fill" but is missing "sizes" prop. Please add it to improve page performance. Read more: https://nextjs.org/docs/api-reference/next/image#sizes
+[01:03:13.427] Browser WARN    Image with src "https://images.unsplash.com/photo-1544776193-52f10d0f912c?w=400" has "fill" but is missing "sizes" prop. Please add it to improve page performance. Read more: https://nextjs.org/docs/api-reference/next/image#sizes
+[01:03:13.427] Browser WARN    Image with src "https://images.unsplash.com/photo-1532629345422-7515f3d16bb6?w=400" has "fill" but is missing "sizes" prop. Please add it to improve page performance. Read more: https://nextjs.org/docs/api-reference/next/image#sizes
+[01:03:13.427] Browser WARN    Image with src "https://images.unsplash.com/photo-1529156069898-49953e39b3ac?w=400" has "fill" but is missing "sizes" prop. Please add it to improve page performance. Read more: https://nextjs.org/docs/api-reference/next/image#sizes
+[01:03:13.427] Browser WARN    Image with src "https://images.unsplash.com/photo-1511895426328-dc8714191300?w=400" has "fill" but is missing "sizes" prop. Please add it to improve page performance. Read more: https://nextjs.org/docs/api-reference/next/image#sizes
+[01:03:13.515] Server  LOG     Consulta ejecutada: {}
+[01:03:14.414] Server  LOG     Consulta ejecutada: {}
+[01:03:14.611] Server  LOG     Consulta ejecutada: {}
+[01:03:18.163] Server  ERROR    ⨯ "upstream image response failed for" "https://images.unsplash.com/photo-1544776193-52f10d0f912c?w=400" 404
+[01:03:18.203] Browser INFO    %cDownload the React DevTools for a better development experience: https://react.dev/link/react-devtools font-weight:bold
+[01:03:18.418] Server  LOG     Consulta ejecutada: {}
+[01:03:18.544] Browser WARN    Image with src "/images/logos/logo-parroquia.png" has "fill" but is missing "sizes" prop. Please add it to improve page performance. Read more: https://nextjs.org/docs/api-reference/next/image#sizes
+[01:03:18.544] Browser WARN    Image with src "https://images.unsplash.com/photo-1529156069898-49953e39b3ac?w=600" has "fill" but is missing "sizes" prop. Please add it to improve page performance. Read more: https://nextjs.org/docs/api-reference/next/image#sizes
+[01:03:18.544] Browser WARN    Image with src "https://images.unsplash.com/photo-1544620347-c4fd4a3d5957?w=600" has "fill" but is missing "sizes" prop. Please add it to improve page performance. Read more: https://nextjs.org/docs/api-reference/next/image#sizes
+[01:03:18.544] Browser WARN    Image with src "https://images.unsplash.com/photo-1544776193-52f10d0f912c?w=400" has "fill" but is missing "sizes" prop. Please add it to improve page performance. Read more: https://nextjs.org/docs/api-reference/next/image#sizes
+[01:03:18.544] Browser WARN    Image with src "https://images.unsplash.com/photo-1532629345422-7515f3d16bb6?w=400" has "fill" but is missing "sizes" prop. Please add it to improve page performance. Read more: https://nextjs.org/docs/api-reference/next/image#sizes
+[01:03:18.544] Browser WARN    Image with src "https://images.unsplash.com/photo-1529156069898-49953e39b3ac?w=400" has "fill" but is missing "sizes" prop. Please add it to improve page performance. Read more: https://nextjs.org/docs/api-reference/next/image#sizes
+[01:03:18.544] Browser WARN    Image with src "https://images.unsplash.com/photo-1511895426328-dc8714191300?w=400" has "fill" but is missing "sizes" prop. Please add it to improve page performance. Read more: https://nextjs.org/docs/api-reference/next/image#sizes
+[01:03:18.621] Server  LOG     Consulta ejecutada: {}
+[01:03:18.983] Server  LOG     Consulta ejecutada: {}
+[01:03:19.004] Server  LOG     Ejecutada query {}
+[01:03:19.005] Server  LOG     Ejecutada query {}
+[01:03:19.006] Server  LOG     Ejecutada query {}
+[01:03:19.026] Server  LOG     Ejecutada query {}
+[01:04:10.698] Server  LOG      ✓ Compiled in 112ms
+[01:08:15.417] Browser WARN    Image with src "/uploads/donations/1765767518868-og7gct.jpg" has "fill" but is missing "sizes" prop. Please add it to improve page performance. Read more: https://nextjs.org/docs/api-reference/next/image#sizes
+[01:08:44.737] Browser INFO    %cDownload the React DevTools for a better development experience: https://react.dev/link/react-devtools font-weight:bold
+[01:08:44.832] Server  LOG     Consulta ejecutada: {}
+[01:08:44.849] Server  LOG     Consulta ejecutada: {}
+[01:08:44.879] Server  LOG     Consulta ejecutada: {}
+[01:08:44.913] Server  LOG     Ejecutada query {}
+[01:08:44.914] Server  LOG     Ejecutada query {}
+[01:08:44.915] Server  LOG     Ejecutada query {}
+[01:08:45.086] Browser ERROR   A tree hydrated but some attributes of the server rendered HTML didn't match the client properties. This won't be patched up. This can happen if a SSR-ed Client Component used:
+
+- A server/client branch `if (typeof window !== 'undefined')`.
+- Variable input such as `Date.now()` or `Math.random()` which changes each time it's called.
+- Date formatting in a user's locale which doesn't match the server.
+- External changing data without sending a snapshot of it along with the HTML.
+- Invalid HTML tag nesting.
+
+It can also happen if the client has a browser extension installed which messes with the HTML before React loaded.
+
+%s%s https://react.dev/link/hydration-mismatch 
+
+  ...
+    <HotReload globalError={[...]} webSocket={WebSocket} staticIndicatorState={{pathname:null, ...}}>
+      <AppDevOverlayErrorBoundary globalError={[...]}>
+        <ReplaySsrOnlyErrors>
+        <DevRootHTTPAccessFallbackBoundary>
+          <HTTPAccessFallbackBoundary notFound={<NotAllowedRootHTTPFallbackError>}>
+            <HTTPAccessFallbackErrorBoundary pathname="/" notFound={<NotAllowedRootHTTPFallbackError>} ...>
+              <RedirectBoundary>
+                <RedirectErrorBoundary router={{...}}>
+                  <Head>
+                  <__next_root_layout_boundary__>
+                    <SegmentViewNode type="layout" pagePath="layout.tsx">
+                      <SegmentTrieNode>
+                      <link>
+                      <script>
+                      <RootLayout>
+                        <html lang="es">
+                          <body
+                            className="geist_a71539c9-module__T19VSG__variable geist_mono_8d43a2aa-module__8Li5zG__var..."
+-                           __processed_1299dc65-19f7-467b-a337-9401b3a8e53a__="true"
+-                           bis_register="W3sibWFzdGVyIjp0cnVlLCJleHRlbnNpb25JZCI6ImVwcGlvY2VtaG1ubGJoanBsY2drb2ZjaWll..."
+                          >
+                  ...
+
+[01:08:45.086] Browser WARN    Image with src "/images/logos/logo-parroquia.png" has "fill" but is missing "sizes" prop. Please add it to improve page performance. Read more: https://nextjs.org/docs/api-reference/next/image#sizes
+[01:08:45.107] Server  LOG     Ejecutada query {}
+[01:08:45.288] Browser WARN    Image with src "/uploads/donations/1765767518868-og7gct.jpg" has "fill" but is missing "sizes" prop. Please add it to improve page performance. Read more: https://nextjs.org/docs/api-reference/next/image#sizes
+[01:09:22.917] Browser WARN    Image with src "https://images.unsplash.com/photo-1529156069898-49953e39b3ac?w=600" has "fill" but is missing "sizes" prop. Please add it to improve page performance. Read more: https://nextjs.org/docs/api-reference/next/image#sizes
+[01:09:24.620] Browser WARN    Image with src "https://images.unsplash.com/photo-1544620347-c4fd4a3d5957?w=600" has "fill" but is missing "sizes" prop. Please add it to improve page performance. Read more: https://nextjs.org/docs/api-reference/next/image#sizes
+[01:09:29.641] Browser INFO    %cDownload the React DevTools for a better development experience: https://react.dev/link/react-devtools font-weight:bold
+[01:09:30.312] Browser ERROR   A tree hydrated but some attributes of the server rendered HTML didn't match the client properties. This won't be patched up. This can happen if a SSR-ed Client Component used:
+
+- A server/client branch `if (typeof window !== 'undefined')`.
+- Variable input such as `Date.now()` or `Math.random()` which changes each time it's called.
+- Date formatting in a user's locale which doesn't match the server.
+- External changing data without sending a snapshot of it along with the HTML.
+- Invalid HTML tag nesting.
+
+It can also happen if the client has a browser extension installed which messes with the HTML before React loaded.
+
+%s%s https://react.dev/link/hydration-mismatch 
+
+  ...
+    <HotReload globalError={[...]} webSocket={WebSocket} staticIndicatorState={{pathname:null, ...}}>
+      <AppDevOverlayErrorBoundary globalError={[...]}>
+        <ReplaySsrOnlyErrors>
+        <DevRootHTTPAccessFallbackBoundary>
+          <HTTPAccessFallbackBoundary notFound={<NotAllowedRootHTTPFallbackError>}>
+            <HTTPAccessFallbackErrorBoundary pathname="/reservar" notFound={<NotAllowedRootHTTPFallbackError>} ...>
+              <RedirectBoundary>
+                <RedirectErrorBoundary router={{...}}>
+                  <Head>
+                  <__next_root_layout_boundary__>
+                    <SegmentViewNode type="layout" pagePath="layout.tsx">
+                      <SegmentTrieNode>
+                      <link>
+                      <script>
+                      <RootLayout>
+                        <html lang="es">
+                          <body
+                            className="geist_a71539c9-module__T19VSG__variable geist_mono_8d43a2aa-module__8Li5zG__var..."
+-                           __processed_19d6a34b-2f6d-44fc-8b7d-2b9c04321640__="true"
+-                           bis_register="W3sibWFzdGVyIjp0cnVlLCJleHRlbnNpb25JZCI6ImVwcGlvY2VtaG1ubGJoanBsY2drb2ZjaWll..."
+                          >
+                  ...
+
+[01:09:30.334] Server  LOG     Consulta ejecutada: {}
+[01:09:30.342] Server  LOG     Consulta ejecutada: {}
+[01:09:30.347] Server  LOG     Consulta ejecutada: {}
+[01:09:30.364] Server  LOG     Consulta ejecutada: {}
+[01:09:30.559] Browser INFO    %cDownload the React DevTools for a better development experience: https://react.dev/link/react-devtools font-weight:bold
+[01:09:30.709] Server  LOG     Consulta ejecutada: {}
+[01:09:30.737] Browser INFO    %cDownload the React DevTools for a better development experience: https://react.dev/link/react-devtools font-weight:bold
+[01:09:31.028] Browser ERROR   A tree hydrated but some attributes of the server rendered HTML didn't match the client properties. This won't be patched up. This can happen if a SSR-ed Client Component used:
+
+- A server/client branch `if (typeof window !== 'undefined')`.
+- Variable input such as `Date.now()` or `Math.random()` which changes each time it's called.
+- Date formatting in a user's locale which doesn't match the server.
+- External changing data without sending a snapshot of it along with the HTML.
+- Invalid HTML tag nesting.
+
+It can also happen if the client has a browser extension installed which messes with the HTML before React loaded.
+
+%s%s https://react.dev/link/hydration-mismatch 
+
+  ...
+    <HotReload globalError={[...]} webSocket={WebSocket} staticIndicatorState={{pathname:null, ...}}>
+      <AppDevOverlayErrorBoundary globalError={[...]}>
+        <ReplaySsrOnlyErrors>
+        <DevRootHTTPAccessFallbackBoundary>
+          <HTTPAccessFallbackBoundary notFound={<NotAllowedRootHTTPFallbackError>}>
+            <HTTPAccessFallbackErrorBoundary pathname="/servicios" notFound={<NotAllowedRootHTTPFallbackError>} ...>
+              <RedirectBoundary>
+                <RedirectErrorBoundary router={{...}}>
+                  <Head>
+                  <__next_root_layout_boundary__>
+                    <SegmentViewNode type="layout" pagePath="layout.tsx">
+                      <SegmentTrieNode>
+                      <link>
+                      <script>
+                      <RootLayout>
+                        <html lang="es">
+                          <body
+                            className="geist_a71539c9-module__T19VSG__variable geist_mono_8d43a2aa-module__8Li5zG__var..."
+-                           __processed_9c839c1a-4ed4-40b7-81eb-9af7c68a37be__="true"
+-                           bis_register="W3sibWFzdGVyIjp0cnVlLCJleHRlbnNpb25JZCI6ImVwcGlvY2VtaG1ubGJoanBsY2drb2ZjaWll..."
+                          >
+                  ...
+
+[01:09:31.031] Browser ERROR   A tree hydrated but some attributes of the server rendered HTML didn't match the client properties. This won't be patched up. This can happen if a SSR-ed Client Component used:
+
+- A server/client branch `if (typeof window !== 'undefined')`.
+- Variable input such as `Date.now()` or `Math.random()` which changes each time it's called.
+- Date formatting in a user's locale which doesn't match the server.
+- External changing data without sending a snapshot of it along with the HTML.
+- Invalid HTML tag nesting.
+
+It can also happen if the client has a browser extension installed which messes with the HTML before React loaded.
+
+%s%s https://react.dev/link/hydration-mismatch 
+
+  ...
+    <HotReload globalError={[...]} webSocket={WebSocket} staticIndicatorState={{pathname:null, ...}}>
+      <AppDevOverlayErrorBoundary globalError={[...]}>
+        <ReplaySsrOnlyErrors>
+        <DevRootHTTPAccessFallbackBoundary>
+          <HTTPAccessFallbackBoundary notFound={<NotAllowedRootHTTPFallbackError>}>
+            <HTTPAccessFallbackErrorBoundary pathname="/horarios" notFound={<NotAllowedRootHTTPFallbackError>} ...>
+              <RedirectBoundary>
+                <RedirectErrorBoundary router={{...}}>
+                  <Head>
+                  <__next_root_layout_boundary__>
+                    <SegmentViewNode type="layout" pagePath="layout.tsx">
+                      <SegmentTrieNode>
+                      <link>
+                      <script>
+                      <RootLayout>
+                        <html lang="es">
+                          <body
+                            className="geist_a71539c9-module__T19VSG__variable geist_mono_8d43a2aa-module__8Li5zG__var..."
+-                           __processed_6891f552-fed1-4d8d-b84c-2c218fe41619__="true"
+-                           bis_register="W3sibWFzdGVyIjp0cnVlLCJleHRlbnNpb25JZCI6ImVwcGlvY2VtaG1ubGJoanBsY2drb2ZjaWll..."
+                          >
+                  ...
+
+[01:09:36.512] Browser WARN    Image with src "https://images.unsplash.com/photo-1532629345422-7515f3d16bb6?w=400" has "fill" but is missing "sizes" prop. Please add it to improve page performance. Read more: https://nextjs.org/docs/api-reference/next/image#sizes
+[01:09:36.512] Browser WARN    Image with src "https://images.unsplash.com/photo-1511895426328-dc8714191300?w=400" has "fill" but is missing "sizes" prop. Please add it to improve page performance. Read more: https://nextjs.org/docs/api-reference/next/image#sizes
+[01:09:36.512] Browser WARN    Image with src "https://images.unsplash.com/photo-1529156069898-49953e39b3ac?w=400" has "fill" but is missing "sizes" prop. Please add it to improve page performance. Read more: https://nextjs.org/docs/api-reference/next/image#sizes
+[01:09:37.212] Server  ERROR    ⨯ "upstream image response failed for" "https://images.unsplash.com/photo-1544776193-52f10d0f912c?w=400" 404
+[01:10:01.658] Server  LOG     Consulta ejecutada: {}
+[01:10:01.677] Server  LOG     Consulta ejecutada: {}
+[01:10:01.691] Server  LOG     Consulta ejecutada: {}
+[01:10:01.708] Browser WARN    Detected `scroll-behavior: smooth` on the `<html>` element. To disable smooth scrolling during route transitions, add `data-scroll-behavior="smooth"` to your <html> element. Learn more: https://nextjs.org/docs/messages/missing-data-scroll-behavior
+[01:10:01.725] Server  LOG     Consulta ejecutada: {}
+[01:11:33.661] Server  LOG     Consulta ejecutada: {}
+[01:11:33.675] Server  LOG     Consulta ejecutada: {}
+[01:11:37.628] Browser WARN    Image with src "https://images.unsplash.com/photo-1544427920-c49ccfb85579?q=80&w=600" has "fill" but is missing "sizes" prop. Please add it to improve page performance. Read more: https://nextjs.org/docs/api-reference/next/image#sizes
+[01:11:37.628] Browser WARN    Image with src "https://images.unsplash.com/photo-1438232992991-995b7058bbb3?q=80&w=600" has "fill" but is missing "sizes" prop. Please add it to improve page performance. Read more: https://nextjs.org/docs/api-reference/next/image#sizes
+[01:11:43.920] Server  LOG     Consulta ejecutada: {}
+[01:11:43.938] Server  LOG     Consulta ejecutada: {}
+[01:11:43.941] Server  LOG     Consulta ejecutada: {}
+[01:11:43.943] Server  LOG     Consulta ejecutada: {}
+[01:11:43.946] Server  LOG     Consulta ejecutada: {}
+[01:11:43.948] Server  LOG     Consulta ejecutada: {}
+[01:11:43.950] Server  LOG     Consulta ejecutada: {}
+[01:11:43.952] Server  LOG     Consulta ejecutada: {}
+[01:11:48.997] Server  LOG     Consulta ejecutada: {}
+[01:11:49.000] Server  LOG     Consulta ejecutada: {}
+[01:11:49.002] Server  LOG     Consulta ejecutada: {}
+[01:11:49.004] Server  LOG     Consulta ejecutada: {}
+[01:11:49.006] Server  LOG     Consulta ejecutada: {}
+[01:11:49.011] Server  LOG     Consulta ejecutada: {}
+[01:11:49.013] Server  LOG     Consulta ejecutada: {}
+[01:11:49.017] Server  LOG     Consulta ejecutada: {}
+[01:11:49.020] Server  LOG     Consulta ejecutada: {}
+[01:11:49.029] Server  LOG     Consulta ejecutada: {}
+[01:11:49.039] Server  LOG     Consulta ejecutada: {}
+[01:11:49.040] Server  LOG     Consulta ejecutada: {}
+[01:11:49.057] Server  LOG     Consulta ejecutada: {}
+[01:11:49.059] Server  LOG     Consulta ejecutada: {}
+[01:11:49.060] Server  LOG     Consulta ejecutada: {}
+[01:11:49.062] Server  LOG     Consulta ejecutada: {}
+[01:11:49.062] Server  LOG     Consulta ejecutada: {}
+[01:11:49.065] Server  LOG     Consulta ejecutada: {}
+[01:11:49.068] Server  LOG     Consulta ejecutada: {}
+[01:11:49.070] Server  LOG     Consulta ejecutada: {}
+[01:11:49.072] Server  LOG     Consulta ejecutada: {}
+[01:11:49.073] Server  LOG     Consulta ejecutada: {}
+[01:11:49.074] Server  LOG     Consulta ejecutada: {}
+[01:11:49.084] Server  LOG     Consulta ejecutada: {}
+[01:11:49.086] Server  LOG     Consulta ejecutada: {}
+[01:11:49.086] Server  LOG     Consulta ejecutada: {}
+[01:11:49.087] Server  LOG     Consulta ejecutada: {}
+[01:11:49.087] Server  LOG     Consulta ejecutada: {}
+[01:11:49.088] Server  LOG     Consulta ejecutada: {}
+[01:11:49.089] Server  LOG     Consulta ejecutada: {}
+[01:11:49.090] Server  LOG     Consulta ejecutada: {}
+[01:11:49.092] Server  LOG     Consulta ejecutada: {}
+[01:11:49.093] Server  LOG     Consulta ejecutada: {}
+[01:11:49.094] Server  LOG     Consulta ejecutada: {}
+[01:11:49.095] Server  LOG     Consulta ejecutada: {}
+[01:11:49.095] Server  LOG     Consulta ejecutada: {}
+[01:11:51.478] Server  LOG     Consulta ejecutada: {}
+[01:11:51.480] Server  LOG     Consulta ejecutada: {}
+[01:11:51.492] Server  LOG     Consulta ejecutada: {}
+[01:11:51.494] Server  LOG     Consulta ejecutada: {}
+[01:11:53.292] Server  LOG     Consulta ejecutada: {}
+[01:11:53.294] Server  LOG     Consulta ejecutada: {}
+[01:11:53.295] Server  LOG     Consulta ejecutada: {}
+[01:11:53.307] Server  LOG     Consulta ejecutada: {}
+[01:11:53.309] Server  LOG     Consulta ejecutada: {}
+[01:11:53.311] Server  LOG     Consulta ejecutada: {}
+[01:11:54.587] Server  LOG     Consulta ejecutada: {}
+[01:11:54.599] Server  LOG     Consulta ejecutada: {}
+[01:11:57.141] Server  LOG     Consulta ejecutada: {}
+[01:11:57.145] Server  LOG     Consulta ejecutada: {}
+[01:11:57.162] Server  LOG     Consulta ejecutada: {}
+[01:11:57.164] Server  LOG     Consulta ejecutada: {}
+[01:11:59.015] Server  LOG     Consulta ejecutada: {}
+[01:11:59.018] Server  LOG     Consulta ejecutada: {}
+[01:11:59.031] Server  LOG     Consulta ejecutada: {}
+[01:11:59.032] Server  LOG     Consulta ejecutada: {}
+[01:12:03.133] Server  LOG     Consulta ejecutada: {}
+[01:12:03.154] Server  LOG     Consulta ejecutada: {}
+[01:12:07.536] Server  LOG     Ejecutada query {}
+[01:12:07.548] Server  LOG     Ejecutada query {}
+[01:12:11.048] Server  LOG     Consulta ejecutada: {}
+[01:12:11.063] Server  LOG     Consulta ejecutada: {}
+[01:12:13.493] Server  LOG     Consulta ejecutada: {}
+[01:12:13.503] Server  LOG     Consulta ejecutada: {}
+[01:12:15.853] Server  LOG     Consulta ejecutada: {}
+[01:12:15.920] Server  LOG     Consulta ejecutada: {}
+[01:12:17.194] Server  LOG     Consulta ejecutada: {}
+[01:12:17.209] Server  LOG     Consulta ejecutada: {}
+[01:12:18.951] Server  LOG     Consulta ejecutada: {}
+[01:12:18.956] Server  LOG     Consulta ejecutada: {}
+[01:12:18.957] Server  LOG     Consulta ejecutada: {}
+[01:12:18.958] Server  LOG     Consulta ejecutada: {}
+[01:12:18.959] Server  LOG     Consulta ejecutada: {}
+[01:12:18.960] Server  LOG     Consulta ejecutada: {}
+[01:12:18.960] Server  LOG     Consulta ejecutada: {}
+[01:12:18.960] Server  LOG     Consulta ejecutada: {}
+[01:12:18.962] Server  LOG     Consulta ejecutada: {}
+[01:12:18.962] Server  LOG     Consulta ejecutada: {}
+[01:12:18.964] Server  LOG     Consulta ejecutada: {}
+[01:12:18.965] Server  LOG     Consulta ejecutada: {}
+[01:12:18.966] Server  LOG     Consulta ejecutada: {}
+[01:12:18.968] Server  LOG     Consulta ejecutada: {}
+[01:12:18.978] Server  LOG     Consulta ejecutada: {}
+[01:12:18.979] Server  LOG     Consulta ejecutada: {}
+[01:12:18.979] Server  LOG     Consulta ejecutada: {}
+[01:12:18.979] Server  LOG     Consulta ejecutada: {}
+[01:12:18.980] Server  LOG     Consulta ejecutada: {}
+[01:12:18.982] Server  LOG     Consulta ejecutada: {}
+[01:12:18.983] Server  LOG     Consulta ejecutada: {}
+[01:12:18.984] Server  LOG     Consulta ejecutada: {}
+[01:12:18.986] Server  LOG     Consulta ejecutada: {}
+[01:12:18.995] Server  LOG     Consulta ejecutada: {}
+[01:12:18.996] Server  LOG     Consulta ejecutada: {}
+[01:12:18.997] Server  LOG     Consulta ejecutada: {}
+[01:12:18.998] Server  LOG     Consulta ejecutada: {}
+[01:12:18.999] Server  LOG     Consulta ejecutada: {}
+[01:12:19.001] Server  LOG     Consulta ejecutada: {}
+[01:12:19.002] Server  LOG     Consulta ejecutada: {}
+[01:12:19.003] Server  LOG     Consulta ejecutada: {}
+[01:12:19.004] Server  LOG     Consulta ejecutada: {}
+[01:12:19.005] Server  LOG     Consulta ejecutada: {}
+[01:12:19.007] Server  LOG     Consulta ejecutada: {}
+[01:12:19.009] Server  LOG     Consulta ejecutada: {}
+[01:12:19.010] Server  LOG     Consulta ejecutada: {}
+[01:13:57.024] Browser WARN    Image with src "/images/logos/logo-parroquia.png" has "fill" but is missing "sizes" prop. Please add it to improve page performance. Read more: https://nextjs.org/docs/api-reference/next/image#sizes
+[01:14:31.288] Browser INFO    %cDownload the React DevTools for a better development experience: https://react.dev/link/react-devtools font-weight:bold
+[01:14:31.407] Server  ERROR    ⨯ "upstream image response failed for" "https://images.unsplash.com/photo-1544776193-52f10d0f912c?w=400" 404
+[01:14:31.419] Server  LOG     Consulta ejecutada: {}
+[01:14:31.431] Server  LOG     Consulta ejecutada: {}
+[01:14:31.466] Server  LOG     Consulta ejecutada: {}
+[01:14:31.505] Server  LOG     Ejecutada query {}
+[01:14:31.506] Server  LOG     Ejecutada query {}
+[01:14:31.507] Server  LOG     Ejecutada query {}
+[01:14:31.520] Server  LOG     Ejecutada query {}
+[01:14:31.914] Browser WARN    Image with src "/images/logos/logo-parroquia.png" has "fill" but is missing "sizes" prop. Please add it to improve page performance. Read more: https://nextjs.org/docs/api-reference/next/image#sizes
+[01:14:31.914] Browser WARN    Image with src "https://images.unsplash.com/photo-1529156069898-49953e39b3ac?w=600" has "fill" but is missing "sizes" prop. Please add it to improve page performance. Read more: https://nextjs.org/docs/api-reference/next/image#sizes
+[01:14:31.914] Browser WARN    Image with src "https://images.unsplash.com/photo-1544620347-c4fd4a3d5957?w=600" has "fill" but is missing "sizes" prop. Please add it to improve page performance. Read more: https://nextjs.org/docs/api-reference/next/image#sizes
+[01:14:31.914] Browser WARN    Image with src "https://images.unsplash.com/photo-1532629345422-7515f3d16bb6?w=400" has "fill" but is missing "sizes" prop. Please add it to improve page performance. Read more: https://nextjs.org/docs/api-reference/next/image#sizes
+[01:14:31.914] Browser WARN    Image with src "https://images.unsplash.com/photo-1529156069898-49953e39b3ac?w=400" has "fill" but is missing "sizes" prop. Please add it to improve page performance. Read more: https://nextjs.org/docs/api-reference/next/image#sizes
+[01:14:31.914] Browser WARN    Image with src "https://images.unsplash.com/photo-1511895426328-dc8714191300?w=400" has "fill" but is missing "sizes" prop. Please add it to improve page performance. Read more: https://nextjs.org/docs/api-reference/next/image#sizes
+[01:14:31.914] Browser WARN    Image with src "/uploads/donations/1765767518868-og7gct.jpg" has "fill" but is missing "sizes" prop. Please add it to improve page performance. Read more: https://nextjs.org/docs/api-reference/next/image#sizes
+[01:15:31.190] Server  LOG     Ejecutada query {}
+[01:15:31.208] Server  LOG     Ejecutada query {}
+[01:15:41.163] Server  LOG     Ejecutada query {}
+[01:15:42.665] Server  LOG     Ejecutada query {}
+[01:15:44.690] Browser INFO    %cDownload the React DevTools for a better development experience: https://react.dev/link/react-devtools font-weight:bold
+[01:15:44.769] Server  LOG     Consulta ejecutada: {}
+[01:15:44.803] Server  LOG     Consulta ejecutada: {}
+[01:15:44.883] Server  LOG     Consulta ejecutada: {}
+[01:15:44.894] Browser WARN    Image with src "/images/logos/logo-parroquia.png" has "fill" but is missing "sizes" prop. Please add it to improve page performance. Read more: https://nextjs.org/docs/api-reference/next/image#sizes
+[01:15:44.929] Server  LOG     Ejecutada query {}
+[01:15:44.939] Server  LOG     Ejecutada query {}
+[01:15:44.943] Server  LOG     Ejecutada query {}
+[01:15:44.971] Server  LOG     Ejecutada query {}
+[01:15:45.033] Browser WARN    Image with src "https://images.unsplash.com/photo-1529156069898-49953e39b3ac?w=600" has "fill" but is missing "sizes" prop. Please add it to improve page performance. Read more: https://nextjs.org/docs/api-reference/next/image#sizes
+[01:15:45.215] Browser WARN    Image with src "/uploads/donations/1765767518868-og7gct.jpg" has "fill" but is missing "sizes" prop. Please add it to improve page performance. Read more: https://nextjs.org/docs/api-reference/next/image#sizes
+[01:15:55.162] Server  LOG     Ejecutada query {}
+[01:15:56.315] Server  LOG     Ejecutada query {}
+[01:15:58.248] Browser INFO    %cDownload the React DevTools for a better development experience: https://react.dev/link/react-devtools font-weight:bold
+[01:15:58.352] Server  LOG     Consulta ejecutada: {}
+[01:15:58.388] Server  LOG     Consulta ejecutada: {}
+[01:15:58.472] Browser WARN    Image with src "/images/logos/logo-parroquia.png" has "fill" but is missing "sizes" prop. Please add it to improve page performance. Read more: https://nextjs.org/docs/api-reference/next/image#sizes
+[01:15:58.472] Browser WARN    Image with src "https://images.unsplash.com/photo-1529156069898-49953e39b3ac?w=600" has "fill" but is missing "sizes" prop. Please add it to improve page performance. Read more: https://nextjs.org/docs/api-reference/next/image#sizes
+[01:15:58.472] Browser WARN    Image with src "https://images.unsplash.com/photo-1544620347-c4fd4a3d5957?w=600" has "fill" but is missing "sizes" prop. Please add it to improve page performance. Read more: https://nextjs.org/docs/api-reference/next/image#sizes
+[01:15:58.529] Server  LOG     Consulta ejecutada: {}
+[01:15:58.601] Server  LOG     Ejecutada query {}
+[01:15:58.603] Server  LOG     Ejecutada query {}
+[01:15:58.605] Server  LOG     Ejecutada query {}
+[01:15:58.637] Server  LOG     Ejecutada query {}
+[01:15:58.687] Browser WARN    Image with src "https://images.unsplash.com/photo-1532629345422-7515f3d16bb6?w=400" has "fill" but is missing "sizes" prop. Please add it to improve page performance. Read more: https://nextjs.org/docs/api-reference/next/image#sizes
+[01:15:58.687] Browser WARN    Image with src "https://images.unsplash.com/photo-1529156069898-49953e39b3ac?w=400" has "fill" but is missing "sizes" prop. Please add it to improve page performance. Read more: https://nextjs.org/docs/api-reference/next/image#sizes
+[01:15:58.687] Browser WARN    Image with src "https://images.unsplash.com/photo-1511895426328-dc8714191300?w=400" has "fill" but is missing "sizes" prop. Please add it to improve page performance. Read more: https://nextjs.org/docs/api-reference/next/image#sizes
+[01:15:58.928] Browser WARN    Image with src "/uploads/donations/1765767518868-og7gct.jpg" has "fill" but is missing "sizes" prop. Please add it to improve page performance. Read more: https://nextjs.org/docs/api-reference/next/image#sizes
+[01:15:59.296] Server  ERROR    ⨯ "upstream image response failed for" "https://images.unsplash.com/photo-1544776193-52f10d0f912c?w=400" 404
+[01:16:03.598] Server  LOG     Ejecutada query {}
+[01:16:04.779] Server  LOG     Ejecutada query {}
+[01:16:41.899] Browser INFO    %cDownload the React DevTools for a better development experience: https://react.dev/link/react-devtools font-weight:bold
+[01:16:41.967] Server  LOG     Consulta ejecutada: {}
+[01:16:41.978] Server  LOG     Consulta ejecutada: {}
+[01:16:41.996] Server  LOG     Consulta ejecutada: {}
+[01:16:42.015] Server  LOG     Ejecutada query {}
+[01:16:42.016] Server  LOG     Ejecutada query {}
+[01:16:42.016] Server  LOG     Ejecutada query {}
+[01:16:42.029] Server  LOG     Ejecutada query {}
+[01:16:42.063] Browser WARN    Image with src "/images/logos/logo-parroquia.png" has "fill" but is missing "sizes" prop. Please add it to improve page performance. Read more: https://nextjs.org/docs/api-reference/next/image#sizes
+[01:16:42.063] Browser WARN    Image with src "https://images.unsplash.com/photo-1529156069898-49953e39b3ac?w=600" has "fill" but is missing "sizes" prop. Please add it to improve page performance. Read more: https://nextjs.org/docs/api-reference/next/image#sizes
+[01:16:42.063] Browser WARN    Image with src "https://images.unsplash.com/photo-1544620347-c4fd4a3d5957?w=600" has "fill" but is missing "sizes" prop. Please add it to improve page performance. Read more: https://nextjs.org/docs/api-reference/next/image#sizes
+[01:16:46.174] Browser WARN    Image with src "/uploads/donations/1765767518868-og7gct.jpg" has "fill" but is missing "sizes" prop. Please add it to improve page performance. Read more: https://nextjs.org/docs/api-reference/next/image#sizes
+[01:16:52.745] Browser WARN    Image with src "https://images.unsplash.com/photo-1529156069898-49953e39b3ac?w=400" has "fill" but is missing "sizes" prop. Please add it to improve page performance. Read more: https://nextjs.org/docs/api-reference/next/image#sizes
+[01:16:52.745] Browser WARN    Image with src "https://images.unsplash.com/photo-1532629345422-7515f3d16bb6?w=400" has "fill" but is missing "sizes" prop. Please add it to improve page performance. Read more: https://nextjs.org/docs/api-reference/next/image#sizes
+[01:16:52.745] Browser WARN    Image with src "https://images.unsplash.com/photo-1511895426328-dc8714191300?w=400" has "fill" but is missing "sizes" prop. Please add it to improve page performance. Read more: https://nextjs.org/docs/api-reference/next/image#sizes
+[01:16:52.886] Server  ERROR    ⨯ "upstream image response failed for" "https://images.unsplash.com/photo-1544776193-52f10d0f912c?w=400" 404
+[01:17:30.380] Server  LOG     Consulta ejecutada: {}
+[01:17:30.391] Server  LOG     Consulta ejecutada: {}
+[01:17:30.440] Browser WARN    Detected `scroll-behavior: smooth` on the `<html>` element. To disable smooth scrolling during route transitions, add `data-scroll-behavior="smooth"` to your <html> element. Learn more: https://nextjs.org/docs/messages/missing-data-scroll-behavior
+[01:17:35.369] Server  LOG     Consulta ejecutada: {}
+[01:17:35.377] Server  LOG     Consulta ejecutada: {}
+[01:17:35.385] Server  LOG     Consulta ejecutada: {}
+[01:17:35.391] Server  LOG     Consulta ejecutada: {}
+[01:23:08.195] Server  LOG      ✓ Compiled in 155ms
+[01:23:30.562] Browser INFO    %cDownload the React DevTools for a better development experience: https://react.dev/link/react-devtools font-weight:bold
+[01:23:30.562] Browser WARN    Image with src "/images/logos/logo-parroquia.png" has "fill" but is missing "sizes" prop. Please add it to improve page performance. Read more: https://nextjs.org/docs/api-reference/next/image#sizes
+[01:23:30.562] Browser WARN    Image with src "https://images.unsplash.com/photo-1532629345422-7515f3d16bb6?w=400" has "fill" but is missing "sizes" prop. Please add it to improve page performance. Read more: https://nextjs.org/docs/api-reference/next/image#sizes
+[01:23:30.562] Browser WARN    Image with src "https://images.unsplash.com/photo-1529156069898-49953e39b3ac?w=400" has "fill" but is missing "sizes" prop. Please add it to improve page performance. Read more: https://nextjs.org/docs/api-reference/next/image#sizes
+[01:23:30.562] Browser WARN    Image with src "https://images.unsplash.com/photo-1511895426328-dc8714191300?w=400" has "fill" but is missing "sizes" prop. Please add it to improve page performance. Read more: https://nextjs.org/docs/api-reference/next/image#sizes
+[01:23:30.572] Server  ERROR    ⨯ "The requested resource isn't a valid image for" "/images/home/misionerosCleretianos.jpg" "received" null
+[01:23:30.588] Server  LOG     Consulta ejecutada: {}
+[01:23:30.613] Server  LOG     Consulta ejecutada: {}
+[01:23:30.624] Server  LOG     Consulta ejecutada: {}
+[01:23:30.664] Server  LOG     Ejecutada query {}
+[01:23:30.665] Server  LOG     Ejecutada query {}
+[01:23:30.666] Server  LOG     Ejecutada query {}
+[01:23:30.689] Server  LOG     Ejecutada query {}
+[01:23:30.833] Browser WARN    Image with src "https://images.unsplash.com/photo-1544620347-c4fd4a3d5957?w=600" has "fill" but is missing "sizes" prop. Please add it to improve page performance. Read more: https://nextjs.org/docs/api-reference/next/image#sizes
+[01:23:30.833] Browser WARN    Image with src "https://images.unsplash.com/photo-1529156069898-49953e39b3ac?w=600" has "fill" but is missing "sizes" prop. Please add it to improve page performance. Read more: https://nextjs.org/docs/api-reference/next/image#sizes
+[01:23:31.165] Server  ERROR    ⨯ "upstream image response failed for" "https://images.unsplash.com/photo-1544776193-52f10d0f912c?w=400" 404
+[01:23:59.897] Server  LOG      ✓ Compiled in 74ms
+[01:24:00.038] Server  ERROR    ⨯ "The requested resource isn't a valid image for" "/images/home/misionerosCleretianos.jpg" "received" null
+[01:24:23.848] Server  ERROR    ⨯ "The requested resource isn't a valid image for" "/images/home/misionerosCleretianos.jpg" "received" null
+[01:24:23.857] Browser INFO    %cDownload the React DevTools for a better development experience: https://react.dev/link/react-devtools font-weight:bold
+[01:24:24.049] Server  LOG     Consulta ejecutada: {}
+[01:24:24.075] Server  LOG     Consulta ejecutada: {}
+[01:24:24.115] Browser WARN    Image with src "/images/logos/logo-parroquia.png" has "fill" but is missing "sizes" prop. Please add it to improve page performance. Read more: https://nextjs.org/docs/api-reference/next/image#sizes
+[01:24:24.115] Browser WARN    Image with src "/images/home/misionerosCleretianos.jpg" has "fill" but is missing "sizes" prop. Please add it to improve page performance. Read more: https://nextjs.org/docs/api-reference/next/image#sizes
+[01:24:24.115] Browser WARN    Image with src "https://images.unsplash.com/photo-1532629345422-7515f3d16bb6?w=400" has "fill" but is missing "sizes" prop. Please add it to improve page performance. Read more: https://nextjs.org/docs/api-reference/next/image#sizes
+[01:24:24.115] Browser WARN    Image with src "https://images.unsplash.com/photo-1529156069898-49953e39b3ac?w=400" has "fill" but is missing "sizes" prop. Please add it to improve page performance. Read more: https://nextjs.org/docs/api-reference/next/image#sizes
+[01:24:24.115] Browser WARN    Image with src "https://images.unsplash.com/photo-1511895426328-dc8714191300?w=400" has "fill" but is missing "sizes" prop. Please add it to improve page performance. Read more: https://nextjs.org/docs/api-reference/next/image#sizes
+[01:24:24.136] Server  LOG     Consulta ejecutada: {}
+[01:24:24.170] Server  ERROR    ⨯ "upstream image response failed for" "https://images.unsplash.com/photo-1544776193-52f10d0f912c?w=400" 404
+[01:24:24.207] Server  LOG     Ejecutada query {}
+[01:24:24.209] Server  LOG     Ejecutada query {}
+[01:24:24.210] Server  LOG     Ejecutada query {}
+[01:24:24.239] Server  LOG     Ejecutada query {}
+[01:24:24.398] Browser WARN    Image with src "https://images.unsplash.com/photo-1529156069898-49953e39b3ac?w=600" has "fill" but is missing "sizes" prop. Please add it to improve page performance. Read more: https://nextjs.org/docs/api-reference/next/image#sizes
+[01:24:46.429] Server  LOG      ✓ Compiled in 57ms
+[01:24:46.595] Browser WARN    Image with src "/images/home/misioneros.jpg" has "fill" but is missing "sizes" prop. Please add it to improve page performance. Read more: https://nextjs.org/docs/api-reference/next/image#sizes
+[01:24:46.595] Browser WARN    Image with src "/images/home/misioneros.jpg" has "fill" but is missing "sizes" prop. Please add it to improve page performance. Read more: https://nextjs.org/docs/api-reference/next/image#sizes
+[01:25:14.555] Browser WARN    Image with src "/uploads/donations/1765767518868-og7gct.jpg" has "fill" but is missing "sizes" prop. Please add it to improve page performance. Read more: https://nextjs.org/docs/api-reference/next/image#sizes
+[01:27:42.944] Server  LOG      ✓ Compiled in 301ms
+[01:27:43.079] Server  ERROR    ⨯ "The requested resource isn't a valid image for" "/images/gallery/gallery-bg.jpg" "received" null
+[01:28:56.274] Server  LOG      ✓ Compiled in 124ms
+[01:30:06.902] Server  LOG      ✓ Compiled in 178ms
+[01:30:20.296] Server  LOG      ✓ Compiled in 177ms
+[01:30:20.546] Server  ERROR    ⨯ "The requested resource isn't a valid image for" "/images/bg/gallery-bg.jpg" "received" null
+[01:32:28.107] Server  LOG      ✓ Compiled in 133ms
+[01:32:44.262] Browser INFO    %cDownload the React DevTools for a better development experience: https://react.dev/link/react-devtools font-weight:bold
+[01:32:44.411] Server  LOG     Consulta ejecutada: {}
+[01:32:44.426] Server  LOG     Consulta ejecutada: {}
+[01:32:44.457] Server  LOG     Consulta ejecutada: {}
+[01:32:44.500] Server  LOG     Ejecutada query {}
+[01:32:44.501] Browser WARN    Image with src "/images/logos/logo-parroquia.png" has "fill" but is missing "sizes" prop. Please add it to improve page performance. Read more: https://nextjs.org/docs/api-reference/next/image#sizes
+[01:32:44.501] Server  LOG     Ejecutada query {}
+[01:32:44.502] Server  LOG     Ejecutada query {}
+[01:32:44.525] Server  LOG     Ejecutada query {}
+[01:32:44.733] Browser WARN    Image with src "/uploads/donations/1765767518868-og7gct.jpg" has "fill" but is missing "sizes" prop. Please add it to improve page performance. Read more: https://nextjs.org/docs/api-reference/next/image#sizes
+[01:32:49.752] Browser WARN    Image with src "https://images.unsplash.com/photo-1529156069898-49953e39b3ac?w=600" has "fill" but is missing "sizes" prop. Please add it to improve page performance. Read more: https://nextjs.org/docs/api-reference/next/image#sizes
+[01:32:50.543] Browser WARN    Image with src "/images/home/misioneros.jpg" has "fill" but is missing "sizes" prop. Please add it to improve page performance. Read more: https://nextjs.org/docs/api-reference/next/image#sizes
+[01:32:50.741] Server  ERROR    ⨯ "The requested resource isn't a valid image for" "/images/bg/gallery-bg.jpg" "received" null
+[01:32:51.813] Browser WARN    Image with src "https://images.unsplash.com/photo-1529156069898-49953e39b3ac?w=400" has "fill" but is missing "sizes" prop. Please add it to improve page performance. Read more: https://nextjs.org/docs/api-reference/next/image#sizes
+[01:32:51.813] Browser WARN    Image with src "https://images.unsplash.com/photo-1532629345422-7515f3d16bb6?w=400" has "fill" but is missing "sizes" prop. Please add it to improve page performance. Read more: https://nextjs.org/docs/api-reference/next/image#sizes
+[01:32:51.813] Browser WARN    Image with src "https://images.unsplash.com/photo-1511895426328-dc8714191300?w=400" has "fill" but is missing "sizes" prop. Please add it to improve page performance. Read more: https://nextjs.org/docs/api-reference/next/image#sizes
+[01:32:52.313] Server  ERROR    ⨯ "upstream image response failed for" "https://images.unsplash.com/photo-1544776193-52f10d0f912c?w=400" 404
+[01:41:14.154] Browser INFO    %cDownload the React DevTools for a better development experience: https://react.dev/link/react-devtools font-weight:bold
+[01:41:14.255] Server  LOG     Consulta ejecutada: {}
+[01:41:14.271] Server  LOG     Consulta ejecutada: {}
+[01:41:14.307] Server  LOG     Consulta ejecutada: {}
+[01:41:14.341] Server  LOG     Ejecutada query {}
+[01:41:14.341] Server  LOG     Ejecutada query {}
+[01:41:14.342] Server  LOG     Ejecutada query {}
+[01:41:14.356] Server  LOG     Ejecutada query {}
+[01:41:14.390] Browser WARN    Image with src "/images/logos/logo-parroquia.png" has "fill" but is missing "sizes" prop. Please add it to improve page performance. Read more: https://nextjs.org/docs/api-reference/next/image#sizes
+[01:41:14.390] Browser WARN    Image with src "https://images.unsplash.com/photo-1532629345422-7515f3d16bb6?w=400" has "fill" but is missing "sizes" prop. Please add it to improve page performance. Read more: https://nextjs.org/docs/api-reference/next/image#sizes
+[01:41:14.390] Browser WARN    Image with src "https://images.unsplash.com/photo-1529156069898-49953e39b3ac?w=400" has "fill" but is missing "sizes" prop. Please add it to improve page performance. Read more: https://nextjs.org/docs/api-reference/next/image#sizes
+[01:41:14.390] Browser WARN    Image with src "https://images.unsplash.com/photo-1511895426328-dc8714191300?w=400" has "fill" but is missing "sizes" prop. Please add it to improve page performance. Read more: https://nextjs.org/docs/api-reference/next/image#sizes
+[01:41:14.506] Browser WARN    Image with src "/images/home/misioneros.jpg" has "fill" but is missing "sizes" prop. Please add it to improve page performance. Read more: https://nextjs.org/docs/api-reference/next/image#sizes
+[01:41:14.506] Browser WARN    Image with src "https://images.unsplash.com/photo-1529156069898-49953e39b3ac?w=600" has "fill" but is missing "sizes" prop. Please add it to improve page performance. Read more: https://nextjs.org/docs/api-reference/next/image#sizes
+[01:41:14.763] Server  ERROR    ⨯ "upstream image response failed for" "https://images.unsplash.com/photo-1544776193-52f10d0f912c?w=400" 404
+[01:42:47.561] Browser WARN    Detected `scroll-behavior: smooth` on the `<html>` element. To disable smooth scrolling during route transitions, add `data-scroll-behavior="smooth"` to your <html> element. Learn more: https://nextjs.org/docs/messages/missing-data-scroll-behavior
+[01:42:47.762] Browser WARN    Image with src "https://images.unsplash.com/photo-1544427920-c49ccfb85579?q=80&w=600" has "fill" but is missing "sizes" prop. Please add it to improve page performance. Read more: https://nextjs.org/docs/api-reference/next/image#sizes
+[01:42:47.762] Browser WARN    Image with src "https://images.unsplash.com/photo-1438232992991-995b7058bbb3?q=80&w=600" has "fill" but is missing "sizes" prop. Please add it to improve page performance. Read more: https://nextjs.org/docs/api-reference/next/image#sizes
+[01:42:50.812] Server  LOG     Consulta ejecutada: {}
+[01:42:50.821] Server  LOG     Consulta ejecutada: {}
+[01:42:50.842] Server  LOG     Consulta ejecutada: {}
+[01:42:50.855] Server  LOG     Consulta ejecutada: {}
+[01:42:50.867] Server  LOG     Consulta ejecutada: {}
+[01:42:50.879] Server  LOG     Consulta ejecutada: {}
+[01:42:50.890] Server  LOG     Ejecutada query {}
+[01:42:50.891] Server  LOG     Ejecutada query {}
+[01:42:50.892] Server  LOG     Ejecutada query {}
+[01:42:50.899] Server  LOG     Ejecutada query {}
+[01:42:50.901] Server  LOG     Ejecutada query {}
+[01:42:50.902] Server  LOG     Ejecutada query {}
+[01:42:50.923] Server  LOG     Ejecutada query {}
+[01:42:50.931] Server  LOG     Ejecutada query {}
+[01:42:52.461] Browser WARN    Image with src "/uploads/donations/1765767518868-og7gct.jpg" has "fill" but is missing "sizes" prop. Please add it to improve page performance. Read more: https://nextjs.org/docs/api-reference/next/image#sizes
+[01:43:17.810] Server  ERROR    ⨯ "upstream image response failed for" "https://images.unsplash.com/photo-1544776193-52f10d0f912c?w=400" 404
+[01:44:08.758] Server  LOG      ✓ Compiled in 113ms
+[01:44:51.137] Server  LOG     Consulta ejecutada: {}
+[01:44:51.152] Server  LOG     Consulta ejecutada: {}
+[01:44:53.485] Server  LOG     Consulta ejecutada: {}
+[01:44:53.494] Server  LOG     Consulta ejecutada: {}
+[01:44:53.496] Server  LOG     Consulta ejecutada: {}
+[01:44:53.510] Server  LOG     Consulta ejecutada: {}
+[01:44:54.458] Server  LOG     Consulta ejecutada: {}
+[01:44:54.472] Server  LOG     Consulta ejecutada: {}
+[01:45:24.107] Server  LOG     Consulta ejecutada: {}
+[01:45:24.124] Server  LOG     Consulta ejecutada: {}
+[01:45:24.128] Server  LOG     Consulta ejecutada: {}
+[01:45:24.154] Server  LOG     Consulta ejecutada: {}
+[01:47:59.452] Server  LOG      ✓ Compiled in 162ms
+[01:47:59.583] Server  LOG     Consulta ejecutada: {}
+[01:47:59.594] Server  LOG     Consulta ejecutada: {}
+[01:48:15.398] Server  LOG      ✓ Compiled in 176ms
+[01:48:34.346] Server  LOG      ✓ Compiled in 231ms
+[01:49:32.631] Browser INFO    %cDownload the React DevTools for a better development experience: https://react.dev/link/react-devtools font-weight:bold
+[01:49:32.794] Server  LOG     Consulta ejecutada: {}
+[01:49:32.798] Server  LOG     Consulta ejecutada: {}
+[01:58:05.736] Server  LOG      ✓ Compiled in 262ms
+[01:58:29.528] Browser INFO    %cDownload the React DevTools for a better development experience: https://react.dev/link/react-devtools font-weight:bold
+[01:58:29.658] Server  LOG     Consulta ejecutada: {}
+[01:58:29.660] Server  LOG     Consulta ejecutada: {}
+[01:58:43.736] Server  LOG     Consulta ejecutada: {}
+[01:58:43.754] Server  LOG     Consulta ejecutada: {}
+[01:59:30.797] Server  LOG      ✓ Compiled in 331ms
+[01:59:30.970] Server  LOG     Consulta ejecutada: {}
+[01:59:30.992] Server  LOG     Consulta ejecutada: {}
+[01:59:48.405] Server  LOG      ✓ Compiled in 362ms
+[02:00:03.415] Server  LOG      ✓ Compiled in 166ms
+[02:01:26.764] Server  LOG     Consulta ejecutada: {}
+[02:01:26.792] Server  LOG     Consulta ejecutada: {}
+[02:02:55.104] Server  LOG     Consulta ejecutada: {}
+[02:02:55.138] Server  LOG     Consulta ejecutada: {}
+[02:03:52.974] Server  LOG     Consulta ejecutada: {}
+[02:03:53.014] Server  LOG     Consulta ejecutada: {}
+[02:04:50.063] Server  LOG     Consulta ejecutada: {}
+[02:04:50.084] Server  LOG     Consulta ejecutada: {}
+[02:05:01.370] Browser INFO    %cDownload the React DevTools for a better development experience: https://react.dev/link/react-devtools font-weight:bold
+[02:05:01.454] Server  LOG     Consulta ejecutada: {}
+[02:05:01.467] Server  LOG     Consulta ejecutada: {}
+[02:05:01.497] Server  LOG     Consulta ejecutada: {}
+[02:05:01.533] Browser WARN    Image with src "/images/logos/logo-parroquia.png" has "fill" but is missing "sizes" prop. Please add it to improve page performance. Read more: https://nextjs.org/docs/api-reference/next/image#sizes
+[02:05:01.533] Browser WARN    Image with src "/images/home/misioneros.jpg" has "fill" but is missing "sizes" prop. Please add it to improve page performance. Read more: https://nextjs.org/docs/api-reference/next/image#sizes
+[02:05:01.533] Browser WARN    Image with src "https://images.unsplash.com/photo-1532629345422-7515f3d16bb6?w=400" has "fill" but is missing "sizes" prop. Please add it to improve page performance. Read more: https://nextjs.org/docs/api-reference/next/image#sizes
+[02:05:01.533] Browser WARN    Image with src "https://images.unsplash.com/photo-1529156069898-49953e39b3ac?w=400" has "fill" but is missing "sizes" prop. Please add it to improve page performance. Read more: https://nextjs.org/docs/api-reference/next/image#sizes
+[02:05:01.533] Browser WARN    Image with src "https://images.unsplash.com/photo-1511895426328-dc8714191300?w=400" has "fill" but is missing "sizes" prop. Please add it to improve page performance. Read more: https://nextjs.org/docs/api-reference/next/image#sizes
+[02:05:01.548] Server  LOG     Ejecutada query {}
+[02:05:01.550] Server  LOG     Ejecutada query {}
+[02:05:01.551] Server  LOG     Ejecutada query {}
+[02:05:01.568] Server  LOG     Ejecutada query {}
+[02:05:01.881] Browser WARN    Image with src "/uploads/interest-pages/1765774756376-5bdwqi.jpg" has "fill" but is missing "sizes" prop. Please add it to improve page performance. Read more: https://nextjs.org/docs/api-reference/next/image#sizes
+[02:05:01.881] Browser WARN    Image with src "/uploads/interest-pages/1765774602893-ogufct.jpg" has "fill" but is missing "sizes" prop. Please add it to improve page performance. Read more: https://nextjs.org/docs/api-reference/next/image#sizes
+[02:05:01.881] Browser WARN    Image with src "/uploads/interest-pages/1765774423762-74u3u6.jpg" has "fill" but is missing "sizes" prop. Please add it to improve page performance. Read more: https://nextjs.org/docs/api-reference/next/image#sizes
+[02:05:01.881] Browser WARN    Image with src "https://images.unsplash.com/photo-1529156069898-49953e39b3ac?w=600" has "fill" but is missing "sizes" prop. Please add it to improve page performance. Read more: https://nextjs.org/docs/api-reference/next/image#sizes
+[02:05:02.633] Server  ERROR    ⨯ "upstream image response failed for" "https://images.unsplash.com/photo-1544776193-52f10d0f912c?w=400" 404
+[02:05:08.042] Browser INFO    %cDownload the React DevTools for a better development experience: https://react.dev/link/react-devtools font-weight:bold
+[02:05:08.070] Server  ERROR    ⨯ "upstream image response failed for" "https://images.unsplash.com/photo-1544776193-52f10d0f912c?w=400" 404
+[02:05:08.125] Server  LOG     Consulta ejecutada: {}
+[02:05:08.181] Server  LOG     Consulta ejecutada: {}
+[02:05:08.218] Server  LOG     Consulta ejecutada: {}
+[02:05:08.259] Server  LOG     Ejecutada query {}
+[02:05:08.260] Server  LOG     Ejecutada query {}
+[02:05:08.261] Server  LOG     Ejecutada query {}
+[02:05:08.272] Browser WARN    Image with src "/images/logos/logo-parroquia.png" has "fill" but is missing "sizes" prop. Please add it to improve page performance. Read more: https://nextjs.org/docs/api-reference/next/image#sizes
+[02:05:08.272] Browser WARN    Image with src "/images/home/misioneros.jpg" has "fill" but is missing "sizes" prop. Please add it to improve page performance. Read more: https://nextjs.org/docs/api-reference/next/image#sizes
+[02:05:08.272] Browser WARN    Image with src "https://images.unsplash.com/photo-1544776193-52f10d0f912c?w=400" has "fill" but is missing "sizes" prop. Please add it to improve page performance. Read more: https://nextjs.org/docs/api-reference/next/image#sizes
+[02:05:08.273] Browser WARN    Image with src "https://images.unsplash.com/photo-1532629345422-7515f3d16bb6?w=400" has "fill" but is missing "sizes" prop. Please add it to improve page performance. Read more: https://nextjs.org/docs/api-reference/next/image#sizes
+[02:05:08.273] Browser WARN    Image with src "https://images.unsplash.com/photo-1529156069898-49953e39b3ac?w=400" has "fill" but is missing "sizes" prop. Please add it to improve page performance. Read more: https://nextjs.org/docs/api-reference/next/image#sizes
+[02:05:08.273] Browser WARN    Image with src "https://images.unsplash.com/photo-1511895426328-dc8714191300?w=400" has "fill" but is missing "sizes" prop. Please add it to improve page performance. Read more: https://nextjs.org/docs/api-reference/next/image#sizes
+[02:05:08.288] Server  LOG     Ejecutada query {}
+[02:05:08.464] Browser WARN    Image with src "/uploads/interest-pages/1765774602893-ogufct.jpg" has "fill" but is missing "sizes" prop. Please add it to improve page performance. Read more: https://nextjs.org/docs/api-reference/next/image#sizes
+[02:05:08.465] Browser WARN    Image with src "/uploads/interest-pages/1765774756376-5bdwqi.jpg" has "fill" but is missing "sizes" prop. Please add it to improve page performance. Read more: https://nextjs.org/docs/api-reference/next/image#sizes
+[02:05:08.465] Browser WARN    Image with src "/uploads/interest-pages/1765774423762-74u3u6.jpg" has "fill" but is missing "sizes" prop. Please add it to improve page performance. Read more: https://nextjs.org/docs/api-reference/next/image#sizes
+[02:05:08.729] Browser WARN    Image with src "https://images.unsplash.com/photo-1529156069898-49953e39b3ac?w=600" has "fill" but is missing "sizes" prop. Please add it to improve page performance. Read more: https://nextjs.org/docs/api-reference/next/image#sizes
+[02:07:49.884] Server  LOG      ✓ Compiled in 191ms
+[02:08:21.974] Browser INFO    %cDownload the React DevTools for a better development experience: https://react.dev/link/react-devtools font-weight:bold
+[02:08:22.109] Server  LOG     Consulta ejecutada: {}
+[02:08:22.128] Server  LOG     Consulta ejecutada: {}
+[02:08:22.168] Browser WARN    Image with src "/images/logos/logo-parroquia.png" has "fill" but is missing "sizes" prop. Please add it to improve page performance. Read more: https://nextjs.org/docs/api-reference/next/image#sizes
+[02:08:22.170] Server  LOG     Consulta ejecutada: {}
+[02:08:22.195] Server  LOG     Ejecutada query {}
+[02:08:22.196] Server  LOG     Ejecutada query {}
+[02:08:22.197] Server  LOG     Ejecutada query {}
+[02:08:22.215] Server  LOG     Ejecutada query {}
+[02:08:35.554] Server  LOG     Consulta ejecutada: {}
+[02:08:35.581] Server  LOG     Consulta ejecutada: {}
+[02:08:38.763] Browser INFO    %cDownload the React DevTools for a better development experience: https://react.dev/link/react-devtools font-weight:bold
+[02:08:38.839] Server  LOG     Consulta ejecutada: {}
+[02:08:38.858] Server  LOG     Consulta ejecutada: {}
+[02:08:38.864] Server  ERROR    ⨯ "upstream image response failed for" "https://images.unsplash.com/photo-1544776193-52f10d0f912c?w=400" 404
+[02:08:38.874] Server  LOG     Consulta ejecutada: {}
+[02:08:38.898] Server  LOG     Ejecutada query {}
+[02:08:38.899] Server  LOG     Ejecutada query {}
+[02:08:38.899] Server  LOG     Ejecutada query {}
+[02:08:38.935] Browser WARN    Image with src "/images/logos/logo-parroquia.png" has "fill" but is missing "sizes" prop. Please add it to improve page performance. Read more: https://nextjs.org/docs/api-reference/next/image#sizes
+[02:08:38.935] Browser WARN    Image with src "/images/home/misioneros.jpg" has "fill" but is missing "sizes" prop. Please add it to improve page performance. Read more: https://nextjs.org/docs/api-reference/next/image#sizes
+[02:08:38.935] Browser WARN    Image with src "https://images.unsplash.com/photo-1532629345422-7515f3d16bb6?w=400" has "fill" but is missing "sizes" prop. Please add it to improve page performance. Read more: https://nextjs.org/docs/api-reference/next/image#sizes
+[02:08:38.935] Browser WARN    Image with src "https://images.unsplash.com/photo-1529156069898-49953e39b3ac?w=400" has "fill" but is missing "sizes" prop. Please add it to improve page performance. Read more: https://nextjs.org/docs/api-reference/next/image#sizes
+[02:08:38.935] Browser WARN    Image with src "https://images.unsplash.com/photo-1511895426328-dc8714191300?w=400" has "fill" but is missing "sizes" prop. Please add it to improve page performance. Read more: https://nextjs.org/docs/api-reference/next/image#sizes
+[02:08:38.943] Server  LOG     Ejecutada query {}
+[02:08:39.126] Browser WARN    Image with src "/uploads/interest-pages/1765774602893-ogufct.jpg" has "fill" but is missing "sizes" prop. Please add it to improve page performance. Read more: https://nextjs.org/docs/api-reference/next/image#sizes
+[02:08:39.126] Browser WARN    Image with src "/uploads/interest-pages/1765774756376-5bdwqi.jpg" has "fill" but is missing "sizes" prop. Please add it to improve page performance. Read more: https://nextjs.org/docs/api-reference/next/image#sizes
+[02:08:39.126] Browser WARN    Image with src "/uploads/interest-pages/1765774423762-74u3u6.jpg" has "fill" but is missing "sizes" prop. Please add it to improve page performance. Read more: https://nextjs.org/docs/api-reference/next/image#sizes
+[02:08:39.126] Browser WARN    Image with src "https://images.unsplash.com/photo-1529156069898-49953e39b3ac?w=600" has "fill" but is missing "sizes" prop. Please add it to improve page performance. Read more: https://nextjs.org/docs/api-reference/next/image#sizes
+[02:15:38.776] Server  LOG      ✓ Compiled in 679ms
+[02:16:28.263] Browser INFO    %cDownload the React DevTools for a better development experience: https://react.dev/link/react-devtools font-weight:bold
+[02:16:28.386] Server  LOG     Consulta ejecutada: {}
+[02:16:28.388] Server  LOG     Consulta ejecutada: {}
+[02:18:38.961] Server  LOG      ✓ Compiled in 156ms
+[02:18:55.207] Browser WARN    Image with src "/uploads/donations/1765767518868-og7gct.jpg" has "fill" but is missing "sizes" prop. Please add it to improve page performance. Read more: https://nextjs.org/docs/api-reference/next/image#sizes
+[02:19:50.365] Server  LOG     Consulta ejecutada: {}
+[02:19:50.386] Server  LOG     Consulta ejecutada: {}
+[02:20:04.197] Server  LOG     Consulta ejecutada: {}
+[02:20:04.227] Server  LOG     Consulta ejecutada: {}
+[02:25:12.239] Browser INFO    %cDownload the React DevTools for a better development experience: https://react.dev/link/react-devtools font-weight:bold
+[02:25:12.326] Server  LOG     Consulta ejecutada: {}
+[02:25:12.338] Server  LOG     Consulta ejecutada: {}
+[02:25:12.357] Server  LOG     Consulta ejecutada: {}
+[02:25:12.379] Server  LOG     Ejecutada query {}
+[02:25:12.381] Server  LOG     Ejecutada query {}
+[02:25:12.382] Server  LOG     Ejecutada query {}
+[02:25:12.398] Server  LOG     Ejecutada query {}
+[02:25:12.512] Browser WARN    Image with src "/images/logos/logo-parroquia.png" has "fill" but is missing "sizes" prop. Please add it to improve page performance. Read more: https://nextjs.org/docs/api-reference/next/image#sizes
+[02:25:12.513] Browser WARN    Image with src "https://images.unsplash.com/photo-1529156069898-49953e39b3ac?w=600" has "fill" but is missing "sizes" prop. Please add it to improve page performance. Read more: https://nextjs.org/docs/api-reference/next/image#sizes
+[02:25:12.513] Browser WARN    Image with src "/images/home/misioneros.jpg" has "fill" but is missing "sizes" prop. Please add it to improve page performance. Read more: https://nextjs.org/docs/api-reference/next/image#sizes
+[02:25:12.513] Browser WARN    Image with src "https://images.unsplash.com/photo-1532629345422-7515f3d16bb6?w=400" has "fill" but is missing "sizes" prop. Please add it to improve page performance. Read more: https://nextjs.org/docs/api-reference/next/image#sizes
+[02:25:12.513] Browser WARN    Image with src "https://images.unsplash.com/photo-1529156069898-49953e39b3ac?w=400" has "fill" but is missing "sizes" prop. Please add it to improve page performance. Read more: https://nextjs.org/docs/api-reference/next/image#sizes
+[02:25:12.513] Browser WARN    Image with src "https://images.unsplash.com/photo-1511895426328-dc8714191300?w=400" has "fill" but is missing "sizes" prop. Please add it to improve page performance. Read more: https://nextjs.org/docs/api-reference/next/image#sizes
+[02:25:12.513] Browser WARN    Image with src "/uploads/interest-pages/1765774423762-74u3u6.jpg" has "fill" but is missing "sizes" prop. Please add it to improve page performance. Read more: https://nextjs.org/docs/api-reference/next/image#sizes
+[02:25:12.513] Browser WARN    Image with src "/uploads/interest-pages/1765774602893-ogufct.jpg" has "fill" but is missing "sizes" prop. Please add it to improve page performance. Read more: https://nextjs.org/docs/api-reference/next/image#sizes
+[02:25:12.513] Browser WARN    Image with src "/uploads/interest-pages/1765774756376-5bdwqi.jpg" has "fill" but is missing "sizes" prop. Please add it to improve page performance. Read more: https://nextjs.org/docs/api-reference/next/image#sizes
+[02:25:12.639] Server  ERROR    ⨯ "upstream image response failed for" "https://images.unsplash.com/photo-1544776193-52f10d0f912c?w=400" 404
+[02:27:53.355] Server  LOG     Consulta ejecutada: {}
+[02:27:53.378] Server  LOG     Consulta ejecutada: {}
+[02:27:59.273] Browser INFO    %cDownload the React DevTools for a better development experience: https://react.dev/link/react-devtools font-weight:bold
+[02:27:59.337] Server  ERROR    ⨯ "upstream image response failed for" "https://images.unsplash.com/photo-1544776193-52f10d0f912c?w=400" 404
+[02:27:59.350] Server  LOG     Consulta ejecutada: {}
+[02:27:59.368] Server  LOG     Consulta ejecutada: {}
+[02:27:59.514] Browser WARN    Image with src "/images/logos/logo-parroquia.png" has "fill" but is missing "sizes" prop. Please add it to improve page performance. Read more: https://nextjs.org/docs/api-reference/next/image#sizes
+[02:27:59.514] Browser WARN    Image with src "/images/home/misioneros.jpg" has "fill" but is missing "sizes" prop. Please add it to improve page performance. Read more: https://nextjs.org/docs/api-reference/next/image#sizes
+[02:27:59.514] Browser WARN    Image with src "https://images.unsplash.com/photo-1532629345422-7515f3d16bb6?w=400" has "fill" but is missing "sizes" prop. Please add it to improve page performance. Read more: https://nextjs.org/docs/api-reference/next/image#sizes
+[02:27:59.514] Browser WARN    Image with src "https://images.unsplash.com/photo-1529156069898-49953e39b3ac?w=400" has "fill" but is missing "sizes" prop. Please add it to improve page performance. Read more: https://nextjs.org/docs/api-reference/next/image#sizes
+[02:27:59.514] Browser WARN    Image with src "https://images.unsplash.com/photo-1511895426328-dc8714191300?w=400" has "fill" but is missing "sizes" prop. Please add it to improve page performance. Read more: https://nextjs.org/docs/api-reference/next/image#sizes
+[02:27:59.527] Server  LOG     Consulta ejecutada: {}
+[02:27:59.564] Server  LOG     Ejecutada query {}
+[02:27:59.566] Server  LOG     Ejecutada query {}
+[02:27:59.567] Server  LOG     Ejecutada query {}
+[02:27:59.601] Server  LOG     Ejecutada query {}
+[02:27:59.808] Browser WARN    Image with src "/uploads/interest-pages/1765774602893-ogufct.jpg" has "fill" but is missing "sizes" prop. Please add it to improve page performance. Read more: https://nextjs.org/docs/api-reference/next/image#sizes
+[02:27:59.808] Browser WARN    Image with src "/uploads/interest-pages/1765774756376-5bdwqi.jpg" has "fill" but is missing "sizes" prop. Please add it to improve page performance. Read more: https://nextjs.org/docs/api-reference/next/image#sizes
+[02:27:59.808] Browser WARN    Image with src "/uploads/interest-pages/1765774423762-74u3u6.jpg" has "fill" but is missing "sizes" prop. Please add it to improve page performance. Read more: https://nextjs.org/docs/api-reference/next/image#sizes
+[02:27:59.808] Browser WARN    Image with src "https://images.unsplash.com/photo-1529156069898-49953e39b3ac?w=600" has "fill" but is missing "sizes" prop. Please add it to improve page performance. Read more: https://nextjs.org/docs/api-reference/next/image#sizes
+[02:28:00.032] Browser WARN    Image with src "/uploads/interest-pages/1765776173730-aha4u2.jpg" has "fill" but is missing "sizes" prop. Please add it to improve page performance. Read more: https://nextjs.org/docs/api-reference/next/image#sizes
+[02:29:11.082] Server  LOG      ✓ Compiled in 113ms
+[02:29:16.259] Server  LOG      ✓ Compiled in 42ms
+[02:29:38.346] Server  LOG      ✓ Compiled in 70ms
+[02:29:46.545] Server  LOG      ✓ Compiled in 41ms
+[02:30:00.025] Server  LOG      ✓ Compiled in 117ms
+[02:31:44.543] Server  LOG     Consulta ejecutada: {}
+[02:31:44.563] Server  LOG     Consulta ejecutada: {}
+[02:32:32.274] Server  LOG     Consulta ejecutada: {}
+[02:32:32.288] Server  LOG     Consulta ejecutada: {}
+[02:32:38.662] Browser INFO    %cDownload the React DevTools for a better development experience: https://react.dev/link/react-devtools font-weight:bold
+[02:32:38.736] Server  LOG     Consulta ejecutada: {}
+[02:32:38.752] Server  LOG     Consulta ejecutada: {}
+[02:32:38.785] Server  LOG     Consulta ejecutada: {}
+[02:32:38.813] Server  LOG     Ejecutada query {}
+[02:32:38.813] Server  LOG     Ejecutada query {}
+[02:32:38.814] Server  LOG     Ejecutada query {}
+[02:32:38.846] Server  LOG     Ejecutada query {}
+[02:32:39.032] Browser WARN    Image with src "/images/logos/logo-parroquia.png" has "fill" but is missing "sizes" prop. Please add it to improve page performance. Read more: https://nextjs.org/docs/api-reference/next/image#sizes
+[02:32:39.032] Browser WARN    Image with src "/images/home/misioneros.jpg" has "fill" but is missing "sizes" prop. Please add it to improve page performance. Read more: https://nextjs.org/docs/api-reference/next/image#sizes
+[02:32:39.032] Browser WARN    Image with src "https://images.unsplash.com/photo-1532629345422-7515f3d16bb6?w=400" has "fill" but is missing "sizes" prop. Please add it to improve page performance. Read more: https://nextjs.org/docs/api-reference/next/image#sizes
+[02:32:39.032] Browser WARN    Image with src "https://images.unsplash.com/photo-1529156069898-49953e39b3ac?w=400" has "fill" but is missing "sizes" prop. Please add it to improve page performance. Read more: https://nextjs.org/docs/api-reference/next/image#sizes
+[02:32:39.032] Browser WARN    Image with src "https://images.unsplash.com/photo-1511895426328-dc8714191300?w=400" has "fill" but is missing "sizes" prop. Please add it to improve page performance. Read more: https://nextjs.org/docs/api-reference/next/image#sizes
+[02:32:39.032] Browser WARN    Image with src "/uploads/interest-pages/1765774602893-ogufct.jpg" has "fill" but is missing "sizes" prop. Please add it to improve page performance. Read more: https://nextjs.org/docs/api-reference/next/image#sizes
+[02:32:39.032] Browser WARN    Image with src "/uploads/interest-pages/1765774756376-5bdwqi.jpg" has "fill" but is missing "sizes" prop. Please add it to improve page performance. Read more: https://nextjs.org/docs/api-reference/next/image#sizes
+[02:32:39.032] Browser WARN    Image with src "/uploads/interest-pages/1765774423762-74u3u6.jpg" has "fill" but is missing "sizes" prop. Please add it to improve page performance. Read more: https://nextjs.org/docs/api-reference/next/image#sizes
+[02:32:39.032] Browser WARN    Image with src "/uploads/interest-pages/1765776173730-aha4u2.jpg" has "fill" but is missing "sizes" prop. Please add it to improve page performance. Read more: https://nextjs.org/docs/api-reference/next/image#sizes
+[02:32:39.032] Browser WARN    Image with src "https://images.unsplash.com/photo-1529156069898-49953e39b3ac?w=600" has "fill" but is missing "sizes" prop. Please add it to improve page performance. Read more: https://nextjs.org/docs/api-reference/next/image#sizes
+[02:32:39.032] Browser WARN    Image with src "/uploads/interest-pages/1765776452925-n7u3ey.jpg" has "fill" but is missing "sizes" prop. Please add it to improve page performance. Read more: https://nextjs.org/docs/api-reference/next/image#sizes
+[02:32:39.032] Browser WARN    Image with src "/uploads/interest-pages/1765776396639-tb6bbu.jpg" has "fill" but is missing "sizes" prop. Please add it to improve page performance. Read more: https://nextjs.org/docs/api-reference/next/image#sizes
+[02:32:39.118] Server  ERROR    ⨯ "upstream image response failed for" "https://images.unsplash.com/photo-1544776193-52f10d0f912c?w=400" 404
+[02:34:57.265] Server  LOG      ✓ Compiled in 131ms
+[02:35:13.703] Browser WARN    Detected `scroll-behavior: smooth` on the `<html>` element. To disable smooth scrolling during route transitions, add `data-scroll-behavior="smooth"` to your <html> element. Learn more: https://nextjs.org/docs/messages/missing-data-scroll-behavior
+[02:35:13.893] Browser WARN    Image with src "/uploads/donations/1765767518868-og7gct.jpg" has "fill" but is missing "sizes" prop. Please add it to improve page performance. Read more: https://nextjs.org/docs/api-reference/next/image#sizes
+[02:35:23.613] Server  LOG     Consulta ejecutada: {}
+[02:35:23.627] Server  LOG     Consulta ejecutada: {}
+[02:35:23.642] Server  LOG     Consulta ejecutada: {}
+[02:35:23.656] Server  LOG     Consulta ejecutada: {}
+[02:35:25.966] Server  LOG     Consulta ejecutada: {}
+[02:35:25.976] Server  LOG     Consulta ejecutada: {}
+[02:35:27.364] Server  LOG     Consulta ejecutada: {}
+[02:35:27.373] Server  LOG     Consulta ejecutada: {}
+[02:35:27.380] Server  LOG     Consulta ejecutada: {}
+[02:35:27.388] Server  LOG     Consulta ejecutada: {}
+[02:35:29.171] Server  LOG     Consulta ejecutada: {}
+[02:35:29.181] Server  LOG     Consulta ejecutada: {}
+[02:35:30.862] Browser WARN    Image with src "https://images.unsplash.com/photo-1544427920-c49ccfb85579?q=80&w=600" has "fill" but is missing "sizes" prop. Please add it to improve page performance. Read more: https://nextjs.org/docs/api-reference/next/image#sizes
+[02:35:30.862] Browser WARN    Image with src "https://images.unsplash.com/photo-1438232992991-995b7058bbb3?q=80&w=600" has "fill" but is missing "sizes" prop. Please add it to improve page performance. Read more: https://nextjs.org/docs/api-reference/next/image#sizes
+[02:35:35.390] Server  LOG     Consulta ejecutada: {}
+[02:35:35.444] Server  LOG     Consulta ejecutada: {}
+[02:35:35.451] Server  LOG     Consulta ejecutada: {}
+[02:35:35.463] Server  LOG     Consulta ejecutada: {}
+[02:35:54.357] Server  LOG     Consulta ejecutada: {}
+[02:35:54.360] Server  LOG     Consulta ejecutada: {}
+[02:35:54.363] Server  LOG     Consulta ejecutada: {}
+[02:35:54.364] Server  LOG     Consulta ejecutada: {}
+[02:35:54.365] Server  LOG     Consulta ejecutada: {}
+[02:35:54.366] Server  LOG     Consulta ejecutada: {}
+[02:35:54.367] Server  LOG     Consulta ejecutada: {}
+[02:35:54.370] Server  LOG     Consulta ejecutada: {}
+[02:35:54.371] Server  LOG     Consulta ejecutada: {}
+[02:35:54.372] Server  LOG     Consulta ejecutada: {}
+[02:35:54.373] Server  LOG     Consulta ejecutada: {}
+[02:35:54.375] Server  LOG     Consulta ejecutada: {}
+[02:35:54.375] Server  LOG     Consulta ejecutada: {}
+[02:35:54.376] Server  LOG     Consulta ejecutada: {}
+[02:35:54.377] Server  LOG     Consulta ejecutada: {}
+[02:35:54.380] Server  LOG     Consulta ejecutada: {}
+[02:35:54.383] Server  LOG     Consulta ejecutada: {}
+[02:35:54.385] Server  LOG     Consulta ejecutada: {}
+[02:35:54.386] Server  LOG     Consulta ejecutada: {}
+[02:35:54.390] Server  LOG     Consulta ejecutada: {}
+[02:35:54.392] Server  LOG     Consulta ejecutada: {}
+[02:35:54.394] Server  LOG     Consulta ejecutada: {}
+[02:35:54.398] Server  LOG     Consulta ejecutada: {}
+[02:35:54.409] Server  LOG     Consulta ejecutada: {}
+[02:35:54.411] Server  LOG     Consulta ejecutada: {}
+[02:35:54.412] Server  LOG     Consulta ejecutada: {}
+[02:35:54.413] Server  LOG     Consulta ejecutada: {}
+[02:35:54.413] Server  LOG     Consulta ejecutada: {}
+[02:35:54.414] Server  LOG     Consulta ejecutada: {}
+[02:35:54.414] Server  LOG     Consulta ejecutada: {}
+[02:35:54.415] Server  LOG     Consulta ejecutada: {}
+[02:35:54.416] Server  LOG     Consulta ejecutada: {}
+[02:35:54.418] Server  LOG     Consulta ejecutada: {}
+[02:35:54.420] Server  LOG     Consulta ejecutada: {}
+[02:35:54.421] Server  LOG     Consulta ejecutada: {}
+[02:35:54.422] Server  LOG     Consulta ejecutada: {}
+[02:40:21.054] Server  LOG      ✓ Compiled in 173ms
+[03:13:53.634] Server  ERROR    ⨯ "upstream image response failed for" "https://images.unsplash.com/photo-1544776193-52f10d0f912c?w=400" 404
+[09:13:15.631] Server  ERROR    ⨯ "upstream image response failed for" "https://images.unsplash.com/photo-1544776193-52f10d0f912c?w=400" 404
+[14:34:13.575] Server  LOG     Consulta ejecutada: {}
+[14:34:13.594] Server  LOG     Consulta ejecutada: {}
+[14:34:13.649] Server  LOG     Consulta ejecutada: {}
+[14:34:13.668] Server  LOG     Consulta ejecutada: {}
+[14:34:13.713] Server  LOG     Consulta ejecutada: {}
+[14:34:13.733] Server  LOG     Consulta ejecutada: {}
+[14:34:13.761] Server  LOG     Ejecutada query {}
+[14:34:13.763] Server  LOG     Ejecutada query {}
+[14:34:13.764] Server  LOG     Ejecutada query {}
+[14:34:13.779] Server  LOG     Ejecutada query {}
+[14:34:13.781] Server  LOG     Ejecutada query {}
+[14:34:13.782] Server  LOG     Ejecutada query {}
+[14:34:13.821] Server  LOG     Ejecutada query {}
+[14:34:13.857] Server  LOG     Ejecutada query {}

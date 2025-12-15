@@ -1,0 +1,6 @@
+{
+  "version": 3,
+  "sources": [],
+  "sections": [
+    {"offset": {"line": 4, "column": 0}, "map": {"version":3,"sources":["file:///Users/davilaacostarenzojhair/DESARROLLO/Nyutku%20Systems/parroquia-icm-nextjs/src/app/admin/settings/page.tsx"],"sourcesContent":["'use client';\n\nimport { Settings as SettingsIcon } from 'lucide-react';\n\nexport default function SettingsPage() {\n  return (\n    <div>\n      <div className=\"bg-white rounded-lg shadow-sm p-6 mb-6\">\n        <h1 className=\"text-3xl font-bold text-gray-900\">Configuración</h1>\n        <p className=\"text-gray-600 mt-1\">Configuración general del sistema</p>\n      </div>\n\n      <div className=\"bg-white rounded-lg shadow-sm p-12 text-center\">\n        <SettingsIcon className=\"w-16 h-16 text-gray-400 mx-auto mb-4\" />\n        <h3 className=\"text-lg font-semibold text-gray-900 mb-2\">Próximamente</h3>\n        <p className=\"text-gray-600\">\n          La configuración del sistema estará disponible pronto\n        </p>\n      </div>\n    </div>\n  );\n}\n"],"names":[],"mappings":";;;;;AAEA;AAFA;;;AAIe,SAAS;IACtB,qBACE,6LAAC;;0BACC,6LAAC;gBAAI,WAAU;;kCACb,6LAAC;wBAAG,WAAU;kCAAmC;;;;;;kCACjD,6LAAC;wBAAE,WAAU;kCAAqB;;;;;;;;;;;;0BAGpC,6LAAC;gBAAI,WAAU;;kCACb,6LAAC,yNAAY;wBAAC,WAAU;;;;;;kCACxB,6LAAC;wBAAG,WAAU;kCAA2C;;;;;;kCACzD,6LAAC;wBAAE,WAAU;kCAAgB;;;;;;;;;;;;;;;;;;AAMrC;KAjBwB"}}]
+}

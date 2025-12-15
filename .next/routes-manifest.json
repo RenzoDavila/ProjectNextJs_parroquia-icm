@@ -1,0 +1,515 @@
+{
+  "version": 3,
+  "pages404": true,
+  "caseSensitive": false,
+  "basePath": "",
+  "redirects": [
+    {
+      "source": "/:path+/",
+      "destination": "/:path+",
+      "internal": true,
+      "priority": true,
+      "statusCode": 308,
+      "regex": "^(?:/((?:[^/]+?)(?:/(?:[^/]+?))*))/$"
+    }
+  ],
+  "headers": [],
+  "rewrites": {
+    "beforeFiles": [],
+    "afterFiles": [],
+    "fallback": []
+  },
+  "dynamicRoutes": [
+    {
+      "page": "/api/admin/banners/[id]",
+      "regex": "^/api/admin/banners/([^/]+?)(?:/)?$",
+      "routeKeys": {
+        "nxtPid": "nxtPid"
+      },
+      "namedRegex": "^/api/admin/banners/(?<nxtPid>[^/]+?)(?:/)?$"
+    },
+    {
+      "page": "/api/admin/donation-info/[id]",
+      "regex": "^/api/admin/donation\\-info/([^/]+?)(?:/)?$",
+      "routeKeys": {
+        "nxtPid": "nxtPid"
+      },
+      "namedRegex": "^/api/admin/donation\\-info/(?<nxtPid>[^/]+?)(?:/)?$"
+    },
+    {
+      "page": "/api/admin/gallery/albums/[id]",
+      "regex": "^/api/admin/gallery/albums/([^/]+?)(?:/)?$",
+      "routeKeys": {
+        "nxtPid": "nxtPid"
+      },
+      "namedRegex": "^/api/admin/gallery/albums/(?<nxtPid>[^/]+?)(?:/)?$"
+    },
+    {
+      "page": "/api/admin/gallery/images/[id]",
+      "regex": "^/api/admin/gallery/images/([^/]+?)(?:/)?$",
+      "routeKeys": {
+        "nxtPid": "nxtPid"
+      },
+      "namedRegex": "^/api/admin/gallery/images/(?<nxtPid>[^/]+?)(?:/)?$"
+    },
+    {
+      "page": "/api/admin/home-services/[id]",
+      "regex": "^/api/admin/home\\-services/([^/]+?)(?:/)?$",
+      "routeKeys": {
+        "nxtPid": "nxtPid"
+      },
+      "namedRegex": "^/api/admin/home\\-services/(?<nxtPid>[^/]+?)(?:/)?$"
+    },
+    {
+      "page": "/api/admin/interest-pages/[id]",
+      "regex": "^/api/admin/interest\\-pages/([^/]+?)(?:/)?$",
+      "routeKeys": {
+        "nxtPid": "nxtPid"
+      },
+      "namedRegex": "^/api/admin/interest\\-pages/(?<nxtPid>[^/]+?)(?:/)?$"
+    },
+    {
+      "page": "/api/admin/mass-pricing/[id]",
+      "regex": "^/api/admin/mass\\-pricing/([^/]+?)(?:/)?$",
+      "routeKeys": {
+        "nxtPid": "nxtPid"
+      },
+      "namedRegex": "^/api/admin/mass\\-pricing/(?<nxtPid>[^/]+?)(?:/)?$"
+    },
+    {
+      "page": "/api/admin/mass-times/[id]",
+      "regex": "^/api/admin/mass\\-times/([^/]+?)(?:/)?$",
+      "routeKeys": {
+        "nxtPid": "nxtPid"
+      },
+      "namedRegex": "^/api/admin/mass\\-times/(?<nxtPid>[^/]+?)(?:/)?$"
+    },
+    {
+      "page": "/api/admin/messages/[id]",
+      "regex": "^/api/admin/messages/([^/]+?)(?:/)?$",
+      "routeKeys": {
+        "nxtPid": "nxtPid"
+      },
+      "namedRegex": "^/api/admin/messages/(?<nxtPid>[^/]+?)(?:/)?$"
+    },
+    {
+      "page": "/api/admin/parish-groups/[id]",
+      "regex": "^/api/admin/parish\\-groups/([^/]+?)(?:/)?$",
+      "routeKeys": {
+        "nxtPid": "nxtPid"
+      },
+      "namedRegex": "^/api/admin/parish\\-groups/(?<nxtPid>[^/]+?)(?:/)?$"
+    },
+    {
+      "page": "/api/admin/reservations/[id]",
+      "regex": "^/api/admin/reservations/([^/]+?)(?:/)?$",
+      "routeKeys": {
+        "nxtPid": "nxtPid"
+      },
+      "namedRegex": "^/api/admin/reservations/(?<nxtPid>[^/]+?)(?:/)?$"
+    },
+    {
+      "page": "/api/admin/social-media/[id]",
+      "regex": "^/api/admin/social\\-media/([^/]+?)(?:/)?$",
+      "routeKeys": {
+        "nxtPid": "nxtPid"
+      },
+      "namedRegex": "^/api/admin/social\\-media/(?<nxtPid>[^/]+?)(?:/)?$"
+    },
+    {
+      "page": "/api/admin/team/[id]",
+      "regex": "^/api/admin/team/([^/]+?)(?:/)?$",
+      "routeKeys": {
+        "nxtPid": "nxtPid"
+      },
+      "namedRegex": "^/api/admin/team/(?<nxtPid>[^/]+?)(?:/)?$"
+    }
+  ],
+  "staticRoutes": [
+    {
+      "page": "/",
+      "regex": "^/(?:/)?$",
+      "routeKeys": {},
+      "namedRegex": "^/(?:/)?$"
+    },
+    {
+      "page": "/_global-error",
+      "regex": "^/_global\\-error(?:/)?$",
+      "routeKeys": {},
+      "namedRegex": "^/_global\\-error(?:/)?$"
+    },
+    {
+      "page": "/_not-found",
+      "regex": "^/_not\\-found(?:/)?$",
+      "routeKeys": {},
+      "namedRegex": "^/_not\\-found(?:/)?$"
+    },
+    {
+      "page": "/admin",
+      "regex": "^/admin(?:/)?$",
+      "routeKeys": {},
+      "namedRegex": "^/admin(?:/)?$"
+    },
+    {
+      "page": "/admin/banners",
+      "regex": "^/admin/banners(?:/)?$",
+      "routeKeys": {},
+      "namedRegex": "^/admin/banners(?:/)?$"
+    },
+    {
+      "page": "/admin/donation-info",
+      "regex": "^/admin/donation\\-info(?:/)?$",
+      "routeKeys": {},
+      "namedRegex": "^/admin/donation\\-info(?:/)?$"
+    },
+    {
+      "page": "/admin/gallery",
+      "regex": "^/admin/gallery(?:/)?$",
+      "routeKeys": {},
+      "namedRegex": "^/admin/gallery(?:/)?$"
+    },
+    {
+      "page": "/admin/home-content",
+      "regex": "^/admin/home\\-content(?:/)?$",
+      "routeKeys": {},
+      "namedRegex": "^/admin/home\\-content(?:/)?$"
+    },
+    {
+      "page": "/admin/mass-times",
+      "regex": "^/admin/mass\\-times(?:/)?$",
+      "routeKeys": {},
+      "namedRegex": "^/admin/mass\\-times(?:/)?$"
+    },
+    {
+      "page": "/admin/messages",
+      "regex": "^/admin/messages(?:/)?$",
+      "routeKeys": {},
+      "namedRegex": "^/admin/messages(?:/)?$"
+    },
+    {
+      "page": "/admin/pages",
+      "regex": "^/admin/pages(?:/)?$",
+      "routeKeys": {},
+      "namedRegex": "^/admin/pages(?:/)?$"
+    },
+    {
+      "page": "/admin/parish-groups",
+      "regex": "^/admin/parish\\-groups(?:/)?$",
+      "routeKeys": {},
+      "namedRegex": "^/admin/parish\\-groups(?:/)?$"
+    },
+    {
+      "page": "/admin/reservations",
+      "regex": "^/admin/reservations(?:/)?$",
+      "routeKeys": {},
+      "namedRegex": "^/admin/reservations(?:/)?$"
+    },
+    {
+      "page": "/admin/settings",
+      "regex": "^/admin/settings(?:/)?$",
+      "routeKeys": {},
+      "namedRegex": "^/admin/settings(?:/)?$"
+    },
+    {
+      "page": "/admin/social-media",
+      "regex": "^/admin/social\\-media(?:/)?$",
+      "routeKeys": {},
+      "namedRegex": "^/admin/social\\-media(?:/)?$"
+    },
+    {
+      "page": "/admin/team",
+      "regex": "^/admin/team(?:/)?$",
+      "routeKeys": {},
+      "namedRegex": "^/admin/team(?:/)?$"
+    },
+    {
+      "page": "/api/admin/banners",
+      "regex": "^/api/admin/banners(?:/)?$",
+      "routeKeys": {},
+      "namedRegex": "^/api/admin/banners(?:/)?$"
+    },
+    {
+      "page": "/api/admin/donation-info",
+      "regex": "^/api/admin/donation\\-info(?:/)?$",
+      "routeKeys": {},
+      "namedRegex": "^/api/admin/donation\\-info(?:/)?$"
+    },
+    {
+      "page": "/api/admin/gallery/albums",
+      "regex": "^/api/admin/gallery/albums(?:/)?$",
+      "routeKeys": {},
+      "namedRegex": "^/api/admin/gallery/albums(?:/)?$"
+    },
+    {
+      "page": "/api/admin/gallery/images",
+      "regex": "^/api/admin/gallery/images(?:/)?$",
+      "routeKeys": {},
+      "namedRegex": "^/api/admin/gallery/images(?:/)?$"
+    },
+    {
+      "page": "/api/admin/home-services",
+      "regex": "^/api/admin/home\\-services(?:/)?$",
+      "routeKeys": {},
+      "namedRegex": "^/api/admin/home\\-services(?:/)?$"
+    },
+    {
+      "page": "/api/admin/interest-pages",
+      "regex": "^/api/admin/interest\\-pages(?:/)?$",
+      "routeKeys": {},
+      "namedRegex": "^/api/admin/interest\\-pages(?:/)?$"
+    },
+    {
+      "page": "/api/admin/mass-pricing",
+      "regex": "^/api/admin/mass\\-pricing(?:/)?$",
+      "routeKeys": {},
+      "namedRegex": "^/api/admin/mass\\-pricing(?:/)?$"
+    },
+    {
+      "page": "/api/admin/mass-times",
+      "regex": "^/api/admin/mass\\-times(?:/)?$",
+      "routeKeys": {},
+      "namedRegex": "^/api/admin/mass\\-times(?:/)?$"
+    },
+    {
+      "page": "/api/admin/messages",
+      "regex": "^/api/admin/messages(?:/)?$",
+      "routeKeys": {},
+      "namedRegex": "^/api/admin/messages(?:/)?$"
+    },
+    {
+      "page": "/api/admin/parish-groups",
+      "regex": "^/api/admin/parish\\-groups(?:/)?$",
+      "routeKeys": {},
+      "namedRegex": "^/api/admin/parish\\-groups(?:/)?$"
+    },
+    {
+      "page": "/api/admin/reservations",
+      "regex": "^/api/admin/reservations(?:/)?$",
+      "routeKeys": {},
+      "namedRegex": "^/api/admin/reservations(?:/)?$"
+    },
+    {
+      "page": "/api/admin/settings",
+      "regex": "^/api/admin/settings(?:/)?$",
+      "routeKeys": {},
+      "namedRegex": "^/api/admin/settings(?:/)?$"
+    },
+    {
+      "page": "/api/admin/social-media",
+      "regex": "^/api/admin/social\\-media(?:/)?$",
+      "routeKeys": {},
+      "namedRegex": "^/api/admin/social\\-media(?:/)?$"
+    },
+    {
+      "page": "/api/admin/stats",
+      "regex": "^/api/admin/stats(?:/)?$",
+      "routeKeys": {},
+      "namedRegex": "^/api/admin/stats(?:/)?$"
+    },
+    {
+      "page": "/api/admin/team",
+      "regex": "^/api/admin/team(?:/)?$",
+      "routeKeys": {},
+      "namedRegex": "^/api/admin/team(?:/)?$"
+    },
+    {
+      "page": "/api/banners",
+      "regex": "^/api/banners(?:/)?$",
+      "routeKeys": {},
+      "namedRegex": "^/api/banners(?:/)?$"
+    },
+    {
+      "page": "/api/confession-schedules",
+      "regex": "^/api/confession\\-schedules(?:/)?$",
+      "routeKeys": {},
+      "namedRegex": "^/api/confession\\-schedules(?:/)?$"
+    },
+    {
+      "page": "/api/contact",
+      "regex": "^/api/contact(?:/)?$",
+      "routeKeys": {},
+      "namedRegex": "^/api/contact(?:/)?$"
+    },
+    {
+      "page": "/api/donation-info",
+      "regex": "^/api/donation\\-info(?:/)?$",
+      "routeKeys": {},
+      "namedRegex": "^/api/donation\\-info(?:/)?$"
+    },
+    {
+      "page": "/api/gallery/albums",
+      "regex": "^/api/gallery/albums(?:/)?$",
+      "routeKeys": {},
+      "namedRegex": "^/api/gallery/albums(?:/)?$"
+    },
+    {
+      "page": "/api/gallery/images",
+      "regex": "^/api/gallery/images(?:/)?$",
+      "routeKeys": {},
+      "namedRegex": "^/api/gallery/images(?:/)?$"
+    },
+    {
+      "page": "/api/home-content",
+      "regex": "^/api/home\\-content(?:/)?$",
+      "routeKeys": {},
+      "namedRegex": "^/api/home\\-content(?:/)?$"
+    },
+    {
+      "page": "/api/home-services",
+      "regex": "^/api/home\\-services(?:/)?$",
+      "routeKeys": {},
+      "namedRegex": "^/api/home\\-services(?:/)?$"
+    },
+    {
+      "page": "/api/interest-pages",
+      "regex": "^/api/interest\\-pages(?:/)?$",
+      "routeKeys": {},
+      "namedRegex": "^/api/interest\\-pages(?:/)?$"
+    },
+    {
+      "page": "/api/mass-schedules",
+      "regex": "^/api/mass\\-schedules(?:/)?$",
+      "routeKeys": {},
+      "namedRegex": "^/api/mass\\-schedules(?:/)?$"
+    },
+    {
+      "page": "/api/mass-types",
+      "regex": "^/api/mass\\-types(?:/)?$",
+      "routeKeys": {},
+      "namedRegex": "^/api/mass\\-types(?:/)?$"
+    },
+    {
+      "page": "/api/office-hours",
+      "regex": "^/api/office\\-hours(?:/)?$",
+      "routeKeys": {},
+      "namedRegex": "^/api/office\\-hours(?:/)?$"
+    },
+    {
+      "page": "/api/parish-groups",
+      "regex": "^/api/parish\\-groups(?:/)?$",
+      "routeKeys": {},
+      "namedRegex": "^/api/parish\\-groups(?:/)?$"
+    },
+    {
+      "page": "/api/pastoral-schedules",
+      "regex": "^/api/pastoral\\-schedules(?:/)?$",
+      "routeKeys": {},
+      "namedRegex": "^/api/pastoral\\-schedules(?:/)?$"
+    },
+    {
+      "page": "/api/payment-methods",
+      "regex": "^/api/payment\\-methods(?:/)?$",
+      "routeKeys": {},
+      "namedRegex": "^/api/payment\\-methods(?:/)?$"
+    },
+    {
+      "page": "/api/reservations",
+      "regex": "^/api/reservations(?:/)?$",
+      "routeKeys": {},
+      "namedRegex": "^/api/reservations(?:/)?$"
+    },
+    {
+      "page": "/api/reservations/available-times",
+      "regex": "^/api/reservations/available\\-times(?:/)?$",
+      "routeKeys": {},
+      "namedRegex": "^/api/reservations/available\\-times(?:/)?$"
+    },
+    {
+      "page": "/api/reservations/verify",
+      "regex": "^/api/reservations/verify(?:/)?$",
+      "routeKeys": {},
+      "namedRegex": "^/api/reservations/verify(?:/)?$"
+    },
+    {
+      "page": "/api/schedules",
+      "regex": "^/api/schedules(?:/)?$",
+      "routeKeys": {},
+      "namedRegex": "^/api/schedules(?:/)?$"
+    },
+    {
+      "page": "/api/settings",
+      "regex": "^/api/settings(?:/)?$",
+      "routeKeys": {},
+      "namedRegex": "^/api/settings(?:/)?$"
+    },
+    {
+      "page": "/api/social-media",
+      "regex": "^/api/social\\-media(?:/)?$",
+      "routeKeys": {},
+      "namedRegex": "^/api/social\\-media(?:/)?$"
+    },
+    {
+      "page": "/api/team",
+      "regex": "^/api/team(?:/)?$",
+      "routeKeys": {},
+      "namedRegex": "^/api/team(?:/)?$"
+    },
+    {
+      "page": "/api/upload",
+      "regex": "^/api/upload(?:/)?$",
+      "routeKeys": {},
+      "namedRegex": "^/api/upload(?:/)?$"
+    },
+    {
+      "page": "/contacto",
+      "regex": "^/contacto(?:/)?$",
+      "routeKeys": {},
+      "namedRegex": "^/contacto(?:/)?$"
+    },
+    {
+      "page": "/favicon.ico",
+      "regex": "^/favicon\\.ico(?:/)?$",
+      "routeKeys": {},
+      "namedRegex": "^/favicon\\.ico(?:/)?$"
+    },
+    {
+      "page": "/galeria",
+      "regex": "^/galeria(?:/)?$",
+      "routeKeys": {},
+      "namedRegex": "^/galeria(?:/)?$"
+    },
+    {
+      "page": "/horarios",
+      "regex": "^/horarios(?:/)?$",
+      "routeKeys": {},
+      "namedRegex": "^/horarios(?:/)?$"
+    },
+    {
+      "page": "/nosotros",
+      "regex": "^/nosotros(?:/)?$",
+      "routeKeys": {},
+      "namedRegex": "^/nosotros(?:/)?$"
+    },
+    {
+      "page": "/reservar",
+      "regex": "^/reservar(?:/)?$",
+      "routeKeys": {},
+      "namedRegex": "^/reservar(?:/)?$"
+    },
+    {
+      "page": "/servicios",
+      "regex": "^/servicios(?:/)?$",
+      "routeKeys": {},
+      "namedRegex": "^/servicios(?:/)?$"
+    }
+  ],
+  "dataRoutes": [],
+  "rsc": {
+    "header": "rsc",
+    "varyHeader": "rsc, next-router-state-tree, next-router-prefetch, next-router-segment-prefetch",
+    "prefetchHeader": "next-router-prefetch",
+    "didPostponeHeader": "x-nextjs-postponed",
+    "contentTypeHeader": "text/x-component",
+    "suffix": ".rsc",
+    "prefetchSuffix": ".prefetch.rsc",
+    "prefetchSegmentHeader": "next-router-segment-prefetch",
+    "prefetchSegmentSuffix": ".segment.rsc",
+    "prefetchSegmentDirSuffix": ".segments",
+    "clientParamParsing": false,
+    "dynamicRSCPrerender": false
+  },
+  "rewriteHeaders": {
+    "pathHeader": "x-nextjs-rewritten-path",
+    "queryHeader": "x-nextjs-rewritten-query"
+  }
+}
