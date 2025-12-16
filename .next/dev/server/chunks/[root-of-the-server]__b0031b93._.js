@@ -112,19 +112,29 @@ async function POST(request) {
         const randomString = Math.random().toString(36).substring(2, 8);
         const extension = file.name.split('.').pop();
         const filename = `${timestamp}-${randomString}.${extension}`;
+        // --- AQUÍ ESTÁ EL CAMBIO CLAVE ---
+        let uploadDir;
+        if ("TURBOPACK compile-time falsy", 0) //TURBOPACK unreachable
+        ;
+        else {
+            // EN TU PC: Guardar en la carpeta normal del proyecto
+            uploadDir = __TURBOPACK__imported__module__$5b$externals$5d2f$path__$5b$external$5d$__$28$path$2c$__cjs$29$__["default"].join(process.cwd(), 'public', 'uploads', folder);
+        }
+        // -------------------------------
         // Crear directorio si no existe
-        const uploadDir = __TURBOPACK__imported__module__$5b$externals$5d2f$path__$5b$external$5d$__$28$path$2c$__cjs$29$__["default"].join(process.cwd(), 'public', 'uploads', folder);
         try {
             await (0, __TURBOPACK__imported__module__$5b$externals$5d2f$fs$2f$promises__$5b$external$5d$__$28$fs$2f$promises$2c$__cjs$29$__["mkdir"])(uploadDir, {
                 recursive: true
             });
         } catch (error) {
-        // El directorio ya existe
+            // El directorio ya existe o hubo un error de permisos
+            console.error('Info directorio:', error);
         }
         // Guardar archivo
         const filepath = __TURBOPACK__imported__module__$5b$externals$5d2f$path__$5b$external$5d$__$28$path$2c$__cjs$29$__["default"].join(uploadDir, filename);
         await (0, __TURBOPACK__imported__module__$5b$externals$5d2f$fs$2f$promises__$5b$external$5d$__$28$fs$2f$promises$2c$__cjs$29$__["writeFile"])(filepath, buffer);
         // Retornar URL pública
+        // La URL sigue siendo /uploads/... porque public_html es la raíz de tu dominio
         const publicUrl = `/uploads/${folder}/${filename}`;
         return __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$server$2e$js__$5b$app$2d$route$5d$__$28$ecmascript$29$__["NextResponse"].json({
             success: true,

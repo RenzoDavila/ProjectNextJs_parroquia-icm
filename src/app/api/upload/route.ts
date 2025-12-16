@@ -42,12 +42,26 @@ export async function POST(request: NextRequest) {
     const extension = file.name.split('.').pop();
     const filename = `${timestamp}-${randomString}.${extension}`;
 
+    // --- AQUÍ ESTÁ EL CAMBIO CLAVE ---
+    let uploadDir;
+
+    if (process.env.NODE_ENV === 'production') {
+      // EN EL SERVIDOR: Guardar en public_html para que no se borre al actualizar la app
+      // y para que Apache sirva la imagen directamente.
+      // Ruta: /home/corazon2/public_html/uploads/team (o la carpeta que sea)
+      uploadDir = path.join('/home/corazon2/public_html/uploads', folder);
+    } else {
+      // EN TU PC: Guardar en la carpeta normal del proyecto
+      uploadDir = path.join(process.cwd(), 'public', 'uploads', folder);
+    }
+    // -------------------------------
+
     // Crear directorio si no existe
-    const uploadDir = path.join(process.cwd(), 'public', 'uploads', folder);
     try {
       await mkdir(uploadDir, { recursive: true });
     } catch (error) {
-      // El directorio ya existe
+      // El directorio ya existe o hubo un error de permisos
+      console.error('Info directorio:', error);
     }
 
     // Guardar archivo
@@ -55,6 +69,7 @@ export async function POST(request: NextRequest) {
     await writeFile(filepath, buffer);
 
     // Retornar URL pública
+    // La URL sigue siendo /uploads/... porque public_html es la raíz de tu dominio
     const publicUrl = `/uploads/${folder}/${filename}`;
 
     return NextResponse.json({
