@@ -53,3 +53,105 @@
 [00:07:52.254] Server  LOG     Consulta ejecutada: {}
 [00:07:52.267] Server  LOG     Consulta ejecutada: {}
 [00:07:52.327] Browser WARN    Image with src "/images/logos/logo-parroquia.png" has "fill" but is missing "sizes" prop. Please add it to improve page performance. Read more: https://nextjs.org/docs/api-reference/next/image#sizes
+[00:28:54.155] Server  LOG     Consulta ejecutada: {}
+[00:28:54.189] Server  LOG     Consulta ejecutada: {}
+[00:28:54.455] Server  LOG     Consulta ejecutada: {}
+[00:28:54.457] Server  LOG     Consulta ejecutada: {}
+[00:28:54.471] Server  LOG     Consulta ejecutada: {}
+[00:28:54.472] Server  LOG     Consulta ejecutada: {}
+[00:28:56.692] Server  LOG     Consulta ejecutada: {}
+[00:28:56.700] Server  LOG     Consulta ejecutada: {}
+[00:29:01.304] Server  LOG     Consulta ejecutada: {}
+[00:29:01.315] Server  LOG     Consulta ejecutada: {}
+[00:29:01.346] Server  LOG     Consulta ejecutada: {}
+[00:29:01.361] Browser WARN    Detected `scroll-behavior: smooth` on the `<html>` element. To disable smooth scrolling during route transitions, add `data-scroll-behavior="smooth"` to your <html> element. Learn more: https://nextjs.org/docs/messages/missing-data-scroll-behavior
+[00:29:01.368] Server  LOG     Consulta ejecutada: {}
+[00:29:01.379] Server  LOG     Consulta ejecutada: {}
+[00:29:01.418] Server  LOG     Consulta ejecutada: {}
+[00:29:01.436] Server  LOG     Ejecutada query {}
+[00:29:01.438] Server  LOG     Ejecutada query {}
+[00:29:01.439] Server  LOG     Ejecutada query {}
+[00:29:01.451] Server  LOG     Ejecutada query {}
+[00:29:01.452] Server  LOG     Ejecutada query {}
+[00:29:01.452] Server  LOG     Ejecutada query {}
+[00:29:01.469] Server  LOG     Ejecutada query {}
+[00:29:01.495] Server  LOG     Ejecutada query {}
+[00:29:17.000] Server  LOG     Consulta ejecutada: {}
+[00:29:17.014] Server  LOG     Consulta ejecutada: {}
+[00:29:31.053] Server  LOG     Consulta ejecutada: {}
+[00:29:31.055] Server  LOG     Consulta ejecutada: {}
+[00:29:31.056] Server  LOG     Consulta ejecutada: {}
+[00:29:31.067] Server  LOG     Consulta ejecutada: {}
+[00:29:31.068] Server  LOG     Consulta ejecutada: {}
+[00:29:31.068] Server  LOG     Consulta ejecutada: {}
+[00:29:33.574] Server  LOG     Consulta ejecutada: {}
+[00:29:33.575] Server  LOG     Consulta ejecutada: {}
+[00:29:33.584] Server  LOG     Consulta ejecutada: {}
+[00:29:33.584] Server  LOG     Consulta ejecutada: {}
+[00:29:34.389] Server  LOG     Consulta ejecutada: {}
+[00:29:34.390] Server  LOG     Consulta ejecutada: {}
+[00:29:34.392] Server  LOG     Consulta ejecutada: {}
+[00:29:34.392] Server  LOG     Consulta ejecutada: {}
+[00:29:34.393] Server  LOG     Consulta ejecutada: {}
+[00:29:34.394] Server  LOG     Consulta ejecutada: {}
+[00:29:34.395] Server  LOG     Consulta ejecutada: {}
+[00:29:34.396] Server  LOG     Consulta ejecutada: {}
+[00:29:34.396] Server  LOG     Consulta ejecutada: {}
+[00:29:34.397] Server  LOG     Consulta ejecutada: {}
+[00:29:34.397] Server  LOG     Consulta ejecutada: {}
+[00:29:34.398] Server  LOG     Consulta ejecutada: {}
+[00:29:34.399] Server  LOG     Consulta ejecutada: {}
+[00:29:34.399] Server  LOG     Consulta ejecutada: {}
+[00:29:34.400] Server  LOG     Consulta ejecutada: {}
+[00:29:34.402] Server  LOG     Consulta ejecutada: {}
+[00:29:34.404] Server  LOG     Consulta ejecutada: {}
+[00:29:34.409] Server  LOG     Consulta ejecutada: {}
+[00:29:34.411] Server  LOG     Consulta ejecutada: {}
+[00:29:34.419] Server  LOG     Consulta ejecutada: {}
+[00:29:34.422] Server  LOG     Consulta ejecutada: {}
+[00:29:34.426] Server  LOG     Consulta ejecutada: {}
+[00:29:34.427] Server  LOG     Consulta ejecutada: {}
+[00:29:34.427] Server  LOG     Consulta ejecutada: {}
+[00:29:34.429] Server  LOG     Consulta ejecutada: {}
+[00:29:34.430] Server  LOG     Consulta ejecutada: {}
+[00:29:34.431] Server  LOG     Consulta ejecutada: {}
+[00:29:34.432] Server  LOG     Consulta ejecutada: {}
+[00:29:34.433] Server  LOG     Consulta ejecutada: {}
+[00:29:34.434] Server  LOG     Consulta ejecutada: {}
+[00:29:34.434] Server  LOG     Consulta ejecutada: {}
+[00:29:34.435] Server  LOG     Consulta ejecutada: {}
+[00:29:34.435] Server  LOG     Consulta ejecutada: {}
+[00:29:34.436] Server  LOG     Consulta ejecutada: {}
+[00:29:34.436] Server  LOG     Consulta ejecutada: {}
+[00:29:34.436] Server  LOG     Consulta ejecutada: {}
+[00:29:39.084] Browser WARN    Image with src "/uploads/donations/1765767518868-og7gct.jpg" has "fill" but is missing "sizes" prop. Please add it to improve page performance. Read more: https://nextjs.org/docs/api-reference/next/image#sizes
+[00:29:42.773] Browser WARN    Image with src "https://images.unsplash.com/photo-1529156069898-49953e39b3ac?w=600" has "fill" but is missing "sizes" prop. Please add it to improve page performance. Read more: https://nextjs.org/docs/api-reference/next/image#sizes
+[00:30:19.115] Browser INFO    %cDownload the React DevTools for a better development experience: https://react.dev/link/react-devtools font-weight:bold
+[00:30:19.246] Server  LOG     Consulta ejecutada: {}
+[00:30:19.257] Server  LOG     Consulta ejecutada: {}
+[00:30:19.290] Server  LOG     Consulta ejecutada: {}
+[00:30:19.302] Browser WARN    Image with src "/images/logos/logo-parroquia.png" has "fill" but is missing "sizes" prop. Please add it to improve page performance. Read more: https://nextjs.org/docs/api-reference/next/image#sizes
+[00:30:19.319] Server  LOG     Ejecutada query {}
+[00:30:19.320] Server  LOG     Ejecutada query {}
+[00:30:19.320] Server  LOG     Ejecutada query {}
+[00:30:19.505] Server  LOG     Ejecutada query {}
+[00:30:19.704] Browser WARN    Image with src "/uploads/donations/1765767518868-og7gct.jpg" has "fill" but is missing "sizes" prop. Please add it to improve page performance. Read more: https://nextjs.org/docs/api-reference/next/image#sizes
+[00:30:31.735] Browser WARN    Image with src "https://images.unsplash.com/photo-1529156069898-49953e39b3ac?w=600" has "fill" but is missing "sizes" prop. Please add it to improve page performance. Read more: https://nextjs.org/docs/api-reference/next/image#sizes
+[00:30:32.524] Browser WARN    Image with src "/images/home/misioneros.jpg" has "fill" but is missing "sizes" prop. Please add it to improve page performance. Read more: https://nextjs.org/docs/api-reference/next/image#sizes
+[00:30:32.524] Browser WARN    Image with src "/uploads/interest-pages/1765774756376-5bdwqi.jpg" has "fill" but is missing "sizes" prop. Please add it to improve page performance. Read more: https://nextjs.org/docs/api-reference/next/image#sizes
+[00:30:32.524] Browser WARN    Image with src "/uploads/interest-pages/1765774602893-ogufct.jpg" has "fill" but is missing "sizes" prop. Please add it to improve page performance. Read more: https://nextjs.org/docs/api-reference/next/image#sizes
+[00:30:32.524] Browser WARN    Image with src "/uploads/interest-pages/1765774423762-74u3u6.jpg" has "fill" but is missing "sizes" prop. Please add it to improve page performance. Read more: https://nextjs.org/docs/api-reference/next/image#sizes
+[00:30:32.524] Browser WARN    Image with src "/uploads/interest-pages/1765776452925-n7u3ey.jpg" has "fill" but is missing "sizes" prop. Please add it to improve page performance. Read more: https://nextjs.org/docs/api-reference/next/image#sizes
+[00:30:32.524] Browser WARN    Image with src "/uploads/interest-pages/1765776396639-tb6bbu.jpg" has "fill" but is missing "sizes" prop. Please add it to improve page performance. Read more: https://nextjs.org/docs/api-reference/next/image#sizes
+[00:30:32.686] Browser WARN    Image with src "/uploads/interest-pages/1765776173730-aha4u2.jpg" has "fill" but is missing "sizes" prop. Please add it to improve page performance. Read more: https://nextjs.org/docs/api-reference/next/image#sizes
+[00:57:06.889] Server  LOG      ✓ Compiled in 136ms
+[01:22:45.991] Browser INFO    %cDownload the React DevTools for a better development experience: https://react.dev/link/react-devtools font-weight:bold
+[01:22:46.084] Server  LOG     Consulta ejecutada: {}
+[01:22:46.094] Server  LOG     Consulta ejecutada: {}
+[01:22:46.121] Server  LOG     Consulta ejecutada: {}
+[01:22:46.148] Server  LOG     Ejecutada query {}
+[01:22:46.149] Server  LOG     Ejecutada query {}
+[01:22:46.149] Server  LOG     Ejecutada query {}
+[01:22:46.329] Browser WARN    Image with src "/images/logos/logo-parroquia.png" has "fill" but is missing "sizes" prop. Please add it to improve page performance. Read more: https://nextjs.org/docs/api-reference/next/image#sizes
+[01:22:46.343] Server  LOG     Ejecutada query {}
+[01:22:46.524] Browser WARN    Image with src "/uploads/donations/1765767518868-og7gct.jpg" has "fill" but is missing "sizes" prop. Please add it to improve page performance. Read more: https://nextjs.org/docs/api-reference/next/image#sizes
