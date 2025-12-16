@@ -1,36 +1,56 @@
-This is a [Next.js](https://nextjs.org) project bootstrapped with [`create-next-app`](https://nextjs.org/docs/app/api-reference/cli/create-next-app).
+# Parroquia Inmaculado Corazón de María - Página Web y Panel Administrativo
 
-## Getting Started
+Este es el repositorio oficial de la página web de la Parroquia Inmaculado Corazón de María (Arequipa). Incluye tanto la vista pública para feligreses como un completo panel de administración para la gestión de contenido y reservas.
 
-First, run the development server:
+## 🚀 Tecnologías
 
-```bash
-npm run dev
-# or
-yarn dev
-# or
-pnpm dev
-# or
-bun dev
-```
+*   **Framework:** Next.js 16 (App Router)
+*   **Lenguaje:** TypeScript
+*   **Estilos:** TailwindCSS
+*   **Base de Datos:** PostgreSQL
+*   **Autenticación:** JWT Custom (Seguro)
 
-Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
+## 📂 Documentación Técnica
 
-You can start editing the page by modifying `app/page.tsx`. The page auto-updates as you edit the file.
+Para mantener este README limpio, la documentación técnica detallada se encuentra en archivos específicos:
 
-This project uses [`next/font`](https://nextjs.org/docs/app/building-your-application/optimizing/fonts) to automatically optimize and load [Geist](https://vercel.com/font), a new font family for Vercel.
+*   **[ARQUITECTURA_COMPLETA.md](./ARQUITECTURA_COMPLETA.md)**: Visión global del proyecto, estructura de base de datos, lista de APIs y estado de implementación. **(LECTURA OBLIGATORIA)**
+*   **[DOCS_AUTENTICACION.md](./DOCS_AUTENTICACION.md)**: Todo sobre el sistema de login, usuarios administradores y seguridad.
+*   **[GUIA_DESPLEGAR_ACTUALIZAR_CPANEL.md](./GUIA_DESPLEGAR_ACTUALIZAR_CPANEL.md)**: Instructivo paso a paso para desplegar en producción (cPanel).
 
-## Learn More
+## 🛠️ Instalación y Desarrollo Local
 
-To learn more about Next.js, take a look at the following resources:
+1.  **Clonar el repositorio:**
+    ```bash
+    git clone <url-del-repo>
+    cd parroquia-icm-nextjs
+    ```
 
-- [Next.js Documentation](https://nextjs.org/docs) - learn about Next.js features and API.
-- [Learn Next.js](https://nextjs.org/learn) - an interactive Next.js tutorial.
+2.  **Instalar dependencias:**
+    ```bash
+    npm install
+    ```
 
-You can check out [the Next.js GitHub repository](https://github.com/vercel/next.js) - your feedback and contributions are welcome!
+3.  **Configurar Variables de Entorno:**
+    Crea un archivo `.env.development.local` con las siguientes variables (puedes copiar de `.env.local` si tienes acceso):
+    ```env
+    DB_HOST=localhost
+    DB_PORT=5432
+    DB_USER=tu_usuario
+    DB_PASSWORD=tu_password
+    DB_NAME=parroquia_dev
+    JWT_SECRET=tu_clave_secreta_local
+    ```
 
-## Deploy on Vercel
+4.  **Iniciar servidor de desarrollo:**
+    ```bash
+    npm run dev
+    ```
+    Visita [http://localhost:3000](http://localhost:3000)
 
-The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
+## 🔑 Credenciales por Defecto (Desarrollo)
+*   **Email:** `admin@parroquiaicm.com`
+*   **Contraseña:** `Admin123!`
 
-Check out our [Next.js deployment documentation](https://nextjs.org/docs/app/building-your-application/deploying) for more details.
+---
+*Desarrollado para los Misioneros Claretianos - Miraflores, Arequipa.*

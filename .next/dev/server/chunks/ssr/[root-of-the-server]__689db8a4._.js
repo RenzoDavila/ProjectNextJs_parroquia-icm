@@ -28,6 +28,8 @@ module.exports = mod;
 
 // Site Configuration
 __turbopack_context__.s([
+    "AUTH_CONFIG",
+    ()=>AUTH_CONFIG,
     "EXTERNAL_LINKS",
     ()=>EXTERNAL_LINKS,
     "GROUP_CATEGORIES",
@@ -234,6 +236,17 @@ const EXTERNAL_LINKS = {
         arzobispado: "http://www.arzobispadoarequipa.org.pe"
     }
 };
+const AUTH_CONFIG = {
+    // SEGURIDAD: Leer solo de variable de entorno. 
+    // En producción, si esto no existe, la autenticación fallará (lo cual es seguro).
+    JWT_SECRET: process.env.JWT_SECRET || '',
+    JWT_EXPIRES_IN: '7d',
+    COOKIE_NAME: 'auth-token'
+};
+// Validar configuración crítica en desarrollo
+if (("TURBOPACK compile-time value", "development") === 'development' && !AUTH_CONFIG.JWT_SECRET) {
+    console.warn('⚠️ ADVERTENCIA: JWT_SECRET no está configurado en las variables de entorno.');
+}
 }),
 "[project]/src/components/layout/Header.tsx [app-ssr] (ecmascript)", ((__turbopack_context__) => {
 "use strict";

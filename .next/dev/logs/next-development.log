@@ -1,157 +1,318 @@
-[00:00:01.261] Server  LOG      ✓ Ready in 954ms
-[00:00:50.841] Browser INFO    %cDownload the React DevTools for a better development experience: https://react.dev/link/react-devtools font-weight:bold
-[00:00:51.010] Browser WARN    Image with src "/images/logos/logo-parroquia.png" has "fill" but is missing "sizes" prop. Please add it to improve page performance. Read more: https://nextjs.org/docs/api-reference/next/image#sizes
-[00:00:51.163] Server  LOG     Consulta ejecutada: {}
-[00:00:51.316] Server  LOG     Consulta ejecutada: {}
-[00:00:51.412] Server  LOG     Consulta ejecutada: {}
-[00:00:51.513] Server  LOG     Ejecutada query {}
-[00:00:51.515] Server  LOG     Ejecutada query {}
-[00:00:51.515] Server  LOG     Ejecutada query {}
-[00:00:51.604] Server  LOG     Ejecutada query {}
-[00:01:00.903] Browser WARN    Detected `scroll-behavior: smooth` on the `<html>` element. To disable smooth scrolling during route transitions, add `data-scroll-behavior="smooth"` to your <html> element. Learn more: https://nextjs.org/docs/messages/missing-data-scroll-behavior
-[00:01:01.083] Browser WARN    Image with src "https://images.unsplash.com/photo-1544427920-c49ccfb85579?q=80&w=600" has "fill" but is missing "sizes" prop. Please add it to improve page performance. Read more: https://nextjs.org/docs/api-reference/next/image#sizes
-[00:01:01.083] Browser WARN    Image with src "https://images.unsplash.com/photo-1438232992991-995b7058bbb3?q=80&w=600" has "fill" but is missing "sizes" prop. Please add it to improve page performance. Read more: https://nextjs.org/docs/api-reference/next/image#sizes
-[00:01:09.174] Browser INFO    %cDownload the React DevTools for a better development experience: https://react.dev/link/react-devtools font-weight:bold
-[00:01:09.347] Server  LOG     Consulta ejecutada: {}
-[00:01:09.355] Server  LOG     Consulta ejecutada: {}
-[00:01:09.358] Server  LOG     Consulta ejecutada: {}
-[00:01:09.364] Server  LOG     Consulta ejecutada: {}
-[00:01:09.365] Server  LOG     Consulta ejecutada: {}
-[00:01:09.367] Server  LOG     Consulta ejecutada: {}
-[00:01:09.368] Server  LOG     Consulta ejecutada: {}
-[00:01:09.370] Server  LOG     Consulta ejecutada: {}
-[00:01:09.374] Server  LOG     Consulta ejecutada: {}
-[00:01:09.375] Server  LOG     Consulta ejecutada: {}
-[00:01:09.376] Server  LOG     Consulta ejecutada: {}
-[00:01:09.379] Server  LOG     Consulta ejecutada: {}
-[00:01:09.381] Server  LOG     Consulta ejecutada: {}
-[00:01:09.383] Server  LOG     Consulta ejecutada: {}
-[00:01:09.384] Server  LOG     Consulta ejecutada: {}
-[00:01:09.385] Server  LOG     Consulta ejecutada: {}
-[00:01:09.387] Server  LOG     Consulta ejecutada: {}
-[00:01:09.390] Server  LOG     Consulta ejecutada: {}
-[00:01:20.751] Browser WARN    Detected `scroll-behavior: smooth` on the `<html>` element. To disable smooth scrolling during route transitions, add `data-scroll-behavior="smooth"` to your <html> element. Learn more: https://nextjs.org/docs/messages/missing-data-scroll-behavior
-[00:01:20.752] Server  LOG     Consulta ejecutada: {}
-[00:01:20.777] Server  LOG     Consulta ejecutada: {}
-[00:01:43.027] Server  LOG     Consulta ejecutada: {}
-[00:01:43.047] Server  LOG     Consulta ejecutada: {}
-[00:01:46.924] Server  LOG     Consulta ejecutada: {}
-[00:01:46.942] Server  LOG     Consulta ejecutada: {}
-[00:01:47.038] Server  LOG     Consulta ejecutada: {}
-[00:01:47.048] Server  LOG     Consulta ejecutada: {}
-[00:02:03.690] Server  LOG     Consulta ejecutada: {}
-[00:02:03.705] Server  LOG     Consulta ejecutada: {}
-[00:07:33.099] Server  LOG     Consulta ejecutada: {}
-[00:07:33.114] Server  LOG     Consulta ejecutada: {}
-[00:07:38.899] Browser INFO    %cDownload the React DevTools for a better development experience: https://react.dev/link/react-devtools font-weight:bold
-[00:07:38.952] Server  LOG     Consulta ejecutada: {}
-[00:07:38.969] Server  LOG     Consulta ejecutada: {}
-[00:07:39.038] Browser WARN    Image with src "/images/logos/logo-parroquia.png" has "fill" but is missing "sizes" prop. Please add it to improve page performance. Read more: https://nextjs.org/docs/api-reference/next/image#sizes
-[00:07:48.687] Server  LOG     Consulta ejecutada: {}
-[00:07:48.700] Server  LOG     Consulta ejecutada: {}
-[00:07:52.200] Browser INFO    %cDownload the React DevTools for a better development experience: https://react.dev/link/react-devtools font-weight:bold
-[00:07:52.254] Server  LOG     Consulta ejecutada: {}
-[00:07:52.267] Server  LOG     Consulta ejecutada: {}
-[00:07:52.327] Browser WARN    Image with src "/images/logos/logo-parroquia.png" has "fill" but is missing "sizes" prop. Please add it to improve page performance. Read more: https://nextjs.org/docs/api-reference/next/image#sizes
-[00:28:54.155] Server  LOG     Consulta ejecutada: {}
-[00:28:54.189] Server  LOG     Consulta ejecutada: {}
-[00:28:54.455] Server  LOG     Consulta ejecutada: {}
-[00:28:54.457] Server  LOG     Consulta ejecutada: {}
-[00:28:54.471] Server  LOG     Consulta ejecutada: {}
-[00:28:54.472] Server  LOG     Consulta ejecutada: {}
-[00:28:56.692] Server  LOG     Consulta ejecutada: {}
-[00:28:56.700] Server  LOG     Consulta ejecutada: {}
-[00:29:01.304] Server  LOG     Consulta ejecutada: {}
-[00:29:01.315] Server  LOG     Consulta ejecutada: {}
-[00:29:01.346] Server  LOG     Consulta ejecutada: {}
-[00:29:01.361] Browser WARN    Detected `scroll-behavior: smooth` on the `<html>` element. To disable smooth scrolling during route transitions, add `data-scroll-behavior="smooth"` to your <html> element. Learn more: https://nextjs.org/docs/messages/missing-data-scroll-behavior
-[00:29:01.368] Server  LOG     Consulta ejecutada: {}
-[00:29:01.379] Server  LOG     Consulta ejecutada: {}
-[00:29:01.418] Server  LOG     Consulta ejecutada: {}
-[00:29:01.436] Server  LOG     Ejecutada query {}
-[00:29:01.438] Server  LOG     Ejecutada query {}
-[00:29:01.439] Server  LOG     Ejecutada query {}
-[00:29:01.451] Server  LOG     Ejecutada query {}
-[00:29:01.452] Server  LOG     Ejecutada query {}
-[00:29:01.452] Server  LOG     Ejecutada query {}
-[00:29:01.469] Server  LOG     Ejecutada query {}
-[00:29:01.495] Server  LOG     Ejecutada query {}
-[00:29:17.000] Server  LOG     Consulta ejecutada: {}
-[00:29:17.014] Server  LOG     Consulta ejecutada: {}
-[00:29:31.053] Server  LOG     Consulta ejecutada: {}
-[00:29:31.055] Server  LOG     Consulta ejecutada: {}
-[00:29:31.056] Server  LOG     Consulta ejecutada: {}
-[00:29:31.067] Server  LOG     Consulta ejecutada: {}
-[00:29:31.068] Server  LOG     Consulta ejecutada: {}
-[00:29:31.068] Server  LOG     Consulta ejecutada: {}
-[00:29:33.574] Server  LOG     Consulta ejecutada: {}
-[00:29:33.575] Server  LOG     Consulta ejecutada: {}
-[00:29:33.584] Server  LOG     Consulta ejecutada: {}
-[00:29:33.584] Server  LOG     Consulta ejecutada: {}
-[00:29:34.389] Server  LOG     Consulta ejecutada: {}
-[00:29:34.390] Server  LOG     Consulta ejecutada: {}
-[00:29:34.392] Server  LOG     Consulta ejecutada: {}
-[00:29:34.392] Server  LOG     Consulta ejecutada: {}
-[00:29:34.393] Server  LOG     Consulta ejecutada: {}
-[00:29:34.394] Server  LOG     Consulta ejecutada: {}
-[00:29:34.395] Server  LOG     Consulta ejecutada: {}
-[00:29:34.396] Server  LOG     Consulta ejecutada: {}
-[00:29:34.396] Server  LOG     Consulta ejecutada: {}
-[00:29:34.397] Server  LOG     Consulta ejecutada: {}
-[00:29:34.397] Server  LOG     Consulta ejecutada: {}
-[00:29:34.398] Server  LOG     Consulta ejecutada: {}
-[00:29:34.399] Server  LOG     Consulta ejecutada: {}
-[00:29:34.399] Server  LOG     Consulta ejecutada: {}
-[00:29:34.400] Server  LOG     Consulta ejecutada: {}
-[00:29:34.402] Server  LOG     Consulta ejecutada: {}
-[00:29:34.404] Server  LOG     Consulta ejecutada: {}
-[00:29:34.409] Server  LOG     Consulta ejecutada: {}
-[00:29:34.411] Server  LOG     Consulta ejecutada: {}
-[00:29:34.419] Server  LOG     Consulta ejecutada: {}
-[00:29:34.422] Server  LOG     Consulta ejecutada: {}
-[00:29:34.426] Server  LOG     Consulta ejecutada: {}
-[00:29:34.427] Server  LOG     Consulta ejecutada: {}
-[00:29:34.427] Server  LOG     Consulta ejecutada: {}
-[00:29:34.429] Server  LOG     Consulta ejecutada: {}
-[00:29:34.430] Server  LOG     Consulta ejecutada: {}
-[00:29:34.431] Server  LOG     Consulta ejecutada: {}
-[00:29:34.432] Server  LOG     Consulta ejecutada: {}
-[00:29:34.433] Server  LOG     Consulta ejecutada: {}
-[00:29:34.434] Server  LOG     Consulta ejecutada: {}
-[00:29:34.434] Server  LOG     Consulta ejecutada: {}
-[00:29:34.435] Server  LOG     Consulta ejecutada: {}
-[00:29:34.435] Server  LOG     Consulta ejecutada: {}
-[00:29:34.436] Server  LOG     Consulta ejecutada: {}
-[00:29:34.436] Server  LOG     Consulta ejecutada: {}
-[00:29:34.436] Server  LOG     Consulta ejecutada: {}
-[00:29:39.084] Browser WARN    Image with src "/uploads/donations/1765767518868-og7gct.jpg" has "fill" but is missing "sizes" prop. Please add it to improve page performance. Read more: https://nextjs.org/docs/api-reference/next/image#sizes
-[00:29:42.773] Browser WARN    Image with src "https://images.unsplash.com/photo-1529156069898-49953e39b3ac?w=600" has "fill" but is missing "sizes" prop. Please add it to improve page performance. Read more: https://nextjs.org/docs/api-reference/next/image#sizes
-[00:30:19.115] Browser INFO    %cDownload the React DevTools for a better development experience: https://react.dev/link/react-devtools font-weight:bold
-[00:30:19.246] Server  LOG     Consulta ejecutada: {}
-[00:30:19.257] Server  LOG     Consulta ejecutada: {}
-[00:30:19.290] Server  LOG     Consulta ejecutada: {}
-[00:30:19.302] Browser WARN    Image with src "/images/logos/logo-parroquia.png" has "fill" but is missing "sizes" prop. Please add it to improve page performance. Read more: https://nextjs.org/docs/api-reference/next/image#sizes
-[00:30:19.319] Server  LOG     Ejecutada query {}
-[00:30:19.320] Server  LOG     Ejecutada query {}
-[00:30:19.320] Server  LOG     Ejecutada query {}
-[00:30:19.505] Server  LOG     Ejecutada query {}
-[00:30:19.704] Browser WARN    Image with src "/uploads/donations/1765767518868-og7gct.jpg" has "fill" but is missing "sizes" prop. Please add it to improve page performance. Read more: https://nextjs.org/docs/api-reference/next/image#sizes
-[00:30:31.735] Browser WARN    Image with src "https://images.unsplash.com/photo-1529156069898-49953e39b3ac?w=600" has "fill" but is missing "sizes" prop. Please add it to improve page performance. Read more: https://nextjs.org/docs/api-reference/next/image#sizes
-[00:30:32.524] Browser WARN    Image with src "/images/home/misioneros.jpg" has "fill" but is missing "sizes" prop. Please add it to improve page performance. Read more: https://nextjs.org/docs/api-reference/next/image#sizes
-[00:30:32.524] Browser WARN    Image with src "/uploads/interest-pages/1765774756376-5bdwqi.jpg" has "fill" but is missing "sizes" prop. Please add it to improve page performance. Read more: https://nextjs.org/docs/api-reference/next/image#sizes
-[00:30:32.524] Browser WARN    Image with src "/uploads/interest-pages/1765774602893-ogufct.jpg" has "fill" but is missing "sizes" prop. Please add it to improve page performance. Read more: https://nextjs.org/docs/api-reference/next/image#sizes
-[00:30:32.524] Browser WARN    Image with src "/uploads/interest-pages/1765774423762-74u3u6.jpg" has "fill" but is missing "sizes" prop. Please add it to improve page performance. Read more: https://nextjs.org/docs/api-reference/next/image#sizes
-[00:30:32.524] Browser WARN    Image with src "/uploads/interest-pages/1765776452925-n7u3ey.jpg" has "fill" but is missing "sizes" prop. Please add it to improve page performance. Read more: https://nextjs.org/docs/api-reference/next/image#sizes
-[00:30:32.524] Browser WARN    Image with src "/uploads/interest-pages/1765776396639-tb6bbu.jpg" has "fill" but is missing "sizes" prop. Please add it to improve page performance. Read more: https://nextjs.org/docs/api-reference/next/image#sizes
-[00:30:32.686] Browser WARN    Image with src "/uploads/interest-pages/1765776173730-aha4u2.jpg" has "fill" but is missing "sizes" prop. Please add it to improve page performance. Read more: https://nextjs.org/docs/api-reference/next/image#sizes
-[00:57:06.889] Server  LOG      ✓ Compiled in 136ms
-[01:22:45.991] Browser INFO    %cDownload the React DevTools for a better development experience: https://react.dev/link/react-devtools font-weight:bold
-[01:22:46.084] Server  LOG     Consulta ejecutada: {}
-[01:22:46.094] Server  LOG     Consulta ejecutada: {}
-[01:22:46.121] Server  LOG     Consulta ejecutada: {}
-[01:22:46.148] Server  LOG     Ejecutada query {}
-[01:22:46.149] Server  LOG     Ejecutada query {}
-[01:22:46.149] Server  LOG     Ejecutada query {}
-[01:22:46.329] Browser WARN    Image with src "/images/logos/logo-parroquia.png" has "fill" but is missing "sizes" prop. Please add it to improve page performance. Read more: https://nextjs.org/docs/api-reference/next/image#sizes
-[01:22:46.343] Server  LOG     Ejecutada query {}
-[01:22:46.524] Browser WARN    Image with src "/uploads/donations/1765767518868-og7gct.jpg" has "fill" but is missing "sizes" prop. Please add it to improve page performance. Read more: https://nextjs.org/docs/api-reference/next/image#sizes
+[00:00:01.110] Server  WARN     ⚠ The "middleware" file convention is deprecated. Please use "proxy" instead. Learn more: https://nextjs.org/docs/messages/middleware-to-proxy
+[00:00:01.250] Server  LOG      ✓ Ready in 985ms
+[00:00:09.411] Browser INFO    %cDownload the React DevTools for a better development experience: https://react.dev/link/react-devtools font-weight:bold
+[00:00:09.569] Browser WARN    Image with src "/images/logos/logo-parroquia.png" has "fill" but is missing "sizes" prop. Please add it to improve page performance. Read more: https://nextjs.org/docs/api-reference/next/image#sizes
+[00:00:09.695] Server  LOG     Consulta ejecutada: {}
+[00:00:09.843] Server  LOG     Consulta ejecutada: {}
+[00:00:10.131] Server  LOG     Consulta ejecutada: {}
+[00:00:10.249] Server  LOG     Ejecutada query {}
+[00:00:10.251] Server  LOG     Ejecutada query {}
+[00:00:10.253] Server  LOG     Ejecutada query {}
+[00:00:10.332] Server  LOG     Ejecutada query {}
+[00:00:10.510] Browser WARN    Image with src "/uploads/donations/1765767518868-og7gct.jpg" has "fill" but is missing "sizes" prop. Please add it to improve page performance. Read more: https://nextjs.org/docs/api-reference/next/image#sizes
+[00:00:12.793] Browser WARN    Detected `scroll-behavior: smooth` on the `<html>` element. To disable smooth scrolling during route transitions, add `data-scroll-behavior="smooth"` to your <html> element. Learn more: https://nextjs.org/docs/messages/missing-data-scroll-behavior
+[00:00:27.598] Server  LOG     Ejecutada query {}
+[00:00:27.729] Server  LOG     Ejecutada query {}
+[00:00:28.164] Browser INFO    %cDownload the React DevTools for a better development experience: https://react.dev/link/react-devtools font-weight:bold
+[00:00:28.336] Server  LOG     Consulta ejecutada: {}
+[00:00:28.339] Server  LOG     Consulta ejecutada: {}
+[00:00:28.342] Server  LOG     Consulta ejecutada: {}
+[00:00:28.344] Server  LOG     Consulta ejecutada: {}
+[00:00:28.345] Server  LOG     Consulta ejecutada: {}
+[00:00:28.347] Server  LOG     Consulta ejecutada: {}
+[00:00:28.347] Server  LOG     Consulta ejecutada: {}
+[00:00:28.349] Server  LOG     Consulta ejecutada: {}
+[00:00:28.349] Server  LOG     Consulta ejecutada: {}
+[00:00:28.352] Server  LOG     Consulta ejecutada: {}
+[00:00:28.354] Server  LOG     Consulta ejecutada: {}
+[00:00:28.355] Server  LOG     Consulta ejecutada: {}
+[00:00:28.356] Server  LOG     Consulta ejecutada: {}
+[00:00:28.357] Server  LOG     Consulta ejecutada: {}
+[00:00:28.358] Server  LOG     Consulta ejecutada: {}
+[00:00:28.363] Server  LOG     Consulta ejecutada: {}
+[00:00:28.364] Server  LOG     Consulta ejecutada: {}
+[00:00:28.366] Server  LOG     Consulta ejecutada: {}
+[00:00:28.367] Server  LOG     Consulta ejecutada: {}
+[00:00:28.373] Server  LOG     Consulta ejecutada: {}
+[00:00:28.376] Server  LOG     Consulta ejecutada: {}
+[00:00:28.377] Server  LOG     Consulta ejecutada: {}
+[00:00:28.378] Server  LOG     Consulta ejecutada: {}
+[00:00:28.384] Server  LOG     Consulta ejecutada: {}
+[00:00:28.386] Server  LOG     Consulta ejecutada: {}
+[00:00:28.387] Server  LOG     Consulta ejecutada: {}
+[00:00:28.388] Server  LOG     Consulta ejecutada: {}
+[00:00:28.388] Server  LOG     Consulta ejecutada: {}
+[00:00:28.389] Server  LOG     Consulta ejecutada: {}
+[00:00:28.389] Server  LOG     Consulta ejecutada: {}
+[00:00:28.390] Server  LOG     Consulta ejecutada: {}
+[00:00:28.390] Server  LOG     Consulta ejecutada: {}
+[00:00:28.391] Server  LOG     Consulta ejecutada: {}
+[00:00:28.392] Server  LOG     Consulta ejecutada: {}
+[00:00:28.393] Server  LOG     Consulta ejecutada: {}
+[00:00:28.394] Server  LOG     Consulta ejecutada: {}
+[00:00:49.197] Browser WARN    Detected `scroll-behavior: smooth` on the `<html>` element. To disable smooth scrolling during route transitions, add `data-scroll-behavior="smooth"` to your <html> element. Learn more: https://nextjs.org/docs/messages/missing-data-scroll-behavior
+[00:00:53.153] Server  LOG     Consulta ejecutada: {}
+[00:00:53.172] Server  LOG     Consulta ejecutada: {}
+[00:00:53.195] Server  LOG     Consulta ejecutada: {}
+[00:00:53.208] Server  LOG     Consulta ejecutada: {}
+[00:00:53.229] Server  LOG     Consulta ejecutada: {}
+[00:00:53.239] Browser WARN    Image with src "/images/logos/logo-parroquia.png" has "fill" but is missing "sizes" prop. Please add it to improve page performance. Read more: https://nextjs.org/docs/api-reference/next/image#sizes
+[00:00:53.261] Server  LOG     Consulta ejecutada: {}
+[00:00:53.266] Server  LOG     Ejecutada query {}
+[00:00:53.268] Server  LOG     Ejecutada query {}
+[00:00:53.269] Server  LOG     Ejecutada query {}
+[00:00:53.678] Server  LOG     Ejecutada query {}
+[00:00:53.679] Server  LOG     Ejecutada query {}
+[00:00:53.695] Server  LOG     Ejecutada query {}
+[00:00:53.701] Server  LOG     Ejecutada query {}
+[00:00:53.712] Server  LOG     Ejecutada query {}
+[00:00:53.903] Browser WARN    Image with src "/uploads/donations/1765767518868-og7gct.jpg" has "fill" but is missing "sizes" prop. Please add it to improve page performance. Read more: https://nextjs.org/docs/api-reference/next/image#sizes
+[00:01:06.838] Server  LOG     Ejecutada query {}
+[00:01:06.948] Server  LOG     Ejecutada query {}
+[00:01:07.118] Browser INFO    %cDownload the React DevTools for a better development experience: https://react.dev/link/react-devtools font-weight:bold
+[00:01:07.197] Server  LOG     Consulta ejecutada: {}
+[00:01:07.198] Server  LOG     Consulta ejecutada: {}
+[00:01:07.198] Server  LOG     Consulta ejecutada: {}
+[00:01:07.200] Server  LOG     Consulta ejecutada: {}
+[00:01:07.201] Server  LOG     Consulta ejecutada: {}
+[00:01:07.202] Server  LOG     Consulta ejecutada: {}
+[00:01:07.203] Server  LOG     Consulta ejecutada: {}
+[00:01:07.203] Server  LOG     Consulta ejecutada: {}
+[00:01:07.204] Server  LOG     Consulta ejecutada: {}
+[00:01:07.205] Server  LOG     Consulta ejecutada: {}
+[00:01:07.205] Server  LOG     Consulta ejecutada: {}
+[00:01:07.206] Server  LOG     Consulta ejecutada: {}
+[00:01:07.206] Server  LOG     Consulta ejecutada: {}
+[00:01:07.210] Server  LOG     Consulta ejecutada: {}
+[00:01:07.211] Server  LOG     Consulta ejecutada: {}
+[00:01:07.214] Server  LOG     Consulta ejecutada: {}
+[00:01:07.216] Server  LOG     Consulta ejecutada: {}
+[00:01:07.219] Server  LOG     Consulta ejecutada: {}
+[00:01:07.242] Server  LOG     Consulta ejecutada: {}
+[00:01:07.243] Server  LOG     Consulta ejecutada: {}
+[00:01:07.244] Server  LOG     Consulta ejecutada: {}
+[00:01:07.255] Server  LOG     Consulta ejecutada: {}
+[00:01:07.257] Server  LOG     Consulta ejecutada: {}
+[00:01:07.258] Server  LOG     Consulta ejecutada: {}
+[00:01:07.260] Server  LOG     Consulta ejecutada: {}
+[00:01:07.261] Server  LOG     Consulta ejecutada: {}
+[00:01:07.262] Server  LOG     Consulta ejecutada: {}
+[00:01:07.265] Server  LOG     Consulta ejecutada: {}
+[00:01:07.267] Server  LOG     Consulta ejecutada: {}
+[00:01:07.268] Server  LOG     Consulta ejecutada: {}
+[00:01:07.269] Server  LOG     Consulta ejecutada: {}
+[00:01:07.271] Server  LOG     Consulta ejecutada: {}
+[00:01:07.271] Server  LOG     Consulta ejecutada: {}
+[00:01:07.272] Server  LOG     Consulta ejecutada: {}
+[00:01:07.273] Server  LOG     Consulta ejecutada: {}
+[00:01:07.274] Server  LOG     Consulta ejecutada: {}
+[00:01:13.906] Server  LOG     Consulta ejecutada: {}
+[00:01:13.907] Server  LOG     Consulta ejecutada: {}
+[00:01:13.944] Server  LOG     Consulta ejecutada: {}
+[00:01:13.945] Server  LOG     Consulta ejecutada: {}
+[00:01:13.987] Browser WARN    Detected `scroll-behavior: smooth` on the `<html>` element. To disable smooth scrolling during route transitions, add `data-scroll-behavior="smooth"` to your <html> element. Learn more: https://nextjs.org/docs/messages/missing-data-scroll-behavior
+[00:01:18.725] Server  LOG     Consulta ejecutada: {}
+[00:01:18.734] Server  LOG     Consulta ejecutada: {}
+[00:01:18.768] Server  LOG     Consulta ejecutada: {}
+[00:01:18.776] Server  LOG     Consulta ejecutada: {}
+[00:01:18.794] Server  LOG     Consulta ejecutada: {}
+[00:01:18.807] Server  LOG     Consulta ejecutada: {}
+[00:01:18.814] Browser WARN    Image with src "/images/logos/logo-parroquia.png" has "fill" but is missing "sizes" prop. Please add it to improve page performance. Read more: https://nextjs.org/docs/api-reference/next/image#sizes
+[00:01:18.826] Server  LOG     Ejecutada query {}
+[00:01:18.827] Server  LOG     Ejecutada query {}
+[00:01:18.828] Server  LOG     Ejecutada query {}
+[00:01:18.841] Server  LOG     Ejecutada query {}
+[00:01:18.842] Server  LOG     Ejecutada query {}
+[00:01:18.843] Server  LOG     Ejecutada query {}
+[00:01:19.060] Server  LOG     Ejecutada query {}
+[00:01:19.085] Server  LOG     Ejecutada query {}
+[00:01:19.264] Browser WARN    Image with src "/uploads/donations/1765767518868-og7gct.jpg" has "fill" but is missing "sizes" prop. Please add it to improve page performance. Read more: https://nextjs.org/docs/api-reference/next/image#sizes
+[00:01:19.940] Server  LOG     Consulta ejecutada: {}
+[00:01:19.940] Server  LOG     Consulta ejecutada: {}
+[00:01:19.941] Server  LOG     Consulta ejecutada: {}
+[00:01:19.941] Server  LOG     Consulta ejecutada: {}
+[00:01:19.942] Server  LOG     Consulta ejecutada: {}
+[00:01:19.943] Server  LOG     Consulta ejecutada: {}
+[00:01:19.943] Server  LOG     Consulta ejecutada: {}
+[00:01:19.945] Server  LOG     Consulta ejecutada: {}
+[00:01:19.946] Server  LOG     Consulta ejecutada: {}
+[00:01:19.948] Server  LOG     Consulta ejecutada: {}
+[00:01:19.949] Server  LOG     Consulta ejecutada: {}
+[00:01:19.951] Server  LOG     Consulta ejecutada: {}
+[00:01:19.953] Server  LOG     Consulta ejecutada: {}
+[00:01:19.958] Server  LOG     Consulta ejecutada: {}
+[00:01:19.960] Server  LOG     Consulta ejecutada: {}
+[00:01:19.960] Server  LOG     Consulta ejecutada: {}
+[00:01:19.961] Server  LOG     Consulta ejecutada: {}
+[00:01:19.963] Server  LOG     Consulta ejecutada: {}
+[00:01:19.963] Server  LOG     Consulta ejecutada: {}
+[00:01:19.964] Server  LOG     Consulta ejecutada: {}
+[00:01:19.964] Server  LOG     Consulta ejecutada: {}
+[00:01:19.964] Server  LOG     Consulta ejecutada: {}
+[00:01:19.968] Server  LOG     Consulta ejecutada: {}
+[00:01:19.978] Server  LOG     Consulta ejecutada: {}
+[00:01:19.979] Server  LOG     Consulta ejecutada: {}
+[00:01:19.980] Server  LOG     Consulta ejecutada: {}
+[00:01:19.981] Server  LOG     Consulta ejecutada: {}
+[00:01:19.983] Server  LOG     Consulta ejecutada: {}
+[00:01:19.986] Server  LOG     Consulta ejecutada: {}
+[00:01:19.987] Server  LOG     Consulta ejecutada: {}
+[00:01:19.988] Server  LOG     Consulta ejecutada: {}
+[00:01:19.989] Server  LOG     Consulta ejecutada: {}
+[00:01:19.990] Server  LOG     Consulta ejecutada: {}
+[00:01:19.991] Server  LOG     Consulta ejecutada: {}
+[00:01:19.994] Server  LOG     Consulta ejecutada: {}
+[00:01:19.996] Server  LOG     Consulta ejecutada: {}
+[00:01:23.506] Browser INFO    %cDownload the React DevTools for a better development experience: https://react.dev/link/react-devtools font-weight:bold
+[00:01:23.550] Server  LOG     Consulta ejecutada: {}
+[00:01:23.551] Server  LOG     Consulta ejecutada: {}
+[00:01:23.558] Server  LOG     Consulta ejecutada: {}
+[00:01:23.559] Server  LOG     Consulta ejecutada: {}
+[00:01:24.514] Server  LOG     Consulta ejecutada: {}
+[00:01:24.523] Server  LOG     Consulta ejecutada: {}
+[00:01:24.534] Server  LOG     Consulta ejecutada: {}
+[00:01:24.575] Server  LOG     Consulta ejecutada: {}
+[00:01:24.578] Server  LOG     Consulta ejecutada: {}
+[00:01:24.606] Server  LOG     Consulta ejecutada: {}
+[00:01:24.608] Server  LOG     Ejecutada query {}
+[00:01:24.609] Server  LOG     Ejecutada query {}
+[00:01:24.610] Server  LOG     Ejecutada query {}
+[00:01:24.788] Browser WARN    Detected `scroll-behavior: smooth` on the `<html>` element. To disable smooth scrolling during route transitions, add `data-scroll-behavior="smooth"` to your <html> element. Learn more: https://nextjs.org/docs/messages/missing-data-scroll-behavior
+[00:01:24.788] Browser WARN    Image with src "/images/logos/logo-parroquia.png" has "fill" but is missing "sizes" prop. Please add it to improve page performance. Read more: https://nextjs.org/docs/api-reference/next/image#sizes
+[00:01:24.839] Server  LOG     Ejecutada query {}
+[00:01:24.847] Server  LOG     Ejecutada query {}
+[00:01:24.851] Server  LOG     Ejecutada query {}
+[00:01:24.857] Server  LOG     Ejecutada query {}
+[00:01:24.895] Server  LOG     Ejecutada query {}
+[00:01:25.083] Browser WARN    Image with src "/uploads/donations/1765767518868-og7gct.jpg" has "fill" but is missing "sizes" prop. Please add it to improve page performance. Read more: https://nextjs.org/docs/api-reference/next/image#sizes
+[00:01:25.928] Server  LOG     Consulta ejecutada: {}
+[00:01:25.929] Server  LOG     Consulta ejecutada: {}
+[00:01:25.929] Server  LOG     Consulta ejecutada: {}
+[00:01:25.930] Server  LOG     Consulta ejecutada: {}
+[00:01:25.930] Server  LOG     Consulta ejecutada: {}
+[00:01:25.931] Server  LOG     Consulta ejecutada: {}
+[00:01:25.931] Server  LOG     Consulta ejecutada: {}
+[00:01:25.931] Server  LOG     Consulta ejecutada: {}
+[00:01:25.933] Server  LOG     Consulta ejecutada: {}
+[00:01:25.935] Server  LOG     Consulta ejecutada: {}
+[00:01:25.939] Server  LOG     Consulta ejecutada: {}
+[00:01:25.944] Server  LOG     Consulta ejecutada: {}
+[00:01:25.946] Server  LOG     Consulta ejecutada: {}
+[00:01:25.947] Server  LOG     Consulta ejecutada: {}
+[00:01:25.947] Server  LOG     Consulta ejecutada: {}
+[00:01:25.947] Server  LOG     Consulta ejecutada: {}
+[00:01:25.950] Server  LOG     Consulta ejecutada: {}
+[00:01:25.951] Server  LOG     Consulta ejecutada: {}
+[00:01:25.952] Server  LOG     Consulta ejecutada: {}
+[00:01:25.952] Server  LOG     Consulta ejecutada: {}
+[00:01:25.955] Server  LOG     Consulta ejecutada: {}
+[00:01:25.956] Server  LOG     Consulta ejecutada: {}
+[00:01:25.957] Server  LOG     Consulta ejecutada: {}
+[00:01:25.963] Server  LOG     Consulta ejecutada: {}
+[00:01:25.965] Server  LOG     Consulta ejecutada: {}
+[00:01:25.966] Server  LOG     Consulta ejecutada: {}
+[00:01:25.967] Server  LOG     Consulta ejecutada: {}
+[00:01:25.968] Server  LOG     Consulta ejecutada: {}
+[00:01:25.969] Server  LOG     Consulta ejecutada: {}
+[00:01:25.970] Server  LOG     Consulta ejecutada: {}
+[00:01:25.971] Server  LOG     Consulta ejecutada: {}
+[00:01:25.972] Server  LOG     Consulta ejecutada: {}
+[00:01:25.972] Server  LOG     Consulta ejecutada: {}
+[00:01:25.973] Server  LOG     Consulta ejecutada: {}
+[00:01:25.974] Server  LOG     Consulta ejecutada: {}
+[00:01:25.975] Server  LOG     Consulta ejecutada: {}
+[00:01:30.439] Browser INFO    %cDownload the React DevTools for a better development experience: https://react.dev/link/react-devtools font-weight:bold
+[00:03:05.572] Server  LOG      ✓ Compiled in 162ms
+[00:18:23.154] Server  LOG     Ejecutada query {}
+[00:18:23.286] Server  LOG     Ejecutada query {}
+[00:18:23.693] Browser INFO    %cDownload the React DevTools for a better development experience: https://react.dev/link/react-devtools font-weight:bold
+[00:18:23.872] Server  LOG     Consulta ejecutada: {}
+[00:18:23.874] Server  LOG     Consulta ejecutada: {}
+[00:18:23.875] Server  LOG     Consulta ejecutada: {}
+[00:18:23.877] Server  LOG     Consulta ejecutada: {}
+[00:18:23.877] Server  LOG     Consulta ejecutada: {}
+[00:18:23.880] Server  LOG     Consulta ejecutada: {}
+[00:18:23.880] Server  LOG     Consulta ejecutada: {}
+[00:18:23.881] Server  LOG     Consulta ejecutada: {}
+[00:18:23.882] Server  LOG     Consulta ejecutada: {}
+[00:18:23.883] Server  LOG     Consulta ejecutada: {}
+[00:18:23.885] Server  LOG     Consulta ejecutada: {}
+[00:18:23.890] Server  LOG     Consulta ejecutada: {}
+[00:18:23.894] Server  LOG     Consulta ejecutada: {}
+[00:18:23.894] Server  LOG     Consulta ejecutada: {}
+[00:18:23.894] Server  LOG     Consulta ejecutada: {}
+[00:18:23.895] Server  LOG     Consulta ejecutada: {}
+[00:18:23.897] Server  LOG     Consulta ejecutada: {}
+[00:18:23.898] Server  LOG     Consulta ejecutada: {}
+[00:18:23.898] Server  LOG     Consulta ejecutada: {}
+[00:18:23.899] Server  LOG     Consulta ejecutada: {}
+[00:18:23.901] Server  LOG     Consulta ejecutada: {}
+[00:18:23.902] Server  LOG     Consulta ejecutada: {}
+[00:18:23.902] Server  LOG     Consulta ejecutada: {}
+[00:18:23.911] Server  LOG     Consulta ejecutada: {}
+[00:18:23.911] Server  LOG     Consulta ejecutada: {}
+[00:18:23.912] Server  LOG     Consulta ejecutada: {}
+[00:18:23.913] Server  LOG     Consulta ejecutada: {}
+[00:18:23.914] Server  LOG     Consulta ejecutada: {}
+[00:18:23.915] Server  LOG     Consulta ejecutada: {}
+[00:18:23.915] Server  LOG     Consulta ejecutada: {}
+[00:18:23.916] Server  LOG     Consulta ejecutada: {}
+[00:18:23.917] Server  LOG     Consulta ejecutada: {}
+[00:18:23.917] Server  LOG     Consulta ejecutada: {}
+[00:18:23.918] Server  LOG     Consulta ejecutada: {}
+[00:18:23.918] Server  LOG     Consulta ejecutada: {}
+[00:18:23.919] Server  LOG     Consulta ejecutada: {}
+[00:18:26.424] Server  LOG     Consulta ejecutada: {}
+[00:18:26.476] Server  LOG     Consulta ejecutada: {}
+[00:18:26.481] Browser WARN    ⚠️ ADVERTENCIA: JWT_SECRET no está configurado en las variables de entorno.
+[00:18:26.481] Browser WARN    Detected `scroll-behavior: smooth` on the `<html>` element. To disable smooth scrolling during route transitions, add `data-scroll-behavior="smooth"` to your <html> element. Learn more: https://nextjs.org/docs/messages/missing-data-scroll-behavior
+[00:18:26.481] Browser WARN    Image with src "/images/logos/logo-parroquia.png" has "fill" but is missing "sizes" prop. Please add it to improve page performance. Read more: https://nextjs.org/docs/api-reference/next/image#sizes
+[00:18:26.481] Server  LOG     Consulta ejecutada: {}
+[00:18:26.494] Server  LOG     Consulta ejecutada: {}
+[00:18:26.536] Server  LOG     Consulta ejecutada: {}
+[00:18:26.581] Server  LOG     Consulta ejecutada: {}
+[00:18:26.587] Server  LOG     Ejecutada query {}
+[00:18:26.589] Server  LOG     Ejecutada query {}
+[00:18:26.589] Server  LOG     Ejecutada query {}
+[00:18:26.757] Server  LOG     Ejecutada query {}
+[00:18:26.759] Server  LOG     Ejecutada query {}
+[00:18:26.759] Server  LOG     Ejecutada query {}
+[00:18:26.766] Server  LOG     Ejecutada query {}
+[00:18:26.780] Server  LOG     Ejecutada query {}
+[00:18:26.953] Browser WARN    Image with src "/uploads/donations/1765767518868-og7gct.jpg" has "fill" but is missing "sizes" prop. Please add it to improve page performance. Read more: https://nextjs.org/docs/api-reference/next/image#sizes
+[00:18:27.718] Server  LOG     Consulta ejecutada: {}
+[00:18:27.719] Server  LOG     Consulta ejecutada: {}
+[00:18:27.719] Server  LOG     Consulta ejecutada: {}
+[00:18:27.720] Server  LOG     Consulta ejecutada: {}
+[00:18:27.720] Server  LOG     Consulta ejecutada: {}
+[00:18:27.720] Server  LOG     Consulta ejecutada: {}
+[00:18:27.721] Server  LOG     Consulta ejecutada: {}
+[00:18:27.722] Server  LOG     Consulta ejecutada: {}
+[00:18:27.726] Server  LOG     Consulta ejecutada: {}
+[00:18:27.726] Server  LOG     Consulta ejecutada: {}
+[00:18:27.728] Server  LOG     Consulta ejecutada: {}
+[00:18:27.731] Server  LOG     Consulta ejecutada: {}
+[00:18:27.736] Server  LOG     Consulta ejecutada: {}
+[00:18:27.737] Server  LOG     Consulta ejecutada: {}
+[00:18:27.737] Server  LOG     Consulta ejecutada: {}
+[00:18:27.738] Server  LOG     Consulta ejecutada: {}
+[00:18:27.739] Server  LOG     Consulta ejecutada: {}
+[00:18:27.741] Server  LOG     Consulta ejecutada: {}
+[00:18:27.742] Server  LOG     Consulta ejecutada: {}
+[00:18:27.742] Server  LOG     Consulta ejecutada: {}
+[00:18:27.742] Server  LOG     Consulta ejecutada: {}
+[00:18:27.744] Server  LOG     Consulta ejecutada: {}
+[00:18:27.744] Server  LOG     Consulta ejecutada: {}
+[00:18:27.751] Server  LOG     Consulta ejecutada: {}
+[00:18:27.752] Server  LOG     Consulta ejecutada: {}
+[00:18:27.752] Server  LOG     Consulta ejecutada: {}
+[00:18:27.752] Server  LOG     Consulta ejecutada: {}
+[00:18:27.753] Server  LOG     Consulta ejecutada: {}
+[00:18:27.753] Server  LOG     Consulta ejecutada: {}
+[00:18:27.755] Server  LOG     Consulta ejecutada: {}
+[00:18:27.756] Server  LOG     Consulta ejecutada: {}
+[00:18:27.757] Server  LOG     Consulta ejecutada: {}
+[00:18:27.758] Server  LOG     Consulta ejecutada: {}
+[00:18:27.758] Server  LOG     Consulta ejecutada: {}
+[00:18:27.759] Server  LOG     Consulta ejecutada: {}
+[00:18:27.763] Server  LOG     Consulta ejecutada: {}

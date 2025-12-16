@@ -2,7 +2,8 @@
 
 import { useState, useEffect } from 'react';
 import Link from 'next/link';
-import { usePathname } from 'next/navigation';
+import { usePathname, useRouter } from 'next/navigation';
+import { checkAuth, logout, type AdminUser } from '@/lib/auth';
 import {
   LayoutDashboard,
   Calendar,
@@ -86,7 +87,10 @@ export default function AdminLayout({
   const [sidebarCollapsed, setSidebarCollapsed] = useState(false);
   const [notifications] = useState(3);
   const [currentTime, setCurrentTime] = useState('');
+  const [user, setUser] = useState<AdminUser | null>(null);
+  const [isLoading, setIsLoading] = useState(true);
   const pathname = usePathname();
+  const router = useRouter();
 
   useEffect(() => {
     const updateTime = () => {
@@ -98,6 +102,21 @@ export default function AdminLayout({
     return () => clearInterval(interval);
   }, []);
 
+  useEffect(() => {
+    const verifyAuth = async () => {
+      const currentUser = await checkAuth();
+      setUser(currentUser);
+      setIsLoading(false);
+    };
+    verifyAuth();
+  }, []);
+
+  const handleLogout = async () => {
+    await logout();
+    router.push('/admin/login');
+    router.refresh();
+  };
+
   const getPageTitle = () => {
     for (const group of navigationGroups) {
       for (const item of group.items) {
@@ -108,6 +127,42 @@ export default function AdminLayout({
     }
     return 'Dashboard';
   };
+
+  // Mostrar pantalla de carga mientras se verifica la autenticación
+  if (isLoading) {
+    return (
+      <div className="min-h-screen bg-gradient-to-br from-slate-50 to-slate-100 flex items-center justify-center">
+        <div className="text-center">
+          <div className="relative w-16 h-16 mx-auto mb-4">
+            <div className="absolute inset-0 rounded-full border-4 border-emerald-200"></div>
+            <div className="absolute inset-0 rounded-full border-4 border-emerald-500 border-t-transparent animate-spin"></div>
+          </div>
+          <p className="text-slate-600 font-medium">Verificando sesión...</p>
+        </div>
+      </div>
+    );
+  }
+
+  // Si estamos en la página de login, renderizar solo el children sin el layout del admin
+  if (pathname === '/admin/login') {
+    return <>{children}</>;
+  }
+
+  // Si no hay usuario autenticado y no estamos en login, mostrar pantalla de carga
+  // (El middleware redirigirá a /admin/login)
+  if (!user) {
+    return (
+      <div className="min-h-screen bg-gradient-to-br from-slate-50 to-slate-100 flex items-center justify-center">
+        <div className="text-center">
+          <div className="relative w-16 h-16 mx-auto mb-4">
+            <div className="absolute inset-0 rounded-full border-4 border-emerald-200"></div>
+            <div className="absolute inset-0 rounded-full border-4 border-emerald-500 border-t-transparent animate-spin"></div>
+          </div>
+          <p className="text-slate-600 font-medium">Redirigiendo al login...</p>
+        </div>
+      </div>
+    );
+  }
 
   return (
     <div className="min-h-screen bg-gradient-to-br from-slate-50 to-slate-100">
@@ -206,17 +261,18 @@ export default function AdminLayout({
           <div className={`flex items-center gap-3 ${sidebarCollapsed ? 'justify-center' : ''}`}>
             <div className="relative">
               <div className="w-11 h-11 rounded-xl bg-gradient-to-br from-violet-500 to-purple-500 flex items-center justify-center text-white font-bold text-lg shadow-lg shadow-violet-500/25">
-                A
+                {user?.name?.charAt(0).toUpperCase() || 'A'}
               </div>
               <span className="absolute bottom-0 right-0 w-3 h-3 bg-emerald-400 border-2 border-slate-900 rounded-full"></span>
             </div>
             {!sidebarCollapsed && (
               <>
                 <div className="flex-1 min-w-0">
-                  <p className="text-sm font-semibold text-white truncate">Administrador</p>
-                  <p className="text-xs text-slate-500 truncate">admin@parroquia.com</p>
+                  <p className="text-sm font-semibold text-white truncate">{user?.name || 'Administrador'}</p>
+                  <p className="text-xs text-slate-500 truncate">{user?.email || 'admin@parroquia.com'}</p>
                 </div>
                 <button
+                  onClick={handleLogout}
                   className="p-2 text-slate-400 hover:text-red-400 hover:bg-red-500/10 rounded-lg transition-colors"
                   title="Cerrar sesión"
                 >

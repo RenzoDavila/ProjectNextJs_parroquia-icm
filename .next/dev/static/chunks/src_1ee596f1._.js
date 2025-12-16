@@ -4,6 +4,8 @@
 
 // Site Configuration
 __turbopack_context__.s([
+    "AUTH_CONFIG",
+    ()=>AUTH_CONFIG,
     "EXTERNAL_LINKS",
     ()=>EXTERNAL_LINKS,
     "GROUP_CATEGORIES",
@@ -25,6 +27,7 @@ __turbopack_context__.s([
     "SOCIAL_LINKS",
     ()=>SOCIAL_LINKS
 ]);
+var __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$build$2f$polyfills$2f$process$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__ = /*#__PURE__*/ __turbopack_context__.i("[project]/node_modules/next/dist/build/polyfills/process.js [app-client] (ecmascript)");
 const SITE_CONFIG = {
     name: "Parroquia del Inmaculado Corazón de María",
     shortName: "ParroquiaICM",
@@ -210,6 +213,17 @@ const EXTERNAL_LINKS = {
         arzobispado: "http://www.arzobispadoarequipa.org.pe"
     }
 };
+const AUTH_CONFIG = {
+    // SEGURIDAD: Leer solo de variable de entorno. 
+    // En producción, si esto no existe, la autenticación fallará (lo cual es seguro).
+    JWT_SECRET: __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$build$2f$polyfills$2f$process$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["default"].env.JWT_SECRET || '',
+    JWT_EXPIRES_IN: '7d',
+    COOKIE_NAME: 'auth-token'
+};
+// Validar configuración crítica en desarrollo
+if (("TURBOPACK compile-time value", "development") === 'development' && !AUTH_CONFIG.JWT_SECRET) {
+    console.warn('⚠️ ADVERTENCIA: JWT_SECRET no está configurado en las variables de entorno.');
+}
 if (typeof globalThis.$RefreshHelpers$ === 'object' && globalThis.$RefreshHelpers !== null) {
     __turbopack_context__.k.registerExports(__turbopack_context__.m, globalThis.$RefreshHelpers$);
 }

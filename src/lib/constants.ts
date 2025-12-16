@@ -43,7 +43,7 @@ export const MASS_SCHEDULE = {
     afternoon: ["6:00 p.m."],
   },
   chapels: {
-    santaRosa: { 
+    santaRosa: {
       name: "Capilla Sta. Rosa de Lima",
       address: "Jr. José Sabogal 1111 - Umacollo",
       weekdays: ["7:00 a.m.", "6:30 p.m."],
@@ -142,3 +142,18 @@ export const EXTERNAL_LINKS = {
     arzobispado: "http://www.arzobispadoarequipa.org.pe",
   },
 };
+
+// Authentication Configuration
+export const AUTH_CONFIG = {
+  // SEGURIDAD: Leer solo de variable de entorno. 
+  // En producción, si esto no existe, la autenticación fallará (lo cual es seguro).
+  JWT_SECRET: process.env.JWT_SECRET || '',
+
+  JWT_EXPIRES_IN: '7d',
+  COOKIE_NAME: 'auth-token',
+};
+
+// Validar configuración crítica en desarrollo
+if (process.env.NODE_ENV === 'development' && !AUTH_CONFIG.JWT_SECRET) {
+  console.warn('⚠️ ADVERTENCIA: JWT_SECRET no está configurado en las variables de entorno.');
+}
