@@ -1,9 +1,9 @@
-'use client';
+"use client";
 
-import { useState, useEffect } from 'react';
-import Link from 'next/link';
-import { usePathname, useRouter } from 'next/navigation';
-import { checkAuth, logout, type AdminUser } from '@/lib/auth';
+import { useState, useEffect } from "react";
+import Link from "next/link";
+import { usePathname, useRouter } from "next/navigation";
+import { checkAuth, logout, type AdminUser } from "@/lib/auth";
 import {
   LayoutDashboard,
   Calendar,
@@ -24,7 +24,8 @@ import {
   Search,
   Home,
   Heart,
-} from 'lucide-react';
+  UserCog,
+} from "lucide-react";
 
 type NavItem = {
   name: string;
@@ -40,40 +41,49 @@ type NavGroup = {
 
 const navigationGroups: NavGroup[] = [
   {
-    title: 'Principal',
+    title: "Principal",
     items: [
-      { name: 'Dashboard', href: '/admin', icon: LayoutDashboard },
-      { name: 'Mensajes', href: '/admin/messages', icon: MessageSquare },
+      { name: "Dashboard", href: "/admin", icon: LayoutDashboard },
+      { name: "Mensajes", href: "/admin/messages", icon: MessageSquare },
     ],
   },
   {
-    title: 'Gestión de Misas',
+    title: "Gestión de Misas",
     items: [
-      { name: 'Reservas de Misas', href: '/admin/reservations', icon: Calendar },
-      { name: 'Horarios de Misas', href: '/admin/mass-times', icon: Clock },
+      {
+        name: "Reservas de Misas",
+        href: "/admin/reservations",
+        icon: Calendar,
+      },
+      { name: "Horarios de Misas", href: "/admin/mass-times", icon: Clock },
     ],
   },
   {
-    title: 'Contenido',
+    title: "Contenido",
     items: [
-      { name: 'Contenido Home', href: '/admin/home-content', icon: Home },
-      { name: 'Galería', href: '/admin/gallery', icon: Image },
-      { name: 'Banners', href: '/admin/banners', icon: FileText },
-      { name: 'Donaciones', href: '/admin/donation-info', icon: Heart },
+      { name: "Contenido Home", href: "/admin/home-content", icon: Home },
+      { name: "Galería", href: "/admin/gallery", icon: Image },
+      { name: "Banners", href: "/admin/banners", icon: FileText },
+      { name: "Donaciones", href: "/admin/donation-info", icon: Heart },
     ],
   },
   {
-    title: 'Comunidad',
+    title: "Comunidad",
     items: [
-      { name: 'Equipo Pastoral', href: '/admin/team', icon: Users },
-      { name: 'Grupos Parroquiales', href: '/admin/parish-groups', icon: UsersRound },
+      { name: "Equipo Pastoral", href: "/admin/team", icon: Users },
+      {
+        name: "Grupos Parroquiales",
+        href: "/admin/parish-groups",
+        icon: UsersRound,
+      },
     ],
   },
   {
-    title: 'Configuración',
+    title: "Configuración",
     items: [
-      { name: 'Redes Sociales', href: '/admin/social-media', icon: Share2 },
-      { name: 'Ajustes', href: '/admin/settings', icon: Settings },
+      { name: "Usuarios", href: "/admin/users", icon: UserCog },
+      { name: "Redes Sociales", href: "/admin/social-media", icon: Share2 },
+      { name: "Ajustes", href: "/admin/settings", icon: Settings },
     ],
   },
 ];
@@ -86,7 +96,7 @@ export default function AdminLayout({
   const [sidebarOpen, setSidebarOpen] = useState(false);
   const [sidebarCollapsed, setSidebarCollapsed] = useState(false);
   const [notifications] = useState(3);
-  const [currentTime, setCurrentTime] = useState('');
+  const [currentTime, setCurrentTime] = useState("");
   const [user, setUser] = useState<AdminUser | null>(null);
   const [isLoading, setIsLoading] = useState(true);
   const pathname = usePathname();
@@ -95,7 +105,9 @@ export default function AdminLayout({
   useEffect(() => {
     const updateTime = () => {
       const now = new Date();
-      setCurrentTime(now.toLocaleTimeString('es-PE', { hour: '2-digit', minute: '2-digit' }));
+      setCurrentTime(
+        now.toLocaleTimeString("es-PE", { hour: "2-digit", minute: "2-digit" }),
+      );
     };
     updateTime();
     const interval = setInterval(updateTime, 60000);
@@ -113,7 +125,7 @@ export default function AdminLayout({
 
   const handleLogout = async () => {
     await logout();
-    router.push('/admin/login');
+    router.push("/admin/login");
     router.refresh();
   };
 
@@ -125,7 +137,7 @@ export default function AdminLayout({
         }
       }
     }
-    return 'Dashboard';
+    return "Dashboard";
   };
 
   // Mostrar pantalla de carga mientras se verifica la autenticación
@@ -144,7 +156,7 @@ export default function AdminLayout({
   }
 
   // Si estamos en la página de login, renderizar solo el children sin el layout del admin
-  if (pathname === '/admin/login') {
+  if (pathname === "/admin/login") {
     return <>{children}</>;
   }
 
@@ -177,8 +189,8 @@ export default function AdminLayout({
       {/* Sidebar */}
       <aside
         className={`fixed inset-y-0 left-0 z-50 flex flex-col bg-gradient-to-b from-slate-900 via-slate-800 to-slate-900 shadow-2xl transform transition-all duration-300 ease-in-out lg:translate-x-0 ${
-          sidebarOpen ? 'translate-x-0' : '-translate-x-full'
-        } ${sidebarCollapsed ? 'lg:w-20' : 'w-72'}`}
+          sidebarOpen ? "translate-x-0" : "-translate-x-full"
+        } ${sidebarCollapsed ? "lg:w-20" : "w-72"}`}
       >
         {/* Logo Header */}
         <div className="flex items-center justify-between h-20 px-6 bg-slate-900/50 border-b border-slate-700/50">
@@ -188,7 +200,9 @@ export default function AdminLayout({
             </div>
             {!sidebarCollapsed && (
               <div className="flex flex-col">
-                <span className="text-white font-bold text-lg tracking-tight">Parroquia</span>
+                <span className="text-white font-bold text-lg tracking-tight">
+                  Parroquia
+                </span>
                 <span className="text-slate-400 text-xs">Panel Admin</span>
               </div>
             )}
@@ -206,7 +220,7 @@ export default function AdminLayout({
           {/* Back to Website Button */}
           <Link
             href="/"
-            className={`flex items-center gap-3 px-4 py-3 text-sm font-medium text-white bg-gradient-to-r from-emerald-500 to-teal-500 hover:from-emerald-600 hover:to-teal-600 rounded-xl transition-all shadow-lg shadow-emerald-500/25 hover:shadow-emerald-500/40 ${sidebarCollapsed ? 'justify-center' : ''}`}
+            className={`flex items-center gap-3 px-4 py-3 text-sm font-medium text-white bg-gradient-to-r from-emerald-500 to-teal-500 hover:from-emerald-600 hover:to-teal-600 rounded-xl transition-all shadow-lg shadow-emerald-500/25 hover:shadow-emerald-500/40 ${sidebarCollapsed ? "justify-center" : ""}`}
           >
             <ArrowLeft className="w-5 h-5" />
             {!sidebarCollapsed && <span>Volver al Sitio</span>}
@@ -231,13 +245,15 @@ export default function AdminLayout({
                       href={item.href}
                       className={`group flex items-center gap-3 px-4 py-3 text-sm font-medium rounded-xl transition-all duration-200 ${
                         isActive
-                          ? 'bg-gradient-to-r from-emerald-500/20 to-teal-500/20 text-emerald-400 border border-emerald-500/30'
-                          : 'text-slate-400 hover:text-white hover:bg-slate-700/50'
-                      } ${sidebarCollapsed ? 'justify-center' : ''}`}
+                          ? "bg-gradient-to-r from-emerald-500/20 to-teal-500/20 text-emerald-400 border border-emerald-500/30"
+                          : "text-slate-400 hover:text-white hover:bg-slate-700/50"
+                      } ${sidebarCollapsed ? "justify-center" : ""}`}
                       onClick={() => setSidebarOpen(false)}
                       title={sidebarCollapsed ? item.name : undefined}
                     >
-                      <Icon className={`w-5 h-5 transition-transform group-hover:scale-110 ${isActive ? 'text-emerald-400' : ''}`} />
+                      <Icon
+                        className={`w-5 h-5 transition-transform group-hover:scale-110 ${isActive ? "text-emerald-400" : ""}`}
+                      />
                       {!sidebarCollapsed && (
                         <>
                           <span>{item.name}</span>
@@ -258,18 +274,24 @@ export default function AdminLayout({
 
         {/* User Section */}
         <div className="p-4 border-t border-slate-700/50 bg-slate-900/50">
-          <div className={`flex items-center gap-3 ${sidebarCollapsed ? 'justify-center' : ''}`}>
+          <div
+            className={`flex items-center gap-3 ${sidebarCollapsed ? "justify-center" : ""}`}
+          >
             <div className="relative">
               <div className="w-11 h-11 rounded-xl bg-gradient-to-br from-violet-500 to-purple-500 flex items-center justify-center text-white font-bold text-lg shadow-lg shadow-violet-500/25">
-                {user?.name?.charAt(0).toUpperCase() || 'A'}
+                {user?.name?.charAt(0).toUpperCase() || "A"}
               </div>
               <span className="absolute bottom-0 right-0 w-3 h-3 bg-emerald-400 border-2 border-slate-900 rounded-full"></span>
             </div>
             {!sidebarCollapsed && (
               <>
                 <div className="flex-1 min-w-0">
-                  <p className="text-sm font-semibold text-white truncate">{user?.name || 'Administrador'}</p>
-                  <p className="text-xs text-slate-500 truncate">{user?.email || 'admin@parroquia.com'}</p>
+                  <p className="text-sm font-semibold text-white truncate">
+                    {user?.name || "Administrador"}
+                  </p>
+                  <p className="text-xs text-slate-500 truncate">
+                    {user?.email || "admin@parroquia.com"}
+                  </p>
                 </div>
                 <button
                   onClick={handleLogout}
@@ -285,7 +307,9 @@ export default function AdminLayout({
       </aside>
 
       {/* Main Content Area */}
-      <div className={`transition-all duration-300 ${sidebarCollapsed ? 'lg:pl-20' : 'lg:pl-72'}`}>
+      <div
+        className={`transition-all duration-300 ${sidebarCollapsed ? "lg:pl-20" : "lg:pl-72"}`}
+      >
         {/* Top Navigation Bar */}
         <header className="sticky top-0 z-30 bg-white/80 backdrop-blur-xl border-b border-slate-200/50 shadow-sm">
           <div className="flex items-center justify-between h-16 px-4 lg:px-6">
@@ -297,18 +321,22 @@ export default function AdminLayout({
               >
                 <Menu className="w-6 h-6" />
               </button>
-              
+
               <button
                 onClick={() => setSidebarCollapsed(!sidebarCollapsed)}
                 className="hidden lg:flex p-2 text-slate-600 hover:text-slate-900 hover:bg-slate-100 rounded-xl transition-colors"
-                title={sidebarCollapsed ? 'Expandir menú' : 'Colapsar menú'}
+                title={sidebarCollapsed ? "Expandir menú" : "Colapsar menú"}
               >
                 <Menu className="w-5 h-5" />
               </button>
 
               <div className="hidden sm:block">
-                <h1 className="text-xl font-bold text-slate-800">{getPageTitle()}</h1>
-                <p className="text-xs text-slate-500">Panel de Administración</p>
+                <h1 className="text-xl font-bold text-slate-800">
+                  {getPageTitle()}
+                </h1>
+                <p className="text-xs text-slate-500">
+                  Panel de Administración
+                </p>
               </div>
             </div>
 
@@ -329,7 +357,9 @@ export default function AdminLayout({
               {/* Time Display */}
               <div className="hidden lg:flex items-center gap-2 px-3 py-2 bg-slate-100 rounded-xl">
                 <Clock className="w-4 h-4 text-slate-500" />
-                <span className="text-sm font-medium text-slate-700">{currentTime}</span>
+                <span className="text-sm font-medium text-slate-700">
+                  {currentTime}
+                </span>
               </div>
 
               {/* Notifications */}
@@ -358,9 +388,7 @@ export default function AdminLayout({
 
         {/* Page Content */}
         <main className="p-4 lg:p-8">
-          <div className="max-w-7xl mx-auto">
-            {children}
-          </div>
+          <div className="max-w-7xl mx-auto">{children}</div>
         </main>
 
         {/* Footer */}
@@ -368,7 +396,8 @@ export default function AdminLayout({
           <div className="max-w-7xl mx-auto flex flex-col sm:flex-row items-center justify-between gap-4 text-sm text-slate-500">
             <p>© 2025 Parroquia Inmaculado Corazón de María</p>
             <p className="flex items-center gap-1">
-              Hecho con <span className="text-red-500">♥</span> para la comunidad
+              Hecho con <span className="text-red-500">♥</span> para la
+              comunidad
             </p>
           </div>
         </footer>

@@ -3,18 +3,18 @@
 import { useState, useEffect, useCallback } from "react";
 import Link from "next/link";
 import PublicLayout from "@/components/layout/PublicLayout";
-import { 
-  Calendar, 
-  Clock, 
-  User, 
-  FileText, 
-  CreditCard, 
+import {
+  Calendar,
+  Clock,
+  User,
+  FileText,
+  CreditCard,
   CheckCircle,
   ChevronRight,
   ChevronLeft,
   Loader2,
   AlertCircle,
-  X
+  X,
 } from "lucide-react";
 
 type Step = 1 | 2 | 3 | 4 | 5;
@@ -78,24 +78,30 @@ interface ValidatedInputProps {
   placeholder?: string;
   icon?: React.ReactNode;
   helpText?: string;
+  inputMode?: "text" | "numeric" | "tel" | "email" | "url";
+  pattern?: string;
+  showCounter?: boolean;
 }
 
-function ValidatedInput({ 
-  label, 
-  name, 
-  type = "text", 
-  value, 
-  onChange, 
+function ValidatedInput({
+  label,
+  name,
+  type = "text",
+  value,
+  onChange,
   onBlur,
-  error, 
-  required, 
+  error,
+  required,
   maxLength,
   placeholder,
   icon,
-  helpText
+  helpText,
+  inputMode,
+  pattern,
+  showCounter,
 }: ValidatedInputProps) {
   const hasError = !!error;
-  
+
   return (
     <div className="space-y-1">
       <label htmlFor={name} className="block text-sm font-medium text-gray-700">
@@ -116,10 +122,15 @@ function ValidatedInput({
           onBlur={onBlur}
           maxLength={maxLength}
           placeholder={placeholder}
-          className={`w-full ${icon ? 'pl-10' : 'px-4'} pr-4 py-3 border rounded-lg transition-all duration-200 focus:outline-none focus:ring-2 ${
-            hasError 
-              ? 'border-red-500 bg-red-50 focus:ring-red-500 focus:border-red-500' 
-              : 'border-gray-300 focus:ring-[#002F57] focus:border-[#002F57]'
+          inputMode={inputMode}
+          pattern={pattern}
+          autoComplete={
+            name === "email" ? "email" : name === "telefono" ? "tel" : undefined
+          }
+          className={`w-full ${icon ? "pl-10" : "px-4"} pr-4 py-3 border rounded-lg transition-all duration-200 focus:outline-none focus:ring-2 ${
+            hasError
+              ? "border-red-500 bg-red-50 focus:ring-red-500 focus:border-red-500"
+              : "border-gray-300 focus:ring-[#002F57] focus:border-[#002F57]"
           }`}
         />
         {hasError && (
@@ -135,7 +146,23 @@ function ValidatedInput({
         </p>
       )}
       {helpText && !hasError && (
-        <p className="text-xs text-gray-500">{helpText}</p>
+        <div className="flex items-center justify-between">
+          <p className="text-xs text-gray-500">{helpText}</p>
+          {showCounter && maxLength && (
+            <p
+              className={`text-xs font-medium ${value.length === maxLength ? "text-emerald-600" : "text-gray-400"}`}
+            >
+              {value.length}/{maxLength}
+            </p>
+          )}
+        </div>
+      )}
+      {showCounter && maxLength && !helpText && !hasError && (
+        <p
+          className={`text-xs font-medium text-right ${value.length === maxLength ? "text-emerald-600" : "text-gray-400"}`}
+        >
+          {value.length}/{maxLength}
+        </p>
       )}
     </div>
   );
@@ -155,20 +182,20 @@ interface ValidatedTextareaProps {
   helpText?: string;
 }
 
-function ValidatedTextarea({ 
-  label, 
-  name, 
-  value, 
-  onChange, 
+function ValidatedTextarea({
+  label,
+  name,
+  value,
+  onChange,
   onBlur,
-  error, 
-  required, 
+  error,
+  required,
   rows = 4,
   placeholder,
-  helpText
+  helpText,
 }: ValidatedTextareaProps) {
   const hasError = !!error;
-  
+
   return (
     <div className="space-y-1">
       <label htmlFor={name} className="block text-sm font-medium text-gray-700">
@@ -183,9 +210,9 @@ function ValidatedTextarea({
         rows={rows}
         placeholder={placeholder}
         className={`w-full px-4 py-3 border rounded-lg transition-all duration-200 focus:outline-none focus:ring-2 resize-none ${
-          hasError 
-            ? 'border-red-500 bg-red-50 focus:ring-red-500 focus:border-red-500' 
-            : 'border-gray-300 focus:ring-[#002F57] focus:border-[#002F57]'
+          hasError
+            ? "border-red-500 bg-red-50 focus:ring-red-500 focus:border-red-500"
+            : "border-gray-300 focus:ring-[#002F57] focus:border-[#002F57]"
         }`}
       />
       {hasError && (
@@ -204,14 +231,16 @@ function ValidatedTextarea({
 export default function ReservarPage() {
   const [currentStep, setCurrentStep] = useState<Step>(1);
   const [isSubmitting, setIsSubmitting] = useState(false);
-  const [submitStatus, setSubmitStatus] = useState<"idle" | "success" | "error">("idle");
+  const [submitStatus, setSubmitStatus] = useState<
+    "idle" | "success" | "error"
+  >("idle");
   const [submitError, setSubmitError] = useState<string>("");
-  
+
   // Función para obtener la fecha de mañana en formato YYYY-MM-DD
   const getTomorrowDate = useCallback(() => {
     const tomorrow = new Date();
     tomorrow.setDate(tomorrow.getDate() + 1);
-    return tomorrow.toISOString().split('T')[0];
+    return tomorrow.toISOString().split("T")[0];
   }, []);
 
   // Estados para datos de las APIs
@@ -219,11 +248,11 @@ export default function ReservarPage() {
   const [paymentMethods, setPaymentMethods] = useState<PaymentMethod[]>([]);
   const [availableTimes, setAvailableTimes] = useState<string[]>([]);
   const [isLoadingTimes, setIsLoadingTimes] = useState(false);
-  
+
   // Estado de errores por campo
   const [fieldErrors, setFieldErrors] = useState<FieldErrors>({});
   const [touchedFields, setTouchedFields] = useState<Set<string>>(new Set());
-  
+
   const [formData, setFormData] = useState<FormData>({
     reservationDate: getTomorrowDate(),
     reservationTime: "",
@@ -244,82 +273,116 @@ export default function ReservarPage() {
   // Validaciones
   const validateField = useCallback((name: string, value: string): string => {
     switch (name) {
-      case 'nombre':
-        if (!value.trim()) return 'El nombre es obligatorio';
-        if (value.trim().length < 2) return 'El nombre debe tener al menos 2 caracteres';
-        if (!/^[a-zA-ZáéíóúÁÉÍÓÚñÑüÜ\s]+$/.test(value)) return 'El nombre solo puede contener letras';
-        return '';
-      
-      case 'apellidos':
-        if (!value.trim()) return 'Los apellidos son obligatorios';
-        if (value.trim().length < 2) return 'Los apellidos deben tener al menos 2 caracteres';
-        if (!/^[a-zA-ZáéíóúÁÉÍÓÚñÑüÜ\s]+$/.test(value)) return 'Los apellidos solo pueden contener letras';
-        return '';
-      
-      case 'dni':
-        if (!value.trim()) return 'El DNI es obligatorio';
-        if (!/^\d+$/.test(value)) return 'El DNI solo debe contener números';
-        if (value.length !== 8) return 'El DNI debe tener exactamente 8 dígitos';
-        return '';
-      
-      case 'telefono':
-        if (!value.trim()) return 'El teléfono es obligatorio';
-        if (!/^\d+$/.test(value)) return 'El teléfono solo debe contener números';
-        if (value.length < 9) return 'El teléfono debe tener al menos 9 dígitos';
-        return '';
-      
-      case 'email':
-        if (!value.trim()) return 'El correo electrónico es obligatorio';
-        if (!/^[^\s@]+@[^\s@]+\.[^\s@]+$/.test(value)) return 'Ingresa un correo electrónico válido';
-        return '';
-      
-      case 'intencion':
-        if (!value.trim()) return 'La intención de la misa es obligatoria';
-        if (value.trim().length < 10) return 'La intención debe tener al menos 10 caracteres';
-        return '';
-      
-      case 'reservationDate':
-        if (!value) return 'Selecciona una fecha';
-        const selectedDate = new Date(value + 'T00:00:00');
+      case "nombre":
+        if (!value.trim()) return "El nombre es obligatorio";
+        if (value.trim().length < 2)
+          return "El nombre debe tener al menos 2 caracteres";
+        if (!/^[a-zA-ZáéíóúÁÉÍÓÚñÑüÜ\s]+$/.test(value))
+          return "El nombre solo puede contener letras";
+        return "";
+
+      case "apellidos":
+        if (!value.trim()) return "Los apellidos son obligatorios";
+        if (value.trim().length < 2)
+          return "Los apellidos deben tener al menos 2 caracteres";
+        if (!/^[a-zA-ZáéíóúÁÉÍÓÚñÑüÜ\s]+$/.test(value))
+          return "Los apellidos solo pueden contener letras";
+        return "";
+
+      case "dni":
+        if (!value.trim()) return "El DNI es obligatorio";
+        if (!/^\d+$/.test(value)) return "El DNI solo debe contener números";
+        if (value.length !== 8)
+          return "El DNI debe tener exactamente 8 dígitos";
+        return "";
+
+      case "telefono":
+        if (!value.trim()) return "El teléfono es obligatorio";
+        if (!/^\d+$/.test(value))
+          return "El teléfono solo debe contener números";
+        if (value.length < 9)
+          return "El teléfono debe tener al menos 9 dígitos";
+        return "";
+
+      case "email":
+        if (!value.trim()) return "El correo electrónico es obligatorio";
+        if (!/^[^\s@]+@[^\s@]+\.[^\s@]+$/.test(value))
+          return "Ingresa un correo electrónico válido";
+        return "";
+
+      case "intencion":
+        if (!value.trim()) return "La intención de la misa es obligatoria";
+        if (value.trim().length < 10)
+          return "La intención debe tener al menos 10 caracteres";
+        return "";
+
+      case "reservationDate":
+        if (!value) return "Selecciona una fecha";
+        const selectedDate = new Date(value + "T00:00:00");
         const tomorrow = new Date();
         tomorrow.setDate(tomorrow.getDate() + 1);
         tomorrow.setHours(0, 0, 0, 0);
-        if (selectedDate < tomorrow) return 'Solo puedes reservar misas a partir de mañana';
-        return '';
-      
-      case 'reservationTime':
-        if (!value) return 'Selecciona una hora';
-        return '';
-      
-      case 'tipoMisa':
-        if (!value) return 'Selecciona un tipo de misa';
-        return '';
-      
-      case 'metodoPago':
-        if (!value) return 'Selecciona un método de pago';
-        return '';
-      
+        if (selectedDate < tomorrow)
+          return "Solo puedes reservar misas a partir de mañana";
+        return "";
+
+      case "reservationTime":
+        if (!value) return "Selecciona una hora";
+        return "";
+
+      case "tipoMisa":
+        if (!value) return "Selecciona un tipo de misa";
+        return "";
+
+      case "metodoPago":
+        if (!value) return "Selecciona un método de pago";
+        return "";
+
       default:
-        return '';
+        return "";
     }
   }, []);
 
   const handleInputChange = (
-    e: React.ChangeEvent<HTMLInputElement | HTMLTextAreaElement | HTMLSelectElement>
+    e: React.ChangeEvent<
+      HTMLInputElement | HTMLTextAreaElement | HTMLSelectElement
+    >,
   ) => {
     const { name, value } = e.target;
-    setFormData((prev) => ({ ...prev, [name]: value }));
-    
+
+    // Filtrar caracteres inválidos al momento de escribir
+    let filteredValue = value;
+    switch (name) {
+      case "dni":
+        // Solo dígitos, máximo 8
+        filteredValue = value.replace(/\D/g, "").slice(0, 8);
+        break;
+      case "telefono":
+        // Solo dígitos, máximo 9
+        filteredValue = value.replace(/\D/g, "").slice(0, 9);
+        break;
+      case "nombre":
+      case "apellidos":
+        // Solo letras, espacios y tildes
+        filteredValue = value.replace(/[^a-zA-ZáéíóúÁÉÍÓÚñÑüÜ\s]/g, "");
+        break;
+    }
+
+    setFormData((prev) => ({ ...prev, [name]: filteredValue }));
+
     // Validar en tiempo real si el campo ya fue tocado
     if (touchedFields.has(name)) {
-      const error = validateField(name, value);
+      const error = validateField(name, filteredValue);
       setFieldErrors((prev) => ({ ...prev, [name]: error }));
     }
   };
 
   const handleBlur = (name: string) => {
     setTouchedFields((prev) => new Set(prev).add(name));
-    const error = validateField(name, formData[name as keyof FormData] as string);
+    const error = validateField(
+      name,
+      formData[name as keyof FormData] as string,
+    );
     setFieldErrors((prev) => ({ ...prev, [name]: error }));
   };
 
@@ -332,13 +395,13 @@ export default function ReservarPage() {
   useEffect(() => {
     const fetchMassTypes = async () => {
       try {
-        const response = await fetch('/api/mass-types', { cache: 'no-store' });
+        const response = await fetch("/api/mass-types", { cache: "no-store" });
         const data = await response.json();
         if (data.success) {
           setMassTypes(data.massTypes || data.data);
         }
       } catch (error) {
-        console.error('Error al cargar tipos de misa:', error);
+        console.error("Error al cargar tipos de misa:", error);
       }
     };
     fetchMassTypes();
@@ -348,13 +411,15 @@ export default function ReservarPage() {
   useEffect(() => {
     const fetchPaymentMethods = async () => {
       try {
-        const response = await fetch('/api/payment-methods', { cache: 'no-store' });
+        const response = await fetch("/api/payment-methods", {
+          cache: "no-store",
+        });
         const data = await response.json();
         if (data.success) {
           setPaymentMethods(data.data);
         }
       } catch (error) {
-        console.error('Error al cargar métodos de pago:', error);
+        console.error("Error al cargar métodos de pago:", error);
       }
     };
     fetchPaymentMethods();
@@ -364,7 +429,7 @@ export default function ReservarPage() {
   useEffect(() => {
     setAvailableTimes([]);
     setFormData((prev) => ({ ...prev, reservationTime: "" }));
-    
+
     if (!formData.reservationDate) return;
 
     const fetchAvailableTimes = async () => {
@@ -372,83 +437,90 @@ export default function ReservarPage() {
       try {
         const response = await fetch(
           `/api/reservations/available-times?date=${formData.reservationDate}`,
-          { cache: 'no-store' }
+          { cache: "no-store" },
         );
-        
-        if (!response.ok) throw new Error(`HTTP error! status: ${response.status}`);
-        
+
+        if (!response.ok)
+          throw new Error(`HTTP error! status: ${response.status}`);
+
         const data = await response.json();
-        
+
         if (data.data && Array.isArray(data.data)) {
           const times = data.data
             .filter((slot: AvailableTime) => slot.isAvailable)
             .map((slot: AvailableTime) => slot.time);
-          
+
           // Eliminar duplicados usando Set (asegurar tipo string[] para TypeScript)
           const uniqueTimes = Array.from(new Set(times)) as string[];
           setAvailableTimes(uniqueTimes);
         }
       } catch (error) {
-        console.error('Error al cargar horarios:', error);
+        console.error("Error al cargar horarios:", error);
       } finally {
         setIsLoadingTimes(false);
       }
     };
-    
+
     fetchAvailableTimes();
   }, [formData.reservationDate]);
 
   const nextStep = () => {
     // Marcar todos los campos del paso como tocados
     const stepFields: { [key: number]: string[] } = {
-      1: ['reservationDate', 'reservationTime'],
-      2: ['nombre', 'apellidos', 'dni', 'telefono', 'email'],
-      3: ['tipoMisa', 'intencion'],
-      4: ['metodoPago'],
+      1: ["reservationDate", "reservationTime"],
+      2: ["nombre", "apellidos", "dni", "telefono", "email"],
+      3: ["tipoMisa", "intencion"],
+      4: ["metodoPago"],
     };
-    
+
     const fields = stepFields[currentStep] || [];
     const newTouchedFields = new Set(touchedFields);
     const newErrors: FieldErrors = {};
-    
-    fields.forEach(field => {
+
+    fields.forEach((field) => {
       newTouchedFields.add(field);
-      const error = validateField(field, formData[field as keyof FormData] as string);
+      const error = validateField(
+        field,
+        formData[field as keyof FormData] as string,
+      );
       if (error) newErrors[field] = error;
     });
-    
+
     setTouchedFields(newTouchedFields);
     setFieldErrors((prev) => ({ ...prev, ...newErrors }));
-    
+
     if (Object.keys(newErrors).length === 0 && currentStep < 5) {
       setCurrentStep((prev) => (prev + 1) as Step);
-      window.scrollTo({ top: 0, behavior: 'smooth' });
+      window.scrollTo({ top: 0, behavior: "smooth" });
     }
   };
 
   const prevStep = () => {
     if (currentStep > 1) {
       setCurrentStep((prev) => (prev - 1) as Step);
-      window.scrollTo({ top: 0, behavior: 'smooth' });
+      window.scrollTo({ top: 0, behavior: "smooth" });
     }
   };
 
   const handleSubmit = async (e: React.FormEvent) => {
     e.preventDefault();
-    
+
     // Validar campos del paso 4 antes de enviar
-    const fields = ['metodoPago'];
+    const fields = ["metodoPago"];
     const newErrors: FieldErrors = {};
-    fields.forEach(field => {
-      const error = validateField(field, formData[field as keyof FormData] as string);
+    fields.forEach((field) => {
+      const error = validateField(
+        field,
+        formData[field as keyof FormData] as string,
+      );
       if (error) newErrors[field] = error;
     });
-    
+
     if (Object.keys(newErrors).length > 0) {
       setFieldErrors((prev) => ({ ...prev, ...newErrors }));
       return;
     }
-    
+
     setIsSubmitting(true);
     setSubmitStatus("idle");
     setSubmitError("");
@@ -472,7 +544,7 @@ export default function ReservarPage() {
       const requestBody = {
         date: formData.reservationDate,
         time: formData.reservationTime,
-        location: formData.location || 'Parroquia Corazón de María',
+        location: formData.location || "Parroquia Corazón de María",
         nombre: formData.nombre.trim(),
         apellidos: formData.apellidos.trim(),
         dni: formData.dni.trim(),
@@ -480,17 +552,17 @@ export default function ReservarPage() {
         email: formData.email.trim().toLowerCase(),
         tipoMisa: formData.tipoMisa,
         intencion: formData.intencion.trim(),
-        difuntos: formData.difuntos?.trim() || '',
-        observaciones: formData.observaciones?.trim() || '',
+        difuntos: formData.difuntos?.trim() || "",
+        observaciones: formData.observaciones?.trim() || "",
         metodoPago: formData.metodoPago,
         comprobanteBase64,
         comprobanteMimeType,
         comprobanteSize,
       };
 
-      const response = await fetch('/api/reservations', {
-        method: 'POST',
-        headers: { 'Content-Type': 'application/json' },
+      const response = await fetch("/api/reservations", {
+        method: "POST",
+        headers: { "Content-Type": "application/json" },
         body: JSON.stringify(requestBody),
       });
 
@@ -499,21 +571,25 @@ export default function ReservarPage() {
       if (data.success && data.confirmationCode) {
         setSubmitStatus("success");
         setCurrentStep(5);
-        window.scrollTo({ top: 0, behavior: 'smooth' });
+        window.scrollTo({ top: 0, behavior: "smooth" });
       } else {
-        throw new Error(data.error || 'Error al crear la reserva');
+        throw new Error(data.error || "Error al crear la reserva");
       }
     } catch (error) {
-      console.error('Error al enviar reserva:', error);
+      console.error("Error al enviar reserva:", error);
       setSubmitStatus("error");
-      setSubmitError(error instanceof Error ? error.message : 'Error desconocido');
+      setSubmitError(
+        error instanceof Error ? error.message : "Error desconocido",
+      );
     } finally {
       setIsSubmitting(false);
     }
   };
 
-  const selectedMassType = massTypes.find(t => t.value === formData.tipoMisa);
-  const selectedPaymentMethod = paymentMethods.find(p => p.type === formData.metodoPago);
+  const selectedMassType = massTypes.find((t) => t.value === formData.tipoMisa);
+  const selectedPaymentMethod = paymentMethods.find(
+    (p) => p.type === formData.metodoPago,
+  );
 
   const steps = [
     { number: 1, title: "Fecha y Hora", icon: Calendar },
@@ -542,26 +618,26 @@ export default function ReservarPage() {
             <div className="flex items-center justify-between relative">
               {/* Progress Line */}
               <div className="absolute top-5 left-0 right-0 h-0.5 bg-gray-200 -z-10">
-                <div 
+                <div
                   className="h-full bg-[#49AE9C] transition-all duration-500"
                   style={{ width: `${((currentStep - 1) / 4) * 100}%` }}
                 />
               </div>
-              
+
               {steps.map((step) => {
                 const Icon = step.icon;
                 const isCompleted = currentStep > step.number;
                 const isCurrent = currentStep === step.number;
-                
+
                 return (
                   <div key={step.number} className="flex flex-col items-center">
-                    <div 
+                    <div
                       className={`w-10 h-10 rounded-full flex items-center justify-center transition-all duration-300 ${
-                        isCompleted 
-                          ? 'bg-[#49AE9C] text-white' 
-                          : isCurrent 
-                            ? 'bg-[#002F57] text-white ring-4 ring-[#002F57]/20' 
-                            : 'bg-gray-200 text-gray-500'
+                        isCompleted
+                          ? "bg-[#49AE9C] text-white"
+                          : isCurrent
+                            ? "bg-[#002F57] text-white ring-4 ring-[#002F57]/20"
+                            : "bg-gray-200 text-gray-500"
                       }`}
                     >
                       {isCompleted ? (
@@ -570,9 +646,11 @@ export default function ReservarPage() {
                         <Icon className="w-5 h-5" />
                       )}
                     </div>
-                    <span className={`text-xs mt-2 font-medium hidden sm:block ${
-                      isCurrent ? 'text-[#002F57]' : 'text-gray-500'
-                    }`}>
+                    <span
+                      className={`text-xs mt-2 font-medium hidden sm:block ${
+                        isCurrent ? "text-[#002F57]" : "text-gray-500"
+                      }`}
+                    >
                       {step.title}
                     </span>
                   </div>
@@ -586,10 +664,12 @@ export default function ReservarPage() {
             <div className="mb-6 p-4 bg-red-50 border border-red-200 rounded-lg flex items-start gap-3 animate-fadeIn">
               <AlertCircle className="w-5 h-5 text-red-500 flex-shrink-0 mt-0.5" />
               <div className="flex-1">
-                <p className="font-medium text-red-800">Error al procesar la reserva</p>
+                <p className="font-medium text-red-800">
+                  Error al procesar la reserva
+                </p>
                 <p className="text-sm text-red-600">{submitError}</p>
               </div>
-              <button 
+              <button
                 onClick={() => setSubmitError("")}
                 className="text-red-500 hover:text-red-700"
               >
@@ -608,7 +688,7 @@ export default function ReservarPage() {
                     <h2 className="text-2xl font-bold text-[#002F57] mb-6">
                       Selecciona Fecha y Hora
                     </h2>
-                    
+
                     <div>
                       <label className="block text-sm font-medium text-gray-700 mb-2">
                         Fecha de la Misa <span className="text-red-500">*</span>
@@ -620,28 +700,30 @@ export default function ReservarPage() {
                           name="reservationDate"
                           value={formData.reservationDate}
                           onChange={handleInputChange}
-                          onBlur={() => handleBlur('reservationDate')}
+                          onBlur={() => handleBlur("reservationDate")}
                           min={getTomorrowDate()}
                           className={`w-full pl-10 pr-4 py-3 border rounded-lg transition-all duration-200 focus:outline-none focus:ring-2 ${
-                            fieldErrors.reservationDate && touchedFields.has('reservationDate')
-                              ? 'border-red-500 bg-red-50 focus:ring-red-500' 
-                              : 'border-gray-300 focus:ring-[#002F57]'
+                            fieldErrors.reservationDate &&
+                            touchedFields.has("reservationDate")
+                              ? "border-red-500 bg-red-50 focus:ring-red-500"
+                              : "border-gray-300 focus:ring-[#002F57]"
                           }`}
                         />
                       </div>
-                      {fieldErrors.reservationDate && touchedFields.has('reservationDate') && (
-                        <p className="text-sm text-red-600 flex items-center gap-1 mt-1 animate-fadeIn">
-                          <AlertCircle className="w-4 h-4" />
-                          {fieldErrors.reservationDate}
-                        </p>
-                      )}
+                      {fieldErrors.reservationDate &&
+                        touchedFields.has("reservationDate") && (
+                          <p className="text-sm text-red-600 flex items-center gap-1 mt-1 animate-fadeIn">
+                            <AlertCircle className="w-4 h-4" />
+                            {fieldErrors.reservationDate}
+                          </p>
+                        )}
                     </div>
 
                     <div>
                       <label className="block text-sm font-medium text-gray-700 mb-2">
                         Hora de la Misa <span className="text-red-500">*</span>
                       </label>
-                      
+
                       {!formData.reservationDate ? (
                         <div className="bg-gray-50 rounded-lg p-4 text-center text-gray-500 border-2 border-dashed border-gray-200">
                           <Calendar className="w-8 h-8 mx-auto mb-2 text-gray-400" />
@@ -664,8 +746,14 @@ export default function ReservarPage() {
                               key={`${time}-${index}`}
                               type="button"
                               onClick={() => {
-                                setFormData((prev) => ({ ...prev, reservationTime: time }));
-                                setFieldErrors((prev) => ({ ...prev, reservationTime: '' }));
+                                setFormData((prev) => ({
+                                  ...prev,
+                                  reservationTime: time,
+                                }));
+                                setFieldErrors((prev) => ({
+                                  ...prev,
+                                  reservationTime: "",
+                                }));
                               }}
                               className={`p-3 rounded-lg border-2 transition-all duration-200 ${
                                 formData.reservationTime === time
@@ -674,17 +762,20 @@ export default function ReservarPage() {
                               }`}
                             >
                               <Clock className="w-5 h-5 mx-auto mb-1" />
-                              <span className="text-sm font-medium">{time}</span>
+                              <span className="text-sm font-medium">
+                                {time}
+                              </span>
                             </button>
                           ))}
                         </div>
                       )}
-                      {fieldErrors.reservationTime && touchedFields.has('reservationTime') && (
-                        <p className="text-sm text-red-600 flex items-center gap-1 mt-2 animate-fadeIn">
-                          <AlertCircle className="w-4 h-4" />
-                          {fieldErrors.reservationTime}
-                        </p>
-                      )}
+                      {fieldErrors.reservationTime &&
+                        touchedFields.has("reservationTime") && (
+                          <p className="text-sm text-red-600 flex items-center gap-1 mt-2 animate-fadeIn">
+                            <AlertCircle className="w-4 h-4" />
+                            {fieldErrors.reservationTime}
+                          </p>
+                        )}
                     </div>
                   </div>
                 )}
@@ -695,16 +786,21 @@ export default function ReservarPage() {
                     <h2 className="text-2xl font-bold text-[#002F57] mb-6">
                       Datos Personales
                     </h2>
-                    
+
                     <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
                       <ValidatedInput
                         label="Nombres"
                         name="nombre"
                         value={formData.nombre}
                         onChange={handleInputChange}
-                        onBlur={() => handleBlur('nombre')}
-                        error={touchedFields.has('nombre') ? fieldErrors.nombre : undefined}
+                        onBlur={() => handleBlur("nombre")}
+                        error={
+                          touchedFields.has("nombre")
+                            ? fieldErrors.nombre
+                            : undefined
+                        }
                         required
+                        maxLength={50}
                         placeholder="Ej: Juan Carlos"
                       />
                       <ValidatedInput
@@ -712,9 +808,14 @@ export default function ReservarPage() {
                         name="apellidos"
                         value={formData.apellidos}
                         onChange={handleInputChange}
-                        onBlur={() => handleBlur('apellidos')}
-                        error={touchedFields.has('apellidos') ? fieldErrors.apellidos : undefined}
+                        onBlur={() => handleBlur("apellidos")}
+                        error={
+                          touchedFields.has("apellidos")
+                            ? fieldErrors.apellidos
+                            : undefined
+                        }
                         required
+                        maxLength={50}
                         placeholder="Ej: Pérez García"
                       />
                     </div>
@@ -725,12 +826,17 @@ export default function ReservarPage() {
                         name="dni"
                         value={formData.dni}
                         onChange={handleInputChange}
-                        onBlur={() => handleBlur('dni')}
-                        error={touchedFields.has('dni') ? fieldErrors.dni : undefined}
+                        onBlur={() => handleBlur("dni")}
+                        error={
+                          touchedFields.has("dni") ? fieldErrors.dni : undefined
+                        }
                         required
                         maxLength={8}
-                        placeholder="8 dígitos"
-                        helpText="Ingresa tu DNI de 8 dígitos"
+                        inputMode="numeric"
+                        pattern="[0-9]*"
+                        showCounter
+                        placeholder="Ej: 72345678"
+                        helpText="Solo números, 8 dígitos"
                       />
                       <ValidatedInput
                         label="Teléfono"
@@ -738,11 +844,19 @@ export default function ReservarPage() {
                         type="tel"
                         value={formData.telefono}
                         onChange={handleInputChange}
-                        onBlur={() => handleBlur('telefono')}
-                        error={touchedFields.has('telefono') ? fieldErrors.telefono : undefined}
+                        onBlur={() => handleBlur("telefono")}
+                        error={
+                          touchedFields.has("telefono")
+                            ? fieldErrors.telefono
+                            : undefined
+                        }
                         required
+                        maxLength={9}
+                        inputMode="numeric"
+                        pattern="[0-9]*"
+                        showCounter
                         placeholder="Ej: 987654321"
-                        helpText="Número de 9 dígitos"
+                        helpText="Solo números, 9 dígitos"
                       />
                     </div>
 
@@ -752,8 +866,12 @@ export default function ReservarPage() {
                       type="email"
                       value={formData.email}
                       onChange={handleInputChange}
-                      onBlur={() => handleBlur('email')}
-                      error={touchedFields.has('email') ? fieldErrors.email : undefined}
+                      onBlur={() => handleBlur("email")}
+                      error={
+                        touchedFields.has("email")
+                          ? fieldErrors.email
+                          : undefined
+                      }
                       required
                       placeholder="correo@ejemplo.com"
                       helpText="Recibirás la confirmación en este correo"
@@ -767,7 +885,7 @@ export default function ReservarPage() {
                     <h2 className="text-2xl font-bold text-[#002F57] mb-6">
                       Detalles de la Misa
                     </h2>
-                    
+
                     <div>
                       <label className="block text-sm font-medium text-gray-700 mb-2">
                         Tipo de Misa <span className="text-red-500">*</span>
@@ -778,8 +896,14 @@ export default function ReservarPage() {
                             key={type.value}
                             type="button"
                             onClick={() => {
-                              setFormData((prev) => ({ ...prev, tipoMisa: type.value }));
-                              setFieldErrors((prev) => ({ ...prev, tipoMisa: '' }));
+                              setFormData((prev) => ({
+                                ...prev,
+                                tipoMisa: type.value,
+                              }));
+                              setFieldErrors((prev) => ({
+                                ...prev,
+                                tipoMisa: "",
+                              }));
                             }}
                             className={`p-4 rounded-xl border-2 text-left transition-all duration-200 ${
                               formData.tipoMisa === type.value
@@ -787,22 +911,27 @@ export default function ReservarPage() {
                                 : "border-gray-200 hover:border-[#49AE9C] hover:shadow-sm"
                             }`}
                           >
-                            <span className="block font-semibold text-[#002F57]">{type.label}</span>
+                            <span className="block font-semibold text-[#002F57]">
+                              {type.label}
+                            </span>
                             <span className="block text-[#49AE9C] font-bold text-lg mt-1">
                               S/ {type.price.toFixed(2)}
                             </span>
                             {type.description && (
-                              <span className="block text-xs text-gray-500 mt-1">{type.description}</span>
+                              <span className="block text-xs text-gray-500 mt-1">
+                                {type.description}
+                              </span>
                             )}
                           </button>
                         ))}
                       </div>
-                      {fieldErrors.tipoMisa && touchedFields.has('tipoMisa') && (
-                        <p className="text-sm text-red-600 flex items-center gap-1 mt-2 animate-fadeIn">
-                          <AlertCircle className="w-4 h-4" />
-                          {fieldErrors.tipoMisa}
-                        </p>
-                      )}
+                      {fieldErrors.tipoMisa &&
+                        touchedFields.has("tipoMisa") && (
+                          <p className="text-sm text-red-600 flex items-center gap-1 mt-2 animate-fadeIn">
+                            <AlertCircle className="w-4 h-4" />
+                            {fieldErrors.tipoMisa}
+                          </p>
+                        )}
                     </div>
 
                     <ValidatedTextarea
@@ -810,8 +939,12 @@ export default function ReservarPage() {
                       name="intencion"
                       value={formData.intencion}
                       onChange={handleInputChange}
-                      onBlur={() => handleBlur('intencion')}
-                      error={touchedFields.has('intencion') ? fieldErrors.intencion : undefined}
+                      onBlur={() => handleBlur("intencion")}
+                      error={
+                        touchedFields.has("intencion")
+                          ? fieldErrors.intencion
+                          : undefined
+                      }
                       required
                       rows={3}
                       placeholder="Describe la intención de la misa..."
@@ -847,7 +980,9 @@ export default function ReservarPage() {
 
                     {/* Resumen */}
                     <div className="bg-gradient-to-r from-[#002F57] to-[#003d6d] rounded-xl p-6 text-white">
-                      <h3 className="font-semibold mb-4">Resumen de tu reserva</h3>
+                      <h3 className="font-semibold mb-4">
+                        Resumen de tu reserva
+                      </h3>
                       <div className="space-y-2 text-sm">
                         <div className="flex justify-between">
                           <span className="text-white/70">Fecha:</span>
@@ -864,14 +999,17 @@ export default function ReservarPage() {
                         <div className="border-t border-white/20 my-3"></div>
                         <div className="flex justify-between text-lg font-bold">
                           <span>Total a pagar:</span>
-                          <span className="text-[#6DFFE5]">S/ {selectedMassType?.price.toFixed(2)}</span>
+                          <span className="text-[#6DFFE5]">
+                            S/ {selectedMassType?.price.toFixed(2)}
+                          </span>
                         </div>
                       </div>
                     </div>
-                    
+
                     <div>
                       <label className="block text-sm font-medium text-gray-700 mb-2">
-                        Selecciona método de pago <span className="text-red-500">*</span>
+                        Selecciona método de pago{" "}
+                        <span className="text-red-500">*</span>
                       </label>
                       <div className="grid grid-cols-1 sm:grid-cols-2 gap-4">
                         {paymentMethods.map((method) => (
@@ -879,8 +1017,14 @@ export default function ReservarPage() {
                             key={method.type}
                             type="button"
                             onClick={() => {
-                              setFormData((prev) => ({ ...prev, metodoPago: method.type }));
-                              setFieldErrors((prev) => ({ ...prev, metodoPago: '' }));
+                              setFormData((prev) => ({
+                                ...prev,
+                                metodoPago: method.type,
+                              }));
+                              setFieldErrors((prev) => ({
+                                ...prev,
+                                metodoPago: "",
+                              }));
                             }}
                             className={`p-4 rounded-xl border-2 text-left transition-all duration-200 ${
                               formData.metodoPago === method.type
@@ -888,73 +1032,103 @@ export default function ReservarPage() {
                                 : "border-gray-200 hover:border-[#49AE9C] hover:shadow-sm"
                             }`}
                           >
-                            <span className="block font-semibold text-[#002F57]">{method.name}</span>
-                            <span className="block text-sm text-gray-500 mt-1">{method.description}</span>
+                            <span className="block font-semibold text-[#002F57]">
+                              {method.name}
+                            </span>
+                            <span className="block text-sm text-gray-500 mt-1">
+                              {method.description}
+                            </span>
                           </button>
                         ))}
                       </div>
-                      {fieldErrors.metodoPago && touchedFields.has('metodoPago') && (
-                        <p className="text-sm text-red-600 flex items-center gap-1 mt-2 animate-fadeIn">
-                          <AlertCircle className="w-4 h-4" />
-                          {fieldErrors.metodoPago}
-                        </p>
-                      )}
+                      {fieldErrors.metodoPago &&
+                        touchedFields.has("metodoPago") && (
+                          <p className="text-sm text-red-600 flex items-center gap-1 mt-2 animate-fadeIn">
+                            <AlertCircle className="w-4 h-4" />
+                            {fieldErrors.metodoPago}
+                          </p>
+                        )}
                     </div>
 
                     {/* Payment Details */}
-                    {selectedPaymentMethod && selectedPaymentMethod.type !== 'efectivo' && (
-                      <div className="bg-blue-50 rounded-xl p-4 border border-blue-100">
-                        <h4 className="font-semibold text-blue-900 mb-3">Datos para transferencia</h4>
-                        <div className="space-y-2 text-sm">
-                          {selectedPaymentMethod.banco && (
-                            <p><span className="text-blue-700">Banco:</span> {selectedPaymentMethod.banco}</p>
-                          )}
-                          {selectedPaymentMethod.cuenta && (
-                            <p><span className="text-blue-700">Cuenta:</span> {selectedPaymentMethod.cuenta}</p>
-                          )}
-                          {selectedPaymentMethod.cci && (
-                            <p><span className="text-blue-700">CCI:</span> {selectedPaymentMethod.cci}</p>
-                          )}
-                          {selectedPaymentMethod.titular && (
-                            <p><span className="text-blue-700">Titular:</span> {selectedPaymentMethod.titular}</p>
-                          )}
+                    {selectedPaymentMethod &&
+                      selectedPaymentMethod.type !== "efectivo" && (
+                        <div className="bg-blue-50 rounded-xl p-4 border border-blue-100">
+                          <h4 className="font-semibold text-blue-900 mb-3">
+                            Datos para transferencia
+                          </h4>
+                          <div className="space-y-2 text-sm">
+                            {selectedPaymentMethod.banco && (
+                              <p>
+                                <span className="text-blue-700">Banco:</span>{" "}
+                                {selectedPaymentMethod.banco}
+                              </p>
+                            )}
+                            {selectedPaymentMethod.cuenta && (
+                              <p>
+                                <span className="text-blue-700">Cuenta:</span>{" "}
+                                {selectedPaymentMethod.cuenta}
+                              </p>
+                            )}
+                            {selectedPaymentMethod.cci && (
+                              <p>
+                                <span className="text-blue-700">CCI:</span>{" "}
+                                {selectedPaymentMethod.cci}
+                              </p>
+                            )}
+                            {selectedPaymentMethod.titular && (
+                              <p>
+                                <span className="text-blue-700">Titular:</span>{" "}
+                                {selectedPaymentMethod.titular}
+                              </p>
+                            )}
+                          </div>
+                          <p className="text-xs text-blue-600 mt-3">
+                            {selectedPaymentMethod.instructions}
+                          </p>
                         </div>
-                        <p className="text-xs text-blue-600 mt-3">{selectedPaymentMethod.instructions}</p>
-                      </div>
-                    )}
+                      )}
 
                     {/* File Upload */}
-                    {selectedPaymentMethod && selectedPaymentMethod.type !== 'efectivo' && (
-                      <div>
-                        <label className="block text-sm font-medium text-gray-700 mb-2">
-                          Comprobante de pago (opcional)
-                        </label>
-                        <div className="border-2 border-dashed border-gray-300 rounded-xl p-6 text-center hover:border-[#49AE9C] transition-colors">
-                          <input
-                            type="file"
-                            onChange={handleFileChange}
-                            accept="image/*,.pdf"
-                            className="hidden"
-                            id="comprobante"
-                          />
-                          <label htmlFor="comprobante" className="cursor-pointer">
-                            {formData.comprobante ? (
-                              <div className="text-[#49AE9C]">
-                                <CheckCircle className="w-8 h-8 mx-auto mb-2" />
-                                <p className="font-medium">{formData.comprobante.name}</p>
-                                <p className="text-xs text-gray-500">Click para cambiar</p>
-                              </div>
-                            ) : (
-                              <div className="text-gray-500">
-                                <CreditCard className="w-8 h-8 mx-auto mb-2" />
-                                <p>Click para subir comprobante</p>
-                                <p className="text-xs">PNG, JPG o PDF</p>
-                              </div>
-                            )}
+                    {selectedPaymentMethod &&
+                      selectedPaymentMethod.type !== "efectivo" && (
+                        <div>
+                          <label className="block text-sm font-medium text-gray-700 mb-2">
+                            Comprobante de pago (opcional)
                           </label>
+                          <div className="border-2 border-dashed border-gray-300 rounded-xl p-6 text-center hover:border-[#49AE9C] transition-colors">
+                            <input
+                              type="file"
+                              onChange={handleFileChange}
+                              accept="image/*,.pdf"
+                              className="hidden"
+                              id="comprobante"
+                            />
+                            <label
+                              htmlFor="comprobante"
+                              className="cursor-pointer"
+                            >
+                              {formData.comprobante ? (
+                                <div className="text-[#49AE9C]">
+                                  <CheckCircle className="w-8 h-8 mx-auto mb-2" />
+                                  <p className="font-medium">
+                                    {formData.comprobante.name}
+                                  </p>
+                                  <p className="text-xs text-gray-500">
+                                    Click para cambiar
+                                  </p>
+                                </div>
+                              ) : (
+                                <div className="text-gray-500">
+                                  <CreditCard className="w-8 h-8 mx-auto mb-2" />
+                                  <p>Click para subir comprobante</p>
+                                  <p className="text-xs">PNG, JPG o PDF</p>
+                                </div>
+                              )}
+                            </label>
+                          </div>
                         </div>
-                      </div>
-                    )}
+                      )}
                   </div>
                 )}
 
@@ -970,29 +1144,39 @@ export default function ReservarPage() {
                     <p className="text-gray-600 mb-6">
                       Tu reserva ha sido registrada exitosamente
                     </p>
-                    
+
                     <div className="bg-gray-50 rounded-xl p-6 max-w-md mx-auto mb-8">
-                      <h3 className="font-semibold text-[#002F57] mb-4">Detalles de tu reserva</h3>
+                      <h3 className="font-semibold text-[#002F57] mb-4">
+                        Detalles de tu reserva
+                      </h3>
                       <div className="space-y-2 text-sm text-left">
                         <div className="flex justify-between">
                           <span className="text-gray-500">Fecha:</span>
-                          <span className="font-medium">{formData.reservationDate}</span>
+                          <span className="font-medium">
+                            {formData.reservationDate}
+                          </span>
                         </div>
                         <div className="flex justify-between">
                           <span className="text-gray-500">Hora:</span>
-                          <span className="font-medium">{formData.reservationTime}</span>
+                          <span className="font-medium">
+                            {formData.reservationTime}
+                          </span>
                         </div>
                         <div className="flex justify-between">
                           <span className="text-gray-500">Tipo:</span>
-                          <span className="font-medium">{selectedMassType?.label}</span>
+                          <span className="font-medium">
+                            {selectedMassType?.label}
+                          </span>
                         </div>
                         <div className="flex justify-between">
                           <span className="text-gray-500">Monto:</span>
-                          <span className="font-medium text-[#49AE9C]">S/ {selectedMassType?.price.toFixed(2)}</span>
+                          <span className="font-medium text-[#49AE9C]">
+                            S/ {selectedMassType?.price.toFixed(2)}
+                          </span>
                         </div>
                       </div>
                     </div>
-                    
+
                     <Link
                       href="/"
                       className="inline-flex items-center px-8 py-3 bg-[#002F57] text-white font-semibold rounded-lg hover:bg-[#001f3d] transition-colors"

@@ -1,22 +1,30 @@
-'use client';
+"use client";
 
-import { useState, FormEvent } from 'react';
+import { useState, FormEvent } from "react";
 // import { useRouter } from 'next/navigation';
-import { login } from '@/lib/auth';
-import { Church, Mail, Lock, AlertCircle, Loader2, Eye, EyeOff } from 'lucide-react';
-import Link from 'next/link';
+import { login } from "@/lib/auth";
+import {
+  Church,
+  Mail,
+  Lock,
+  AlertCircle,
+  Loader2,
+  Eye,
+  EyeOff,
+} from "lucide-react";
+import Link from "next/link";
 
 export default function LoginPage() {
   // const router = useRouter(); // No necesario con window.location.href
-  const [email, setEmail] = useState('');
-  const [password, setPassword] = useState('');
+  const [email, setEmail] = useState("");
+  const [password, setPassword] = useState("");
   const [showPassword, setShowPassword] = useState(false);
-  const [error, setError] = useState('');
+  const [error, setError] = useState("");
   const [isLoading, setIsLoading] = useState(false);
 
   const handleSubmit = async (e: FormEvent) => {
     e.preventDefault();
-    setError('');
+    setError("");
     setIsLoading(true);
 
     try {
@@ -25,12 +33,12 @@ export default function LoginPage() {
       if (result.success) {
         // Redirigir al dashboard
         // Forzar recarga completa para asegurar que la cookie se procese correctamente
-        window.location.href = '/admin';
+        window.location.href = "/admin";
       } else {
-        setError(result.error || 'Error al iniciar sesión');
+        setError(result.error || "Error al iniciar sesión");
       }
     } catch {
-      setError('Error de conexión. Por favor, intenta nuevamente.');
+      setError("Error de conexión. Por favor, intenta nuevamente.");
     } finally {
       setIsLoading(false);
     }
@@ -40,24 +48,31 @@ export default function LoginPage() {
     <div className="min-h-screen bg-gradient-to-br from-slate-900 via-slate-800 to-emerald-900 flex items-center justify-center p-4">
       {/* Background Pattern */}
       <div className="absolute inset-0 opacity-10">
-        <div className="absolute inset-0" style={{
-          backgroundImage: `url("data:image/svg+xml,%3Csvg width='60' height='60' viewBox='0 0 60 60' xmlns='http://www.w3.org/2000/svg'%3E%3Cg fill='none' fill-rule='evenodd'%3E%3Cg fill='%23ffffff' fill-opacity='1'%3E%3Cpath d='M36 34v-4h-2v4h-4v2h4v4h2v-4h4v-2h-4zm0-30V0h-2v4h-4v2h4v4h2V6h4V4h-4zM6 34v-4H4v4H0v2h4v4h2v-4h4v-2H6zM6 4V0H4v4H0v2h4v4h2V6h4V4H6z'/%3E%3C/g%3E%3C/g%3E%3C/svg%3E")`,
-        }} />
+        <div
+          className="absolute inset-0"
+          style={{
+            backgroundImage: `url("data:image/svg+xml,%3Csvg width='60' height='60' viewBox='0 0 60 60' xmlns='http://www.w3.org/2000/svg'%3E%3Cg fill='none' fill-rule='evenodd'%3E%3Cg fill='%23ffffff' fill-opacity='1'%3E%3Cpath d='M36 34v-4h-2v4h-4v2h4v4h2v-4h4v-2h-4zm0-30V0h-2v4h-4v2h4v4h2V6h4V4h-4zM6 34v-4H4v4H0v2h4v4h2v-4h4v-2H6zM6 4V0H4v4H0v2h4v4h2V6h4V4H6z'/%3E%3C/g%3E%3C/g%3E%3C/svg%3E")`,
+          }}
+        />
       </div>
 
       {/* Login Card */}
       <div className="relative w-full max-w-md">
         {/* Glow Effect */}
         <div className="absolute -inset-1 bg-gradient-to-r from-emerald-500 to-teal-500 rounded-2xl blur-xl opacity-30 animate-pulse" />
-        
+
         <div className="relative bg-white/95 backdrop-blur-xl rounded-2xl shadow-2xl p-8 border border-white/20">
           {/* Logo & Header */}
           <div className="text-center mb-8">
             <div className="inline-flex items-center justify-center w-20 h-20 bg-gradient-to-br from-emerald-500 to-teal-500 rounded-2xl shadow-lg shadow-emerald-500/30 mb-4">
               <Church className="w-10 h-10 text-white" />
             </div>
-            <h1 className="text-3xl font-bold text-slate-900 mb-2">Panel Administrativo</h1>
-            <p className="text-slate-600">Parroquia Inmaculado Corazón de María</p>
+            <h1 className="text-3xl font-bold text-slate-900 mb-2">
+              Panel Administrativo
+            </h1>
+            <p className="text-slate-600">
+              Parroquia Inmaculado Corazón de María
+            </p>
           </div>
 
           {/* Error Alert */}
@@ -74,7 +89,10 @@ export default function LoginPage() {
           <form onSubmit={handleSubmit} className="space-y-5">
             {/* Email Field */}
             <div>
-              <label htmlFor="email" className="block text-sm font-semibold text-slate-700 mb-2">
+              <label
+                htmlFor="email"
+                className="block text-sm font-semibold text-slate-700 mb-2"
+              >
                 Correo Electrónico
               </label>
               <div className="relative">
@@ -97,7 +115,10 @@ export default function LoginPage() {
 
             {/* Password Field */}
             <div>
-              <label htmlFor="password" className="block text-sm font-semibold text-slate-700 mb-2">
+              <label
+                htmlFor="password"
+                className="block text-sm font-semibold text-slate-700 mb-2"
+              >
                 Contraseña
               </label>
               <div className="relative">
@@ -106,7 +127,7 @@ export default function LoginPage() {
                 </div>
                 <input
                   id="password"
-                  type={showPassword ? 'text' : 'password'}
+                  type={showPassword ? "text" : "password"}
                   value={password}
                   onChange={(e) => setPassword(e.target.value)}
                   required
@@ -164,20 +185,11 @@ export default function LoginPage() {
           >
             Volver al sitio web
           </Link>
-
-          {/* Info Box */}
-          <div className="mt-6 p-4 bg-blue-50 border border-blue-200 rounded-xl">
-            <p className="text-xs text-blue-800 text-center">
-              <strong>Credenciales por defecto:</strong><br />
-              Email: admin@corazondemariaarequipa.com<br />
-              Contraseña: Admin123!
-            </p>
-          </div>
         </div>
 
         {/* Footer */}
         <p className="text-center text-sm text-slate-400 mt-6">
-          © 2025 Parroquia ICM • Sistema Seguro
+          © 2026 Parroquia ICM • Sistema Seguro
         </p>
       </div>
     </div>

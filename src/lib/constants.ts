@@ -144,16 +144,20 @@ export const EXTERNAL_LINKS = {
 };
 
 // Authentication Configuration
-export const AUTH_CONFIG = {
-  // SEGURIDAD: Leer solo de variable de entorno. 
-  // En producción, si esto no existe, la autenticación fallará (lo cual es seguro).
-  JWT_SECRET: process.env.JWT_SECRET || '',
+function getJwtSecret(): string {
+  const secret = process.env.JWT_SECRET;
+  if (!secret) {
+    if (process.env.NODE_ENV === 'production') {
+      throw new Error('FATAL: JWT_SECRET no está configurado. La aplicación no puede funcionar sin esta variable.');
+    }
+    console.warn('⚠️ ADVERTENCIA: JWT_SECRET no está configurado. Usando valor temporal para desarrollo.');
+    return 'dev-only-secret-do-not-use-in-production';
+  }
+  return secret;
+}
 
+export const AUTH_CONFIG = {
+  JWT_SECRET: getJwtSecret(),
   JWT_EXPIRES_IN: '7d',
   COOKIE_NAME: 'auth-token',
 };
-
-// Validar configuración crítica en desarrollo
-if (process.env.NODE_ENV === 'development' && !AUTH_CONFIG.JWT_SECRET) {
-  console.warn('⚠️ ADVERTENCIA: JWT_SECRET no está configurado en las variables de entorno.');
-}

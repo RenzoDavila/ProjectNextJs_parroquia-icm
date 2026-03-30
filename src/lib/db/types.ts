@@ -333,11 +333,3 @@ export interface CreateReservationRequest {
   comprobanteUrl?: string;
   comprobanteCloudinaryId?: string;
 }
-
-export interface CreateReservationResponse {
-  success: boolean;
-  message: string;
-  reservationId?: number;
-  confirmationCode?: string;
-  error?: string;
-}

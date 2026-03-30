@@ -4,20 +4,34 @@ import { Pool, PoolClient, QueryResult, QueryResultRow } from 'pg';
 let pool: Pool | null = null;
 
 /**
- * Obtiene o crea una instancia del pool de conexiones a PostgreSQL
+ * Obtiene o crea una instancia del pool de conexiones a PostgreSQL.
+ * Soporta tanto DATABASE_URL como variables individuales (DB_HOST, DB_PORT, etc.)
  */
 export function getPool(): Pool {
   if (!pool) {
+    const useSSL = process.env.DB_SSL === 'true' || process.env.NODE_ENV === 'production';
+    const sslConfig = useSSL ? { rejectUnauthorized: false } : false;
+
+    // Si DATABASE_URL existe, usarla directamente; sino, usar variables individuales
+    const poolConfig = process.env.DATABASE_URL
+      ? {
+          connectionString: process.env.DATABASE_URL,
+          ssl: sslConfig,
+        }
+      : {
+          host: process.env.DB_HOST,
+          port: parseInt(process.env.DB_PORT || '5432'),
+          database: process.env.DB_NAME,
+          user: process.env.DB_USER,
+          password: process.env.DB_PASSWORD,
+          ssl: sslConfig,
+        };
+
     pool = new Pool({
-      host: process.env.DB_HOST,
-      port: parseInt(process.env.DB_PORT || '5432'),
-      database: process.env.DB_NAME,
-      user: process.env.DB_USER,
-      password: process.env.DB_PASSWORD,
-      ssl: process.env.DB_SSL === 'true' ? { rejectUnauthorized: false } : false,
-      max: 20, // Máximo de conexiones en el pool
-      idleTimeoutMillis: 30000, // Tiempo antes de cerrar una conexión inactiva
-      connectionTimeoutMillis: 2000, // Tiempo máximo de espera para obtener una conexión
+      ...poolConfig,
+      max: 20,
+      idleTimeoutMillis: 30000,
+      connectionTimeoutMillis: 2000,
     });
 
     // Manejar errores del pool
