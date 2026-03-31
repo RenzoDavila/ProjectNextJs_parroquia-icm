@@ -157,7 +157,11 @@ function getJwtSecret(): string {
 }
 
 export const AUTH_CONFIG = {
-  JWT_SECRET: getJwtSecret(),
+  // Lazy getter: solo se evalúa cuando se accede, no al importar el módulo.
+  // Esto evita que el build de Next.js falle por falta de JWT_SECRET.
+  get JWT_SECRET(): string {
+    return getJwtSecret();
+  },
   JWT_EXPIRES_IN: '7d',
   COOKIE_NAME: 'auth-token',
 };
