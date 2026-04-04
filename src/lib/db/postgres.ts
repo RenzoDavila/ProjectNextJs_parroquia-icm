@@ -9,23 +9,23 @@ let pool: Pool | null = null;
  */
 export function getPool(): Pool {
   if (!pool) {
-    const useSSL = process.env.DB_SSL === 'true' || process.env.NODE_ENV === 'production';
+    const useSSL = process.env.DB_SSL === 'true';
     const sslConfig = useSSL ? { rejectUnauthorized: false } : false;
 
     // Si DATABASE_URL existe, usarla directamente; sino, usar variables individuales
     const poolConfig = process.env.DATABASE_URL
       ? {
-          connectionString: process.env.DATABASE_URL,
-          ssl: sslConfig,
-        }
+        connectionString: process.env.DATABASE_URL,
+        ssl: sslConfig,
+      }
       : {
-          host: process.env.DB_HOST,
-          port: parseInt(process.env.DB_PORT || '5432'),
-          database: process.env.DB_NAME,
-          user: process.env.DB_USER,
-          password: process.env.DB_PASSWORD,
-          ssl: sslConfig,
-        };
+        host: process.env.DB_HOST,
+        port: parseInt(process.env.DB_PORT || '5432'),
+        database: process.env.DB_NAME,
+        user: process.env.DB_USER,
+        password: process.env.DB_PASSWORD,
+        ssl: sslConfig,
+      };
 
     pool = new Pool({
       ...poolConfig,
@@ -52,16 +52,16 @@ export async function query<T extends QueryResultRow = any>(
 ): Promise<QueryResult<T>> {
   const pool = getPool();
   const start = Date.now();
-  
+
   try {
     const result = await pool.query<T>(text, params);
     const duration = Date.now() - start;
-    
+
     // Log en desarrollo
     if (process.env.NODE_ENV === 'development') {
       console.log('Consulta ejecutada:', { text, duration, rows: result.rowCount });
     }
-    
+
     return result;
   } catch (error) {
     console.error('Error en consulta SQL:', error);
@@ -84,7 +84,7 @@ export async function transaction<T>(
   callback: (client: PoolClient) => Promise<T>
 ): Promise<T> {
   const client = await getClient();
-  
+
   try {
     await client.query('BEGIN');
     const result = await callback(client);
@@ -134,24 +134,24 @@ export interface DbResult<T> {
  */
 export function handleDbError(error: any): DbResult<never> {
   console.error('Error de base de datos:', error);
-  
+
   // Errores comunes de PostgreSQL
   if (error.code === '23505') {
     return { success: false, error: 'El registro ya existe (duplicado)' };
   }
-  
+
   if (error.code === '23503') {
     return { success: false, error: 'Violación de clave foránea' };
   }
-  
+
   if (error.code === '23502') {
     return { success: false, error: 'Campo obligatorio faltante' };
   }
-  
-  return { 
-    success: false, 
-    error: process.env.NODE_ENV === 'development' 
-      ? error.message 
-      : 'Error al procesar la solicitud' 
+
+  return {
+    success: false,
+    error: process.env.NODE_ENV === 'development'
+      ? error.message
+      : 'Error al procesar la solicitud'
   };
 }
