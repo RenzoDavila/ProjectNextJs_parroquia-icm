@@ -137,10 +137,64 @@ Debe mostrar `✓ Ready in Xs`. Para con `Ctrl+C`.
 | **`node: command not found`**       | Node no está en PATH del servidor     | Usar ruta completa: `/home/corazon2/nodevenv/ProjectNextJs_parroquia-icm/20/bin/node`                |
 | **`Cannot find module 'next'`**     | Permisos en node_modules              | `chmod -R 755 node_modules/`                                                                         |
 | **`EADDRINUSE`** al probar manual   | La app de Passenger ya está corriendo | Normal, hacer la prueba vía navegador                                                                |
+| **Login "Credenciales inválidas"**  | Hash de contraseña no coincide        | Seguir la sección "Crear/Resetear Usuario Admin" más abajo                                           |
 
 ---
 
-## 📋 Resumen Express (para copiar/pegar rápido)
+## � Crear o Resetear Usuario Admin (solo primera vez o si olvidas la contraseña)
+
+### Paso 1: Generar el hash de la contraseña en tu PC
+
+Abre **PowerShell** en la carpeta del proyecto:
+
+```powershell
+node -e "const bcrypt = require('bcryptjs'); console.log(bcrypt.hashSync('TU_CONTRASEÑA_AQUI', 10));"
+```
+
+Esto imprime algo como: `$2b$10$mRwwOH9gMYa...` — cópialo.
+
+### Paso 2: Crear o actualizar el usuario en producción
+
+Abre la **terminal de cPanel** y ejecuta el siguiente comando, reemplazando `HASH_GENERADO` con el hash del paso anterior:
+
+**Si es la primera vez** (crear usuario nuevo):
+
+```bash
+cd /home/corazon2/ProjectNextJs_parroquia-icm && /home/corazon2/nodevenv/ProjectNextJs_parroquia-icm/20/bin/node -e "
+require('./node_modules/@next/env').loadEnvConfig('.');
+const { Pool } = require('./node_modules/pg');
+const pool = new Pool({ host: process.env.DB_HOST, port: parseInt(process.env.DB_PORT||'5432'), user: process.env.DB_USER, password: process.env.DB_PASSWORD, database: process.env.DB_NAME });
+pool.query('INSERT INTO admin_users (name, email, password_hash) VALUES (\$1, \$2, \$3) ON CONFLICT (email) DO UPDATE SET password_hash = \$3', ['Administrador', 'admin@parroquiaicm.com', 'HASH_GENERADO']).then(r => {
+  console.log('Usuario creado/actualizado:', r.rowCount, 'fila(s)');
+  pool.end();
+}).catch(e => { console.error(e.message); pool.end(); });
+"
+```
+
+**Si solo quieres resetear la contraseña**:
+
+```bash
+cd /home/corazon2/ProjectNextJs_parroquia-icm && /home/corazon2/nodevenv/ProjectNextJs_parroquia-icm/20/bin/node -e "
+require('./node_modules/@next/env').loadEnvConfig('.');
+const { Pool } = require('./node_modules/pg');
+const pool = new Pool({ host: process.env.DB_HOST, port: parseInt(process.env.DB_PORT||'5432'), user: process.env.DB_USER, password: process.env.DB_PASSWORD, database: process.env.DB_NAME });
+pool.query('UPDATE admin_users SET password_hash = \$1 WHERE email = \$2', ['HASH_GENERADO', 'admin@parroquiaicm.com']).then(r => {
+  console.log('Password actualizado:', r.rowCount, 'fila(s)');
+  pool.end();
+}).catch(e => { console.error(e.message); pool.end(); });
+"
+```
+
+### Credenciales actuales:
+
+- **Email:** `admin@parroquiaicm.com`
+- **Password:** `Admin123!`
+
+> ⚠️ **Se recomienda cambiar la contraseña por una más segura en producción.**
+
+---
+
+## �📋 Resumen Express (para copiar/pegar rápido)
 
 ### En tu PC (PowerShell):
 
