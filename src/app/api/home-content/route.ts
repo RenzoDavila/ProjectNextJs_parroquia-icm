@@ -3,36 +3,29 @@ import { query } from '@/lib/db';
 
 export async function GET() {
   try {
-    // Obtener sección de bienvenida
-    const welcomeResult = await query(`
-      SELECT content, image_url 
+    // Una sola query en vez de 3 separadas
+    const result = await query(`
+      SELECT section, content, image_url 
       FROM page_sections 
-      WHERE page = 'home' AND section = 'welcome' AND is_active = true
-      LIMIT 1
+      WHERE page = 'home' AND is_active = true
+        AND section IN ('welcome', 'pastoral_juvenil', 'msc')
     `);
 
-    // Obtener sección pastoral juvenil
-    const pastoralResult = await query(`
-      SELECT content, image_url 
-      FROM page_sections 
-      WHERE page = 'home' AND section = 'pastoral_juvenil' AND is_active = true
-      LIMIT 1
-    `);
-
-    // Obtener sección MSC
-    const mscResult = await query(`
-      SELECT content, image_url 
-      FROM page_sections 
-      WHERE page = 'home' AND section = 'msc' AND is_active = true
-      LIMIT 1
-    `);
+    const sections: Record<string, any> = {};
+    for (const row of result.rows) {
+      sections[row.section === 'pastoral_juvenil' ? 'pastoralJuvenil' : row.section] = row;
+    }
 
     return NextResponse.json({
       success: true,
       data: {
-        welcome: welcomeResult.rows[0] || null,
-        pastoralJuvenil: pastoralResult.rows[0] || null,
-        msc: mscResult.rows[0] || null,
+        welcome: sections.welcome || null,
+        pastoralJuvenil: sections.pastoralJuvenil || null,
+        msc: sections.msc || null,
+      },
+    }, {
+      headers: {
+        'Cache-Control': 'public, s-maxage=300, stale-while-revalidate=600',
       },
     });
   } catch (error) {

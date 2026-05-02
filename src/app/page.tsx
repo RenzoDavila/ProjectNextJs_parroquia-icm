@@ -1,6 +1,3 @@
-"use client";
-
-import { useEffect, useState } from "react";
 import Image from "next/image";
 import Link from "next/link";
 import PublicLayout from "@/components/layout/PublicLayout";
@@ -10,92 +7,11 @@ import SectionHeading from "@/components/ui/SectionHeading";
 import Button from "@/components/ui/Button";
 import { SocialMediaSection } from "@/components/ui/SocialEmbed";
 import { EXTERNAL_LINKS, SITE_CONFIG } from "@/lib/constants";
+import { getHomePageData } from "@/lib/db/home-data";
 
-// Tipos para los datos dinámicos
-type Banner = {
-  id: number;
-  image: string;
-  title: string;
-  subtitle: string;
-  description: string;
-  link?: string;
-  linkText?: string;
-};
+export const revalidate = 300; // ISR cache de 5 minutos
 
-type HomeService = {
-  id: number;
-  title: string;
-  description: string;
-  icon:
-    | "clock"
-    | "calendar"
-    | "heart"
-    | "users"
-    | "book"
-    | "star"
-    | "info"
-    | "map"
-    | "phone"
-    | "mail";
-  link_url: string;
-};
-
-type InterestPage = {
-  id: number;
-  title: string;
-  image_url: string;
-  link_url: string;
-};
-
-type PageContent = {
-  welcome: {
-    content: {
-      title: string;
-      subtitle: string;
-      description: string;
-    };
-    image_url: string;
-  } | null;
-  pastoralJuvenil: {
-    content: {
-      title: string;
-      description: string;
-      buttonText: string;
-      buttonUrl: string;
-    };
-    image_url: string;
-  } | null;
-  msc: {
-    content: {
-      title: string;
-      subtitle: string;
-      description: string;
-      buttonText: string;
-      buttonUrl: string;
-    };
-    image_url: string;
-  } | null;
-};
-
-type DonationInfo = {
-  id: number;
-  title: string;
-  subtitle: string;
-  bank_name: string;
-  bank_logo_url: string | null;
-  account_type: string;
-  account_number: string;
-  cci: string;
-  account_holder: string;
-  church_image_url: string | null;
-  heart_image_url: string | null;
-  purpose_title: string | null;
-  purpose_description: string | null;
-  purpose_image_url: string | null;
-  is_active: boolean;
-};
-
-// Datos de fallback (si la DB no está disponible)
+// Datos de fallback (si la DB falla o está vacía)
 const fallbackServices = [
   {
     id: 1,
@@ -153,8 +69,7 @@ const fallbackInterestPages = [
   },
 ];
 
-// Fallback para banners (coherente con los datos de la DB)
-const fallbackBanners: Banner[] = [
+const fallbackBanners = [
   {
     id: 1,
     image:
@@ -164,81 +79,16 @@ const fallbackBanners: Banner[] = [
     description:
       "Una comunidad de fe, esperanza y amor en el corazón de Arequipa",
   },
-  {
-    id: 2,
-    image: "https://images.unsplash.com/photo-1544427920-c49ccfb85579?w=2000",
-    title: "Reserva tu Misa",
-    subtitle: "Intenciones de Misa",
-    description:
-      "Solicita una intención de misa para tus seres queridos de manera fácil y rápida",
-  },
-  {
-    id: 3,
-    image:
-      "https://images.unsplash.com/photo-1529156069898-49953e39b3ac?w=2000",
-    title: "Pastoral Juvenil",
-    subtitle: "Jóvenes por Cristo",
-    description:
-      "Únete a nuestra comunidad de jóvenes comprometidos con la fe y el servicio",
-  },
 ];
 
-export default function HomePage() {
-  const [banners, setBanners] = useState<Banner[]>(fallbackBanners);
-  const [services, setServices] = useState<HomeService[]>(fallbackServices);
-  const [interestPages, setInterestPages] = useState<InterestPage[]>(
-    fallbackInterestPages,
-  );
-  const [pageContent, setPageContent] = useState<PageContent | null>(null);
-  const [donationInfo, setDonationInfo] = useState<DonationInfo | null>(null);
-  const [isLoading, setIsLoading] = useState(true);
+export default async function HomePage() {
+  const data = await getHomePageData();
 
-  useEffect(() => {
-    loadDynamicContent();
-  }, []);
-
-  const loadDynamicContent = async () => {
-    try {
-      // Cargar banners
-      const bannersRes = await fetch("/api/banners");
-      const bannersData = await bannersRes.json();
-      if (bannersData.success && bannersData.slides?.length > 0) {
-        setBanners(bannersData.slides);
-      }
-
-      // Cargar servicios
-      const servicesRes = await fetch("/api/home-services");
-      const servicesData = await servicesRes.json();
-      if (servicesData.success && servicesData.data?.length > 0) {
-        setServices(servicesData.data);
-      }
-
-      // Cargar páginas de interés
-      const pagesRes = await fetch("/api/interest-pages");
-      const pagesData = await pagesRes.json();
-      if (pagesData.success && pagesData.data?.length > 0) {
-        setInterestPages(pagesData.data);
-      }
-
-      // Cargar contenido de página
-      const contentRes = await fetch("/api/home-content");
-      const contentData = await contentRes.json();
-      if (contentData.success && contentData.data) {
-        setPageContent(contentData.data);
-      }
-
-      // Cargar información de donaciones
-      const donationRes = await fetch("/api/donation-info");
-      const donationData = await donationRes.json();
-      if (donationData.success && donationData.data) {
-        setDonationInfo(donationData.data);
-      }
-    } catch (error) {
-      console.log("Usando datos de fallback:", error);
-    } finally {
-      setIsLoading(false);
-    }
-  };
+  const banners = data?.banners?.length ? data.banners : fallbackBanners;
+  const services = data?.services?.length ? data.services : fallbackServices;
+  const interestPages = data?.interestPages?.length ? data.interestPages : fallbackInterestPages;
+  const pageContent = data?.pageContent;
+  const donationInfo = data?.donationInfo;
 
   return (
     <PublicLayout hasHero>
@@ -420,7 +270,7 @@ export default function HomePage() {
               centered
             />
             <div className="grid grid-cols-1 md:grid-cols-3 gap-8 mt-12">
-              {services.map((service) => (
+              {services.map((service: any) => (
                 <ServiceCard
                   key={service.id}
                   icon={service.icon}
@@ -490,11 +340,11 @@ export default function HomePage() {
           <div className="container mx-auto px-4">
             <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 items-center">
               <div>
-                <h2 className="text-3xl md:text-4xl font-bold mb-4">
+                <h2 className="text-3xl md:text-4xl font-bold mb-4 text-white">
                   {pageContent?.pastoralJuvenil?.content.title ||
                     "Pastoral Juvenil"}
                 </h2>
-                <p className="text-lg mb-6 opacity-90">
+                <p className="text-lg mb-6 text-white/90">
                   {pageContent?.pastoralJuvenil?.content.description ||
                     "Un espacio para jóvenes donde compartimos nuestra fe, realizamos actividades de formación y servicio, y construimos una comunidad de amistad en Cristo."}
                 </p>
@@ -613,7 +463,7 @@ export default function HomePage() {
               centered
             />
             <div className="grid grid-cols-2 md:grid-cols-4 gap-6 mt-12">
-              {interestPages.map((page) => (
+              {interestPages.map((page: any) => (
                 <Link
                   key={page.id}
                   href={page.link_url}
@@ -628,7 +478,7 @@ export default function HomePage() {
                     className="object-cover transition-transform duration-300 group-hover:scale-110"
                   />
                   <div className="absolute inset-0 bg-black/50 flex items-center justify-center">
-                    <span className="px-8 text-white font-semibold text-lg">
+                    <span className="px-8 text-white font-semibold text-lg text-center">
                       {page.title}
                     </span>
                   </div>

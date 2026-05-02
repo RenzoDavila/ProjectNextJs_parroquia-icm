@@ -1,6 +1,6 @@
 'use client';
 
-import { useSyncExternalStore } from 'react';
+import { useState, useEffect, useRef } from 'react';
 import { SOCIAL_LINKS } from '@/lib/constants';
 
 // SVG Icons
@@ -27,6 +27,53 @@ const ExternalLinkIcon = ({ className }: { className?: string }) => (
     <path strokeLinecap="round" strokeLinejoin="round" d="M10 6H6a2 2 0 00-2 2v10a2 2 0 002 2h10a2 2 0 002-2v-4M14 4h6m0 0v6m0-6L10 14"/>
   </svg>
 );
+
+/**
+ * Hook para lazy loading con Intersection Observer.
+ * Los iframes solo se cargan cuando el usuario scrollea hasta la sección.
+ */
+function useLazyLoad(rootMargin = '200px') {
+  const ref = useRef<HTMLDivElement>(null);
+  const [isVisible, setIsVisible] = useState(false);
+
+  useEffect(() => {
+    const element = ref.current;
+    if (!element) return;
+
+    const observer = new IntersectionObserver(
+      ([entry]) => {
+        if (entry.isIntersecting) {
+          setIsVisible(true);
+          observer.disconnect();
+        }
+      },
+      { rootMargin }
+    );
+
+    observer.observe(element);
+    return () => observer.disconnect();
+  }, [rootMargin]);
+
+  return { ref, isVisible };
+}
+
+// Placeholder que se muestra mientras el iframe no ha cargado
+function IframePlaceholder({ 
+  icon: Icon, 
+  title, 
+  gradient 
+}: { 
+  icon: React.ComponentType<{ className?: string }>;
+  title: string;
+  gradient: string;
+}) {
+  return (
+    <div className={`flex flex-col items-center justify-center h-full min-h-[200px] bg-gradient-to-br ${gradient} animate-pulse`}>
+      <Icon className="w-12 h-12 text-white/60 mb-3" />
+      <p className="text-white/60 text-sm">Cargando {title}...</p>
+    </div>
+  );
+}
 
 // Tarjeta de fallback para Firefox
 function FallbackCard({ 
@@ -95,10 +142,12 @@ function FallbackCard({
   );
 }
 
-// Componente de YouTube (siempre visible en todos los navegadores)
+// Componente de YouTube con lazy loading
 function YouTubeEmbed() {
+  const { ref, isVisible } = useLazyLoad();
+
   return (
-    <div className="rounded-xl overflow-hidden shadow-lg bg-white">
+    <div ref={ref} className="rounded-xl overflow-hidden shadow-lg bg-white">
       {/* Header YouTube */}
       <div className="bg-gradient-to-r from-red-600 to-red-700 p-4">
         <div className="flex items-center gap-3">
@@ -109,44 +158,52 @@ function YouTubeEmbed() {
         </div>
       </div>
       <div className="flex flex-col h-[450px]">
-        <div className="flex-1 p-1">
-          <iframe 
-            width="100%" 
-            height="100%"
-            src="https://www.youtube.com/embed/videoseries?list=UU4ixCXfHtD-8Ns88kJdEucA"
-            frameBorder="0"
-            allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture"
-            allowFullScreen
-            className="border-0 rounded"
-            title="YouTube - Canal 1"
-          />
-        </div>
-        <div className="flex-1 p-1">
-          <iframe 
-            width="100%" 
-            height="100%"
-            src="https://www.youtube.com/embed?listType=playlist&list=UUNZ4QrvoHFv5theSyg5XZaw"
-            frameBorder="0"
-            allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture"
-            allowFullScreen
-            className="border-0 rounded"
-            title="YouTube - Canal 2"
-          />
-        </div>
+        {isVisible ? (
+          <>
+            <div className="flex-1 p-1">
+              <iframe 
+                width="100%" 
+                height="100%"
+                src="https://www.youtube.com/embed/videoseries?list=UU4ixCXfHtD-8Ns88kJdEucA"
+                frameBorder="0"
+                allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture"
+                allowFullScreen
+                loading="lazy"
+                className="border-0 rounded"
+                title="YouTube - Canal 1"
+              />
+            </div>
+            <div className="flex-1 p-1">
+              <iframe 
+                width="100%" 
+                height="100%"
+                src="https://www.youtube.com/embed?listType=playlist&list=UUNZ4QrvoHFv5theSyg5XZaw"
+                frameBorder="0"
+                allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture"
+                allowFullScreen
+                loading="lazy"
+                className="border-0 rounded"
+                title="YouTube - Canal 2"
+              />
+            </div>
+          </>
+        ) : (
+          <IframePlaceholder icon={YoutubeIcon} title="YouTube" gradient="from-red-50 to-red-100" />
+        )}
       </div>
     </div>
   );
 }
 
 export function SocialMediaSection() {
-  // Detectar Firefox usando useSyncExternalStore para evitar problemas de hidratación
-  const isFirefox = useSyncExternalStore(
-    () => () => {}, // subscribe - no necesitamos suscripciones
-    () => typeof navigator !== 'undefined' && navigator.userAgent.toLowerCase().includes('firefox'), // getSnapshot (cliente)
-    () => false // getServerSnapshot (servidor)
-  );
+  const { ref, isVisible } = useLazyLoad();
+  const [isFirefox, setIsFirefox] = useState(false);
 
-  // En Firefox, mostrar fallback solo para Instagram y Facebook, pero YouTube siempre con iframe
+  useEffect(() => {
+    setIsFirefox(navigator.userAgent.toLowerCase().includes('firefox'));
+  }, []);
+
+  // En Firefox, mostrar fallback solo para Instagram y Facebook
   if (isFirefox) {
     return (
       <div className="grid grid-cols-1 md:grid-cols-3 gap-6">
@@ -167,12 +224,10 @@ export function SocialMediaSection() {
     );
   }
 
-  // En otros navegadores (Chrome, Edge, Safari), mostrar iframes directamente
   return (
-    <div className="grid grid-cols-1 md:grid-cols-3 gap-6">
+    <div ref={ref} className="grid grid-cols-1 md:grid-cols-3 gap-6">
       {/* Instagram Embed */}
       <div className="rounded-xl overflow-hidden shadow-lg bg-white">
-        {/* Header Instagram */}
         <div className="bg-gradient-to-r from-purple-600 via-pink-600 to-orange-500 p-4">
           <div className="flex items-center gap-3">
             <div className="w-10 h-10 bg-white/20 rounded-full flex items-center justify-center">
@@ -181,22 +236,26 @@ export function SocialMediaSection() {
             <h3 className="text-white font-bold text-lg">Instagram</h3>
           </div>
         </div>
-        <iframe 
-          width="100%" 
-          height="450" 
-          src="https://www.instagram.com/picmaqp/embed/" 
-          frameBorder="0"
-          className="border-0"
-          title="Instagram - Parroquia ICM"
-        />
+        {isVisible ? (
+          <iframe 
+            width="100%" 
+            height="450" 
+            src="https://www.instagram.com/picmaqp/embed/" 
+            frameBorder="0"
+            loading="lazy"
+            className="border-0"
+            title="Instagram - Parroquia ICM"
+          />
+        ) : (
+          <IframePlaceholder icon={InstagramIcon} title="Instagram" gradient="from-purple-50 to-pink-50" />
+        )}
       </div>
 
-      {/* YouTube Embeds - Reutilizamos el componente */}
+      {/* YouTube */}
       <YouTubeEmbed />
 
       {/* Facebook Page Plugin */}
       <div className="rounded-xl overflow-hidden shadow-lg bg-white">
-        {/* Header Facebook */}
         <div className="bg-gradient-to-r from-blue-600 to-blue-700 p-4">
           <div className="flex items-center gap-3">
             <div className="w-10 h-10 bg-white/20 rounded-full flex items-center justify-center">
@@ -205,17 +264,22 @@ export function SocialMediaSection() {
             <h3 className="text-white font-bold text-lg">Facebook</h3>
           </div>
         </div>
-        <iframe
-          src="https://www.facebook.com/plugins/page.php?href=https%3A%2F%2Fwww.facebook.com%2FDel-Inmaculado-Coraz%C3%B3n-de-Mar%C3%ADa-Miraflores-AQP-104673071260189%2F&tabs=timeline&width=340&height=450&small_header=false&adapt_container_width=true&hide_cover=false&show_facepile=false&appId=118909448694662"
-          width="100%" 
-          height="450" 
-          style={{ border: 'none', overflow: 'hidden' }} 
-          scrolling="no" 
-          frameBorder="0"
-          allowFullScreen
-          allow="autoplay; clipboard-write; encrypted-media; picture-in-picture; web-share"
-          title="Facebook - Parroquia ICM"
-        />
+        {isVisible ? (
+          <iframe
+            src="https://www.facebook.com/plugins/page.php?href=https%3A%2F%2Fwww.facebook.com%2FDel-Inmaculado-Coraz%C3%B3n-de-Mar%C3%ADa-Miraflores-AQP-104673071260189%2F&tabs=timeline&width=340&height=450&small_header=false&adapt_container_width=true&hide_cover=false&show_facepile=false&appId=118909448694662"
+            width="100%" 
+            height="450" 
+            style={{ border: 'none', overflow: 'hidden' }} 
+            scrolling="no" 
+            frameBorder="0"
+            allowFullScreen
+            loading="lazy"
+            allow="autoplay; clipboard-write; encrypted-media; picture-in-picture; web-share"
+            title="Facebook - Parroquia ICM"
+          />
+        ) : (
+          <IframePlaceholder icon={FacebookIcon} title="Facebook" gradient="from-blue-50 to-blue-100" />
+        )}
       </div>
     </div>
   );

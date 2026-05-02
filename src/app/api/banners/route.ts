@@ -39,6 +39,10 @@ export async function GET() {
       success: true,
       data: result.rows,
       slides: slides,
+    }, {
+      headers: {
+        'Cache-Control': 'public, s-maxage=300, stale-while-revalidate=600',
+      },
     });
 
   } catch (error) {

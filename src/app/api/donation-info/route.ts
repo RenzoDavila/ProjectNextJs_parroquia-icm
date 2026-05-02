@@ -13,6 +13,10 @@ export async function GET() {
     return NextResponse.json({
       success: true,
       data: result.rows[0] || null,
+    }, {
+      headers: {
+        'Cache-Control': 'public, s-maxage=300, stale-while-revalidate=600',
+      },
     });
   } catch (error) {
     console.error('Error fetching donation info:', error);

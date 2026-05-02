@@ -1,12 +1,14 @@
-
 import { NextRequest, NextResponse } from 'next/server';
 import jwt from 'jsonwebtoken';
 import { AUTH_CONFIG } from '@/lib/constants';
 
-const { JWT_SECRET, COOKIE_NAME } = AUTH_CONFIG;
+export const dynamic = 'force-dynamic';
 
 export async function GET(request: NextRequest) {
     try {
+        const COOKIE_NAME = AUTH_CONFIG.COOKIE_NAME;
+        const JWT_SECRET = AUTH_CONFIG.JWT_SECRET;
+        
         // Obtener token de la cookie
         const token = request.cookies.get(COOKIE_NAME)?.value;
 

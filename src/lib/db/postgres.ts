@@ -29,9 +29,9 @@ export function getPool(): Pool {
 
     pool = new Pool({
       ...poolConfig,
-      max: 20,
-      idleTimeoutMillis: 30000,
-      connectionTimeoutMillis: 2000,
+      max: 5,
+      idleTimeoutMillis: 10000,
+      connectionTimeoutMillis: 5000,
     });
 
     // Manejar errores del pool

@@ -4,10 +4,14 @@ import bcrypt from 'bcryptjs';
 import jwt from 'jsonwebtoken';
 import { AUTH_CONFIG } from '@/lib/constants';
 
-const { JWT_SECRET, JWT_EXPIRES_IN, COOKIE_NAME } = AUTH_CONFIG;
+export const dynamic = 'force-dynamic';
 
 export async function POST(request: NextRequest) {
     try {
+        const JWT_SECRET = AUTH_CONFIG.JWT_SECRET;
+        const JWT_EXPIRES_IN = AUTH_CONFIG.JWT_EXPIRES_IN;
+        const COOKIE_NAME = AUTH_CONFIG.COOKIE_NAME;
+
         const body = await request.json();
         const { email, password } = body;
 
