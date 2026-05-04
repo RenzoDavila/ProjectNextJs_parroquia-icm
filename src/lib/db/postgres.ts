@@ -63,8 +63,12 @@ export async function query<T extends QueryResultRow = any>(
     }
 
     return result;
-  } catch (error) {
-    console.error('Error en consulta SQL:', error);
+  } catch (error: any) {
+    // Don't log "relation does not exist" errors – these are expected when optional tables are missing
+    const msg = error?.message || '';
+    if (!msg.includes('no existe la relación') && !msg.includes('relation') && !msg.includes('does not exist')) {
+      console.error('Error en consulta SQL:', error);
+    }
     throw error;
   }
 }
