@@ -6,7 +6,8 @@ import { query } from '@/lib/db/postgres';
  */
 export async function getHomePageData() {
   try {
-    const [bannersRes, servicesRes, pagesRes, contentRes, donationRes] = await Promise.all([
+    // Core queries that should always succeed
+    const [bannersRes, servicesRes, pagesRes, contentRes] = await Promise.all([
       query(`SELECT id, title, subtitle, description, image_url, link_url, link_text, display_order
              FROM banners WHERE is_active = true ORDER BY display_order ASC`),
       query(`SELECT id, title, description, icon, link_url, display_order
@@ -16,8 +17,18 @@ export async function getHomePageData() {
       query(`SELECT section, content, image_url FROM page_sections
              WHERE page = 'home' AND is_active = true
              AND section IN ('welcome', 'pastoral_juvenil', 'msc')`),
-      query(`SELECT * FROM donation_info WHERE is_active = true ORDER BY created_at DESC LIMIT 1`),
     ]);
+
+    // Donation query - may fail if table doesn't exist, so we handle it separately
+    let donationInfo = null;
+    try {
+      const donationRes = await query(
+        `SELECT * FROM donation_info WHERE is_active = true ORDER BY created_at DESC LIMIT 1`
+      );
+      donationInfo = donationRes.rows[0] || null;
+    } catch {
+      // Table donation_info may not exist yet - this is fine
+    }
 
     // Transform banners
     const banners = bannersRes.rows.map(b => ({
@@ -54,10 +65,11 @@ export async function getHomePageData() {
         pastoralJuvenil: sections.pastoralJuvenil || null,
         msc: sections.msc || null,
       },
-      donationInfo: donationRes.rows[0] || null,
+      donationInfo,
     };
   } catch (error) {
     console.error('Error fetching homepage data:', error);
     return null;
   }
 }
+

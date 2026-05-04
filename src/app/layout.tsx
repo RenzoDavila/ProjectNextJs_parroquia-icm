@@ -14,13 +14,33 @@ const geistMono = Geist_Mono({
 });
 
 export const metadata: Metadata = {
+  metadataBase: new URL(process.env.NEXT_PUBLIC_SITE_URL || "https://parroquiaicm.com"),
   title: {
     default: SITE_CONFIG.name,
     template: `%s | ${SITE_CONFIG.shortName}`,
   },
   description: SITE_CONFIG.description,
   icons: {
-    icon: "/favicon.ico",
+    icon: [
+      { url: "/images/logos/logo-parroquia-new.png", type: "image/png" },
+    ],
+    apple: [
+      { url: "/images/logos/logo-parroquia-new.png", sizes: "180x180", type: "image/png" },
+    ],
+  },
+  openGraph: {
+    title: SITE_CONFIG.name,
+    description: SITE_CONFIG.description,
+    images: [
+      {
+        url: "/images/logos/logo-parroquia-new.png",
+        width: 512,
+        height: 512,
+        alt: SITE_CONFIG.name,
+      },
+    ],
+    locale: "es_PE",
+    type: "website",
   },
 };
 
