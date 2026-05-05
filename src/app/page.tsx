@@ -86,7 +86,9 @@ export default async function HomePage() {
 
   const banners = data?.banners?.length ? data.banners : fallbackBanners;
   const services = data?.services?.length ? data.services : fallbackServices;
-  const interestPages = data?.interestPages?.length ? data.interestPages : fallbackInterestPages;
+  const interestPages = data?.interestPages?.length
+    ? data.interestPages
+    : fallbackInterestPages;
   const pageContent = data?.pageContent;
   const donationInfo = data?.donationInfo;
 
@@ -121,7 +123,7 @@ export default async function HomePage() {
               </p>
               <p className="text-white/95 leading-relaxed drop-shadow-md">
                 {pageContent?.welcome?.content.description ||
-                  "Los Misioneros del Sagrado Corazón de Jesús (MSC) te invitan a ser parte de nuestra comunidad parroquial. Aquí encontrarás un espacio de fe, oración y servicio al prójimo."}
+                  "Los misioneros claretianos, hijos del Inmaculado Corazón de María te invitamos a ser parte de nuestra comunidad parroquial. Aquí encontrarás un espacio de fe, oración y servicio al prójimo."}
               </p>
 
               <div className="relative mt-6 max-w-xs mx-auto">
