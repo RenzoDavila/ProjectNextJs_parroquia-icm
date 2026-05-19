@@ -1,7 +1,7 @@
 'use client';
 
 import { useState, useEffect } from 'react';
-import PublicLayout from "@/components/layout/PublicLayout";
+import ClientPublicLayout from "@/components/layout/ClientPublicLayout";
 import SectionHeading from "@/components/ui/SectionHeading";
 import { Clock, MapPin, Phone, Mail, X } from "lucide-react";
 import { SITE_CONFIG } from "@/lib/constants";
@@ -62,7 +62,7 @@ export default function NosotrosPage() {
   }, []);
 
   return (
-    <PublicLayout>
+    <ClientPublicLayout>
       {/* Hero Banner */}
       <section 
         className="relative h-[300px] md:h-[400px] bg-cover bg-center"
@@ -422,6 +422,6 @@ export default function NosotrosPage() {
           </div>
         </div>
       </section>
-    </PublicLayout>
+    </ClientPublicLayout>
   );
 }

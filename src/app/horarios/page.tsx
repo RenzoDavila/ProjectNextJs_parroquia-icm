@@ -1,7 +1,7 @@
 "use client";
 
 import { useState, useEffect } from "react";
-import PublicLayout from "@/components/layout/PublicLayout";
+import ClientPublicLayout from "@/components/layout/ClientPublicLayout";
 import SectionHeading from "@/components/ui/SectionHeading";
 import { Clock, User, Church } from "lucide-react";
 
@@ -73,7 +73,7 @@ export default function HorariosPage() {
   };
 
   return (
-    <PublicLayout>
+    <ClientPublicLayout>
       {/* Hero Banner */}
       <section 
         className="relative h-[300px] md:h-[400px] bg-cover bg-center"
@@ -302,6 +302,6 @@ export default function HorariosPage() {
           </p>
         </div>
       </section>
-    </PublicLayout>
+    </ClientPublicLayout>
   );
 }

@@ -2,7 +2,7 @@
 
 import { useState } from "react";
 import Image from "next/image";
-import PublicLayout from "@/components/layout/PublicLayout";
+import ClientPublicLayout from "@/components/layout/ClientPublicLayout";
 import SectionHeading from "@/components/ui/SectionHeading";
 import { Calendar, ChevronDown, X } from "lucide-react";
 
@@ -92,7 +92,7 @@ export default function GaleriaPage() {
   const events = galleryData[selectedYear as keyof typeof galleryData] || [];
 
   return (
-    <PublicLayout>
+    <ClientPublicLayout>
       {/* Hero Banner */}
       <section 
         className="relative h-[300px] md:h-[400px] bg-cover bg-center"
@@ -280,6 +280,6 @@ export default function GaleriaPage() {
           </a>
         </div>
       </section>
-    </PublicLayout>
+    </ClientPublicLayout>
   );
 }
