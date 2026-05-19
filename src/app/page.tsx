@@ -8,6 +8,7 @@ import Button from "@/components/ui/Button";
 import { SocialMediaSection } from "@/components/ui/SocialEmbed";
 import { EXTERNAL_LINKS, SITE_CONFIG } from "@/lib/constants";
 import { getHomePageData } from "@/lib/db/home-data";
+import { getSiteConfig } from "@/lib/db/site-config";
 
 export const revalidate = 300; // ISR cache de 5 minutos
 
@@ -82,7 +83,10 @@ const fallbackBanners = [
 ];
 
 export default async function HomePage() {
-  const data = await getHomePageData();
+  const [data, { siteConfig }] = await Promise.all([
+    getHomePageData(),
+    getSiteConfig(),
+  ]);
 
   const banners = data?.banners?.length ? data.banners : fallbackBanners;
   const services = data?.services?.length ? data.services : fallbackServices;
@@ -119,7 +123,7 @@ export default async function HomePage() {
                 }
               />
               <p className="text-lg text-white mb-8 font-medium drop-shadow-lg">
-                {SITE_CONFIG.description}
+                {siteConfig.description}
               </p>
               <p className="text-white/95 leading-relaxed drop-shadow-md">
                 {pageContent?.welcome?.content.description ||

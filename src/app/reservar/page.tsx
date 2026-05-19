@@ -2,7 +2,7 @@
 
 import { useState, useEffect, useCallback } from "react";
 import Link from "next/link";
-import PublicLayout from "@/components/layout/PublicLayout";
+import ClientPublicLayout from "@/components/layout/ClientPublicLayout";
 import {
   Calendar,
   Clock,
@@ -235,6 +235,7 @@ export default function ReservarPage() {
     "idle" | "success" | "error"
   >("idle");
   const [submitError, setSubmitError] = useState<string>("");
+  const [showDemoModal, setShowDemoModal] = useState(true);
 
   // Función para obtener la fecha de mañana en formato YYYY-MM-DD
   const getTomorrowDate = useCallback(() => {
@@ -600,7 +601,72 @@ export default function ReservarPage() {
   ];
 
   return (
-    <PublicLayout>
+    <ClientPublicLayout>
+      {/* Modal de Aviso - Página en Construcción */}
+      {showDemoModal && (
+        <div className="fixed inset-0 z-[100] flex items-center justify-center p-4 bg-black/60 backdrop-blur-sm animate-fadeIn">
+          <div className="bg-white rounded-3xl shadow-2xl max-w-lg w-full overflow-hidden animate-scaleIn">
+            {/* Header con gradiente */}
+            <div className="bg-gradient-to-r from-amber-500 via-orange-500 to-amber-600 p-6 text-center">
+              <div className="w-20 h-20 mx-auto bg-white/20 rounded-full flex items-center justify-center mb-4 backdrop-blur-sm">
+                <AlertCircle className="w-10 h-10 text-white" />
+              </div>
+              <h2 className="text-2xl md:text-3xl font-bold text-white">
+                Página en Construcción
+              </h2>
+            </div>
+
+            {/* Contenido */}
+            <div className="p-6 md:p-8">
+              <div className="bg-amber-50 border border-amber-200 rounded-xl p-4 mb-6">
+                <p className="text-amber-800 font-semibold text-lg mb-2 text-center">
+                  ⚠️ Aviso Importante
+                </p>
+                <p className="text-amber-700 text-center leading-relaxed">
+                  Este sistema de reservas de misas es <strong>demostrativo</strong> y se encuentra actualmente en desarrollo. 
+                  <strong> No se pueden realizar reservas reales</strong> a través de esta plataforma por el momento.
+                </p>
+              </div>
+
+              <div className="space-y-3 text-gray-600 text-sm">
+                <div className="flex items-start gap-3">
+                  <div className="w-6 h-6 rounded-full bg-blue-100 flex items-center justify-center flex-shrink-0 mt-0.5">
+                    <span className="text-blue-600 text-xs font-bold">✓</span>
+                  </div>
+                  <p>Puedes <strong>explorar y familiarizarte</strong> con el proceso de reserva</p>
+                </div>
+                <div className="flex items-start gap-3">
+                  <div className="w-6 h-6 rounded-full bg-blue-100 flex items-center justify-center flex-shrink-0 mt-0.5">
+                    <span className="text-blue-600 text-xs font-bold">✓</span>
+                  </div>
+                  <p>Puedes <strong>experimentar</strong> con todas las funcionalidades del formulario</p>
+                </div>
+                <div className="flex items-start gap-3">
+                  <div className="w-6 h-6 rounded-full bg-red-100 flex items-center justify-center flex-shrink-0 mt-0.5">
+                    <span className="text-red-600 text-xs font-bold">✕</span>
+                  </div>
+                  <p><strong>Ninguna reserva</strong> enviada será procesada ni tendrá validez</p>
+                </div>
+              </div>
+
+              <p className="text-gray-500 text-xs text-center mt-6">
+                Para reservar una misa, por favor comunícate directamente con la parroquia a través de nuestro teléfono o WhatsApp.
+              </p>
+            </div>
+
+            {/* Botón */}
+            <div className="px-6 pb-6 md:px-8 md:pb-8">
+              <button
+                onClick={() => setShowDemoModal(false)}
+                className="w-full py-3.5 bg-gradient-to-r from-[#002F57] to-[#003d73] text-white font-semibold rounded-xl hover:shadow-lg transition-all duration-300 hover:scale-[1.02] active:scale-[0.98]"
+              >
+                Entendido, quiero explorar
+              </button>
+            </div>
+          </div>
+        </div>
+      )}
+
       <main className="min-h-screen bg-gradient-to-b from-gray-50 to-white py-8 md:py-12">
         <div className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8">
           {/* Header */}
@@ -1238,6 +1304,6 @@ export default function ReservarPage() {
           </div>
         </div>
       </main>
-    </PublicLayout>
+    </ClientPublicLayout>
   );
 }

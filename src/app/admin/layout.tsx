@@ -95,7 +95,9 @@ export default function AdminLayout({
 }) {
   const [sidebarOpen, setSidebarOpen] = useState(false);
   const [sidebarCollapsed, setSidebarCollapsed] = useState(false);
-  const [notifications] = useState(3);
+  const [notifications, setNotifications] = useState(0);
+  const [recentMessages, setRecentMessages] = useState<{id: number; name: string; subject: string; created_at: string}[]>([]);
+  const [showNotifications, setShowNotifications] = useState(false);
   const [currentTime, setCurrentTime] = useState("");
   const [user, setUser] = useState<AdminUser | null>(null);
   const [isLoading, setIsLoading] = useState(true);
@@ -121,6 +123,26 @@ export default function AdminLayout({
       setIsLoading(false);
     };
     verifyAuth();
+  }, []);
+
+  // Fetch unread messages count for notifications
+  useEffect(() => {
+    const fetchNotifications = async () => {
+      try {
+        const res = await fetch('/api/admin/messages?status=unread&limit=5');
+        const data = await res.json();
+        if (data.success) {
+          setNotifications(data.unreadCount || 0);
+          setRecentMessages((data.data || []).slice(0, 5));
+        }
+      } catch {
+        // silently fail
+      }
+    };
+    fetchNotifications();
+    // Refresh every 30 seconds
+    const interval = setInterval(fetchNotifications, 30000);
+    return () => clearInterval(interval);
   }, []);
 
   const handleLogout = async () => {
@@ -363,14 +385,70 @@ export default function AdminLayout({
               </div>
 
               {/* Notifications */}
-              <button className="relative p-2.5 text-slate-600 hover:text-slate-900 hover:bg-slate-100 rounded-xl transition-colors">
-                <Bell className="w-5 h-5" />
-                {notifications > 0 && (
-                  <span className="absolute top-1 right-1 w-5 h-5 bg-red-500 text-white text-xs font-bold rounded-full flex items-center justify-center animate-pulse">
-                    {notifications}
-                  </span>
+              <div className="relative">
+                <button 
+                  onClick={() => setShowNotifications(!showNotifications)}
+                  className="relative p-2.5 text-slate-600 hover:text-slate-900 hover:bg-slate-100 rounded-xl transition-colors"
+                >
+                  <Bell className="w-5 h-5" />
+                  {notifications > 0 && (
+                    <span className="absolute top-1 right-1 w-5 h-5 bg-red-500 text-white text-xs font-bold rounded-full flex items-center justify-center animate-pulse">
+                      {notifications}
+                    </span>
+                  )}
+                </button>
+
+                {/* Notification Dropdown */}
+                {showNotifications && (
+                  <div className="absolute right-0 top-full mt-2 w-80 bg-white rounded-xl shadow-2xl border border-slate-200 overflow-hidden z-50">
+                    <div className="p-4 border-b border-slate-100 bg-gradient-to-r from-slate-50 to-white">
+                      <div className="flex items-center justify-between">
+                        <h3 className="font-bold text-slate-900">Notificaciones</h3>
+                        {notifications > 0 && (
+                          <span className="text-xs bg-red-100 text-red-700 px-2 py-0.5 rounded-full font-medium">
+                            {notifications} nuevo{notifications !== 1 ? 's' : ''}
+                          </span>
+                        )}
+                      </div>
+                    </div>
+                    <div className="max-h-64 overflow-y-auto divide-y divide-slate-100">
+                      {recentMessages.length > 0 ? (
+                        recentMessages.map((msg) => (
+                          <Link
+                            key={msg.id}
+                            href="/admin/messages"
+                            onClick={() => setShowNotifications(false)}
+                            className="block p-3 hover:bg-blue-50/50 transition-colors"
+                          >
+                            <div className="flex items-start gap-2">
+                              <div className="w-2 h-2 rounded-full bg-blue-500 mt-1.5 flex-shrink-0"></div>
+                              <div className="flex-1 min-w-0">
+                                <p className="text-sm font-semibold text-slate-900 truncate">{msg.name}</p>
+                                <p className="text-xs text-slate-600 truncate">{msg.subject}</p>
+                                <p className="text-xs text-slate-400 mt-0.5">
+                                  {new Date(msg.created_at).toLocaleDateString('es-PE', { day: '2-digit', month: 'short', hour: '2-digit', minute: '2-digit' })}
+                                </p>
+                              </div>
+                            </div>
+                          </Link>
+                        ))
+                      ) : (
+                        <div className="p-6 text-center">
+                          <Bell className="w-8 h-8 text-slate-300 mx-auto mb-2" />
+                          <p className="text-sm text-slate-500">No hay notificaciones nuevas</p>
+                        </div>
+                      )}
+                    </div>
+                    <Link
+                      href="/admin/messages"
+                      onClick={() => setShowNotifications(false)}
+                      className="block p-3 text-center text-sm font-medium text-emerald-600 hover:text-emerald-700 hover:bg-emerald-50 border-t border-slate-100 transition-colors"
+                    >
+                      Ver todos los mensajes
+                    </Link>
+                  </div>
                 )}
-              </button>
+              </div>
 
               {/* Ver Sitio Button */}
               <div className="hidden sm:flex items-center gap-2 pl-2 border-l border-slate-200">

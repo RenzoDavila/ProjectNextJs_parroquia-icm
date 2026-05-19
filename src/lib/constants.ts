@@ -1,6 +1,6 @@
 // Site Configuration
 export const SITE_CONFIG = {
-  name: "Parroquia del Inmaculado Corazón de María",
+  name: "Parroquia del Inmaculado Corazón de María - Miraflores, Arequipa",
   shortName: "ParroquiaICM",
   description: "Administrada por los Misioneros Claretianos. Miraflores - Arequipa",
   phone: "(054) 253-280",
