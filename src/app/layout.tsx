@@ -15,10 +15,7 @@ const geistMono = Geist_Mono({
 
 export const metadata: Metadata = {
   metadataBase: new URL(process.env.NEXT_PUBLIC_SITE_URL || "https://parroquiaicm.com"),
-  title: {
-    default: SITE_CONFIG.name,
-    template: `%s | ${SITE_CONFIG.shortName}`,
-  },
+  title: SITE_CONFIG.name,
   description: SITE_CONFIG.description,
   icons: {
     icon: [
