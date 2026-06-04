@@ -37,7 +37,7 @@ export default function Footer({
           {/* About Section */}
           <div className="lg:col-span-1">
             <Link href="/" className="flex items-center mb-6 group">
-              <div className="relative w-14 h-14 rounded-xl overflow-hidden shadow-lg group-hover:shadow-xl group-hover:scale-105 transition-all duration-300">
+              <div className="relative w-14 h-14 rounded-full aspect-square overflow-hidden shadow-lg group-hover:shadow-xl group-hover:scale-105 transition-all duration-300">
                 <Image
                   src="/images/logos/logo-parroquia-new.png"
                   alt={config.shortName}

@@ -209,7 +209,7 @@ VALUES
   ('site_name', 'Parroquia Inmaculado Corazón de María', 'text', 'Nombre oficial de la parroquia', NOW(), NOW()),
   ('site_short_name', 'Parroquia ICM', 'text', 'Nombre corto de la parroquia', NOW(), NOW()),
   ('site_address', 'Calle Dean Valdivia 405, Cercado, Arequipa', 'text', 'Dirección de la parroquia', NOW(), NOW()),
-  ('site_phone', '(054) 253-280', 'text', 'Teléfono principal', NOW(), NOW()),
+  ('site_phone', '(054) 222191', 'text', 'Teléfono principal', NOW(), NOW()),
   ('site_email', 'icmpamiraflores@gmail.com', 'text', 'Email de contacto', NOW(), NOW()),
   ('site_whatsapp', '959123456', 'text', 'Número de WhatsApp', NOW(), NOW()),
   

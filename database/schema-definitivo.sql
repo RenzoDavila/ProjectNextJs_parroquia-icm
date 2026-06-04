@@ -63,7 +63,7 @@ INSERT INTO site_config (config_key, config_value, config_type, description) VAL
 ('site_name', 'Parroquia Inmaculado Corazón de María', 'text', 'Nombre del sitio'),
 ('site_tagline', 'Miraflores, Arequipa', 'text', 'Subtítulo del sitio'),
 ('site_email', 'icmpamiraflores@gmail.com', 'text', 'Email principal'),
-('site_phone', '(054) 253-280', 'text', 'Teléfono principal'),
+('site_phone', '(054) 222191', 'text', 'Teléfono principal'),
 ('site_whatsapp', '932408576', 'text', 'WhatsApp'),
 ('site_address', 'Calle Tacna 540 - A, Miraflores - Arequipa - Perú', 'text', 'Dirección'),
 ('site_city', 'Miraflores, Arequipa - Perú', 'text', 'Ciudad y país'),

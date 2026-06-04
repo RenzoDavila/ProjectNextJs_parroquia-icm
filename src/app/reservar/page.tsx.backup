@@ -682,7 +682,7 @@ export default function ReservarPage() {
               </li>
               <li className="flex items-start">
                 <CheckCircle className="w-4 h-4 mr-2 text-[#49AE9C] flex-shrink-0 mt-0.5" />
-                Si tienes dudas, llámanos al (054) 253-280.
+                Si tienes dudas, llámanos al (054) 222191.
               </li>
             </ul>
           </div>

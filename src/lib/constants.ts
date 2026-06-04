@@ -3,7 +3,7 @@ export const SITE_CONFIG = {
   name: "Parroquia del Inmaculado Corazón de María - Miraflores, Arequipa",
   shortName: "ParroquiaICM",
   description: "Administrada por los Misioneros Claretianos. Miraflores - Arequipa",
-  phone: "(054) 253-280",
+  phone: "(054) 222191",
   whatsapp: "932408576",
   email: "icmpamiraflores@gmail.com",
   address: "Calle Tacna 540 - A, Miraflores - Arequipa - Perú",
@@ -13,8 +13,9 @@ export const SITE_CONFIG = {
 // Social Links
 export const SOCIAL_LINKS = {
   facebook: "https://www.facebook.com/profile.php?id=100064383386052",
-  youtube: "https://www.youtube.com/channel/UCKgN4YP_cOQd4LQYV1Ey5nw",
-  instagram: "https://www.instagram.com/picmaqp2023",
+  youtube: "#", // TODO: Update YouTube URL with the correct one
+  instagram: "https://www.instagram.com/picmaqp",
+  tiktok: "#", // TODO: Update TikTok URL with the correct one
   facebookLive: "https://web.facebook.com/parroquia.miraflores.arequipa/live/",
 };
 
